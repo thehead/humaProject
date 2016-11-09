@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0 user-scalable=no">
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<meta onselectstart="return false;" unselectable="on"> <!--兼容IE6-9的写法-->
+	<meta name="msapplication-tap-highlight" content="no"><!--a、input标签被点击时产生的半透明灰色背景 去掉-->
+	<!--以下三个meta 去掉ios默认样式-->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="format-detection" content="telephone=no,email=no"><!--忽略页面的数字为电话，忽略email识别-->
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+	<title>购物车</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="css/iconfont/iconfont.css"/>
+    <link rel="stylesheet" type="text/css" href="css/swiper-3.3.1.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+</head>
+<body>
+	<header></header>
+	<section>
+		<!--搜索栏-->
+		<div class="screen">
+			<div class="action">
+				<p class="all-select">
+					<a class="select-all-box" for="s1">
+						<i class="iconfont icon-checkbox1"></i>
+						<input type="checkbox" name="checkbox1" class="all-check" id="s1">
+						<span>全选</span>
+					</a>
+				</p>
+				<p class="del">
+					<i class="iconfont icon-shanchu"></i>
+					<span>删除</span>
+				</p>
+			</div>
+		</div>
+		<div class="listbox">
+			<form action="" method="post">
+			<div id="box1" class="boxinfo background-write">
+				<div class="boxtop">
+					<span class="isbuy">已失效</span>
+					<span class="date">2016-11-07 10:00</span>
+				</div>
+				<div class="boxcont">
+					<div class="checkbox">
+						<i class="iconfont icon-checkbox1"></i>
+						<input data-name="1" type="checkbox" name="checkbox1" value="90" class="all-check">
+						<input type="hidden" name="price" value="38.02" class="price">
+					</div>
+					<div class="thumbbox">
+						<img src="./images/img1.jpg" alt="" />
+					</div>
+					<div class="info">
+						<p class="shopname">这是虎妈二手商城的商品...</p>
+						<p class="shopcat">
+							<span class="catname">
+								<i class="iconfont"></i>
+								女装
+							</span>
+							<span class="price">¥38.02</span>
+						</p>
+					</div>
+				</div>
+			</div>
+			<div id="box2" class="boxinfo background-write">
+				<div class="boxtop">
+					<span class="isbuy">已失效</span>
+					<span class="date">2016-11-07 10:00</span>
+				</div>
+				<div class="boxcont">
+					<div class="checkbox">
+						<i class="iconfont icon-checkbox1"></i>
+						<input data-name="2" type="checkbox" name="checkbox1" class="all-check">
+						<input type="hidden" name="price" value="38.00" class="price">
+					</div>
+					<div class="thumbbox">
+						<img src="./images/img1.jpg" alt="" />
+					</div>
+					<div class="info">
+						<p class="shopname">这是虎妈二手商城的商品...</p>
+						<p class="shopcat">
+							<span class="catname">
+								<i class="iconfont"></i>
+								女装
+							</span>
+							<span class="price">¥38.00</span>
+						</p>
+					</div>
+				</div>
+			</div>
+			<div id="box3" class="boxinfo background-write">
+				<div class="boxtop">
+					<span class="isbuy">已失效</span>
+					<span class="date">2016-11-07 10:00</span>
+				</div>
+				<div class="boxcont">
+					<div class="checkbox">
+						<i class="iconfont icon-checkbox1"></i>
+						<input data-name="3" type="checkbox" name="checkbox1" class="all-check">
+						<input type="hidden" name="price" value="38.00" class="price">
+					</div>
+					<div class="thumbbox">
+						<img src="./images/img1.jpg" alt="" />
+					</div>
+					<div class="info">
+						<p class="shopname">这是虎妈二手商城的商品...</p>
+						<p class="shopcat">
+							<span class="catname">
+								<i class="iconfont"></i>
+								女装
+							</span>
+							<span class="price">¥38.00</span>
+						</p>
+					</div>
+				</div>
+			</div>
+			<div id="box4" class="boxinfo background-write">
+				<div class="boxtop">
+					<span class="isbuy">已失效</span>
+					<span class="date">2016-11-07 10:00</span>
+				</div>
+				<div class="boxcont">
+					<div class="checkbox">
+						<i class="iconfont icon-checkbox1"></i>
+						<input data-name="4" type="checkbox" name="checkbox1" class="all-check">
+						<input type="hidden" name="price" value="38.00" class="price">
+					</div>
+					<div class="thumbbox">
+						<img src="./images/img1.jpg" alt="" />
+					</div>
+					<div class="info">
+						<p class="shopname">这是虎妈二手商城的商品...</p>
+						<p class="shopcat">
+							<span class="catname">
+								<i class="iconfont"></i>
+								女装
+							</span>
+							<span class="price">¥38.00</span>
+						</p>
+					</div>
+				</div>
+			</div>
+			<div id="box5" class="boxinfo background-write">
+				<div class="boxtop">
+					<span class="isbuy">已失效</span>
+					<span class="date">2016-11-07 10:00</span>
+				</div>
+				<div class="boxcont">
+					<div class="checkbox">
+						<i class="iconfont icon-checkbox1"></i>
+						<input data-name="5" type="checkbox" name="checkbox1" class="all-check">
+						<input type="hidden" name="price" value="38.00" class="price">
+					</div>
+					<div class="thumbbox">
+						<img src="./images/img1.jpg" alt="" />
+					</div>
+					<div class="info">
+						<p class="shopname">这是虎妈二手商城的商品...</p>
+						<p class="shopcat">
+							<span class="catname">
+								<i class="iconfont"></i>
+								女装
+							</span>
+							<span class="price">¥38.00</span>
+						</p>
+					</div>
+				</div>
+			</div>
+				<input type="hidden" value="" name="total-price">
+			</form>
+		</div>
+		<div class="loadding-box">
+			<img src="./images/loading2.gif" />
+			<span>正在加载中...</span>
+		</div>
+		<!--产品列表-->
+
+		<!--客服-->
+		<div id="kf">
+			<i class="iconfont icon-kefu"></i>
+		</div>
+		<!--kong-->
+		<div id="kong"></div>
+		<div class="loadding hide">
+			玩命加载中...
+		</div>
+	</section>
+	<footer id="footer">
+		<div class="totalbox">
+			<p><span class="total-price">合计:<i>¥0.00元</i></span></p>
+			<p><span class="total-num">(共计<i>0件商品</i>)</span></p>
+		</div>
+		<div class="now-buy">
+			<a href="buy.html" ><em>立即购买</em></a>
+		</div>
+	</footer>
+	
+	
+</body>
+
+	<script src="js/swiper-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/zepto_1.1.3.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+<script>
+	var n=0;
+	var m=0;
+	$(window).scroll(function () {
+		var scrollTop = $(this).scrollTop();
+		var scrollHeight = $(document).height();
+		var windowHeight = $(this).height();
+		if (scrollTop + windowHeight == scrollHeight) {
+			$(".loadding-box").addClass("active");
+			if(n<3){
+				setTimeout(function(){
+					for(var i=0;i<2;i++){
+						$(".listbox").append(
+								'<div id="box'+(m+5)+'" class="boxinfo background-write">'+
+								'<div class="boxtop">'+
+								'<span class="isbuy">已失效</span>'+
+								'<span class="date">2016-11-07 10:00</span>'+
+								'</div>'+
+								'<div class="boxcont">'+
+								'<div class="checkbox">'+
+								'<i class="iconfont icon-checkbox1"></i>'+
+								'<input data-name="'+(m+5)+'" type="checkbox" name="checkbox1" class="all-check"><input type="hidden" name="price" value="38.02" class="price">'+
+								'</div>'+
+								'<div class="thumbbox">'+
+								'<img src="./images/img1.jpg" alt="" />'+
+								'</div>'+
+								'<div class="info">'+
+								'<p class="shopname">这是虎妈二手商城的商品...</p>'+
+								'<p class="shopcat">'+
+								'<span class="catname">'+
+								'<i class="iconfont"></i>'+
+								'女装'+
+								'</span>'+
+								'		<span class="price">¥38.00</span>'+
+								'</p>'+
+								'</div>'+
+								'</div>'+
+								'</div>'
+						);
+						m++;
+					}
+					n++
+				},400);
+			}else{
+				$(".loadding-box").html('没有更多了!');
+			}
+		}
+	});
+</script>
+</html>
