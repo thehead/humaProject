@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../iconfont/iconfont.css"/>
+    <link rel="stylesheet" type="text/css" href="../assets/css/swiper-3.3.1.min.css"/>
+    <link rel="stylesheet" href="../css/personalCenter.css">
+    <script>
+        (function () {
+            var vw=document.documentElement.clientWidth,
+                    html=document.querySelector('html');
+            var font=html.style.fontSize=(vw/375>2?'200px':(vw/375*100+'px'));
+            console.log(font);
+        })()
+    </script>
+</head>
+<body>
+<!--会员信息-->
+<section class="pcHeader pcVip">
+    <ul>
+        <li class="pcPortrait ">
+            <img src="../images/portrait.png" alt="微信头像">
+        </li>
+        <li class="vipName">
+            <div>
+                <a href="javascript:;">
+                    您还不是会员
+                </a>
+                <a href="javascript:;">开通会员,拥有更多特权更省钱</a>
+                <span id="vipLogo"><img src="../images/vipLogo.png" alt="vip"></span>
+            </div>
+        </li>
+    </ul>
+</section>
+<!--卡片-->
+<section class="pcCard">
+    <ul class="pcVipCard">
+        <li class="pcVipList pcUnderline">
+            <div>
+                <img src="../images/vip.png" alt="vip">
+            </div>
+            <div class="card">
+                <span>银卡会员</span>
+                <span>198/年</span>
+            </div>
+            <div class="cardIcon">
+                <i class="iconfont icon-checkbox1"></i>
+            </div>
+        </li>
+        <li class="pcVipList pcUnderline">
+            <div>
+                <img src="../images/vip.png" alt="vip">
+            </div>
+            <div class="card">
+                <span>银卡会员</span>
+                <span>198/年</span>
+            </div>
+            <div class="cardIcon">
+                <i class="iconfont icon-checkbox1"></i>
+            </div>
+        </li>
+        <li class="pcVipList">
+            <div>
+                <img src="../images/vip.png" alt="vip">
+            </div>
+            <div class="card cardLast">
+                <span>银卡会员</span>
+                <span>198/年</span>
+                <span>推荐</span>
+            </div>
+            <div class="cardIcon cardIconLast">
+                <i class="iconfont icon-checkbox"></i>
+            </div>
+        </li>
+    </ul>
+</section>
+<!--server-->
+<section class="pcServer">
+    <ul>
+        <li class="pcUnderline">
+            <span>钻石会员特权及服务</span>
+        </li>
+        <li>
+            <span>
+                <i class="iconfont icon-baojiahuigou"></i>
+                <p>原价回购服务</p>
+                <p>
+                    累计限额
+                    <span class="colorFont">
+                        900
+                    </span>
+                    元
+                </p>
+            </span>
+            <span class="spanP">
+                <i class="iconfont icon-tuihuomianyunfei "></i>
+                <span>原价回购服务</span>
+                <p>
+                    累计限额
+                    <span class="colorFont">
+                        900
+                    </span>
+                    元
+                </p>
+            </span>
+            <span class="spanP">
+                <i class="iconfont icon-jijian"></i>
+                <span>原价回购服务</span>
+                <p>
+                    累计限额
+                    <span class="colorFont">
+                        900
+                    </span>
+                    元
+                </p>
+            </span>
+        </li>
+    </ul>
+</section>
+<footer class="reciveFooter">
+    <a href="javascript:;">
+        <span>
+            立即开通
+        </span>
+    </a>
+</footer>
+<script src="../js/zepto_1.1.3.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/personalCenter.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../iconfont/iconfont.css"/>
+    <link rel="stylesheet" type="text/css" href="../assets/css/swiper-3.3.1.min.css"/>
+    <link rel="stylesheet" href="../css/personalCenter.css">
+    <script>
+        (function () {
+            var vw=document.documentElement.clientWidth,
+                    html=document.querySelector('html');
+            var font=html.style.fontSize=(vw/375>2?'200px':(vw/375*100+'px'));
+            console.log(font);
+        })()
+    </script>
+</head>
+<body>
+<!--个人信息-->
+<section class="pcHeader pcPersonalFile">
+    <ul>
+        <li class="pcPortrait">
+            <img id="pcPortraitImg" src="../images/portrait.png" alt="微信头像">
+        </li>
+        <li class="pcDescribe">
+            <form action="">
+                <div>
+                    <a id="weiNickname" href="javascript:;">
+                        <input type="text" placeholder="微信昵称"></a>
+                    <a  class="pcPortraitWord" href="javascript:;">
+                        <input type="file" id="pcPortraitWord" onchange="" value="选择图片">
+                    </a>
+                </div>
+            </form>
+        </li>
+        <li>
+            <i id="icon-pingjia" class="iconfont icon-pingjia"></i>
+        </li>
+    </ul>
+</section>
+<!--订单-->
+<section class="pcOrder">
+    <ul>
+        <li class="fund">
+            <a href="../pages/phone.html">
+                <i class="iconfont icon-qianbao pcOrderS"></i>
+                <span>18511788686</span>
+                <i class="iconfont icon-xiangyoujiantou iconLeft"></i>
+            </a>
+        </li>
+        <li class="sale">
+            <a href="">
+                <i class="iconfont icon-wupinjicun pcOrderS"></i>
+                <span>性别</span>
+                <i class="iconfont icon-xiangyoujiantou iconLeft"></i>
+            </a>
+        </li>
+        <li class="rights">
+           <a href="">
+               <i class="iconfont icon-huiyuan pcOrderS"></i>
+               <span>出生日期</span>
+               <i class="iconfont icon-xiangyoujiantou iconLeft"></i>
+           </a>
+        </li>
+        <li class="huM">
+            <a href="recive.html">
+                <i class="iconfont icon-daizhifu pcOrderS"></i>
+                <span>收货管理地址</span>
+                <i class="iconfont icon-xiangyoujiantou iconLeft"></i>
+            </a>
+        </li>
+    </ul>
+</section>
+<script src="../js/zepto_1.1.3.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/personalCenter.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    $(function () {
+        var $input_browseFile = $("#pcPortraitWord");
+        $input_browseFile.on("change",function () {
+            previewInImage(this.files[0]);
+        });
+    });
+    function previewInImage (file) {
+        //通过file.size可以取得图片大小
+        var reader = new FileReader();
+        reader.onload = function( evt ){
+            console.log("111");
+            console.log(evt.target.result);
+            $('#pcPortraitImg').src = evt.target.result;
+        }
+    }
+
+</script>
+</body>
+</html>
