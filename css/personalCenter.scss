@@ -29,6 +29,7 @@ a:focus {
 }
 .pcUnderline{
   position: relative;
+  color: #333;
 }
 .pcUnderline:after{
   content: '';
@@ -142,7 +143,7 @@ a:focus {
   display: inline-block;
   background: #fab639;
 }
-.pcOrder .pcAllOrders, .pcOrder .fund, .pcOrder .sale, .pcOrder .collect, .pcOrder .rights, .pcOrder .problems, .pcOrder .huM {
+.pcOrder .pcAllOrders, .pcOrder .fund, .pcOrder .sale, .pcOrder .collect, .pcOrder .rights, .pcOrder .problems, .pcOrder .huM, .vipedBottom{
   position: relative;
   background: #fff;
   display: -webkit-box;
@@ -154,6 +155,9 @@ a:focus {
   -ms-flex-align: center;
   align-items: center;
   position: relative;
+  a{
+    width: 100%;
+  }
 }
 .pcOrder .pcAllOrders .iconLeft, .pcOrder .fund .iconLeft, .pcOrder .sale .iconLeft, .pcOrder .collect .iconLeft, .pcOrder .rights .iconLeft, .pcOrder .problems .iconLeft, .pcOrder .huM .iconLeft {
   position: absolute;
@@ -401,6 +405,9 @@ a:focus {
   .setDefault{
     padding-top: .1rem;
    padding-left: .1rem;
+    .icon-checkbox1{
+      font-size: .13rem;
+    }
   }
   .newAdress{
     color: #979797;
@@ -592,4 +599,139 @@ a:focus {
   }
 }
 
-//vip
+.pcViped{
+  .vipLogo{
+    position: absolute;
+    top: 0.05rem;
+    left: 1.65rem;
+    width: .34rem;
+    height: .22rem;
+    display: block;
+    img{
+      width: 100%;
+    }
+  }
+}
+.vipedBottom{
+  padding: .1rem;
+  font-size: .2rem;
+  position: relative;
+  i.iconfont{
+    position: absolute;
+    font-size: .2rem;
+    right: .1rem;
+    top: 0.1rem;
+  }
+}
+//renew
+.renewP{
+  text-align: center;
+  font-size: .15rem;
+  margin-top: .2rem;
+  color: #999;
+}
+//renew
+//
+#pay-type {
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background: rgba(45, 45, 45, 0.3);
+  z-index: 99;
+  display: none;
+}
+#pay-type.active {
+  display: block;
+}
+#pay-type #animatebox {
+  background: #FFF;
+  position: fixed;
+  z-index: 999;
+  width: 94%;
+  left: 50%;
+  top: 35%;
+  margin: 0 auto;
+  margin-left: -47%;
+}
+#pay-type #animatebox h3 {
+  font-size: 1.3em;
+  color: #333;
+  line-height: 40px;
+  border-bottom: 1px solid #ece8e2;
+  margin-left: 8px;
+  font-weight: normal;
+}
+#pay-type #animatebox h3 i {
+  color: #ff5f00;
+  font-style: normal;
+}
+#pay-type #animatebox .address-info {
+  width: 94%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+#pay-type #animatebox .address-info .leftbox {
+  width: 90%;
+  overflow: hidden;
+  float: left;
+}
+#pay-type #animatebox .address-info .leftbox .iconbox {
+  width: 20%;
+  float: left;
+}
+#pay-type #animatebox .address-info .leftbox .iconbox i {
+  font-size: 3.5em;
+}
+#pay-type #animatebox .address-info .leftbox .iconbox i.icon-weixinzhifu {
+  color: #6cc143;
+}
+#pay-type #animatebox .address-info .leftbox .iconbox i.icon-zhifubaozhifu {
+  color: #3caaee;
+  display: inline-block;
+  margin-top: 5px;
+}
+#pay-type #animatebox .address-info .leftbox .linkman {
+  width: 80%;
+  font-size: 1.24em;
+  line-height: 30px;
+  overflow: hidden;
+  display: block;
+  float: left;
+  height: 100%;
+  margin-top: 8px;
+}
+#pay-type #animatebox .address-info .leftbox .linkman span {
+  display: block;
+}
+#pay-type #animatebox .address-info .leftbox .linkman span.weixin-desc {
+  font-size: 0.8em;
+  color: #999;
+  font-weight: normal;
+}
+#pay-type #animatebox .address-info .leftbox .address {
+  font-size: 1.1em;
+  line-height: 25px;
+  color: #5a5a5a;
+}
+#pay-type #animatebox .address-info a {
+  color: #333;
+}
+#pay-type #animatebox .address-info a:hover {
+  color: #333;
+}
+#pay-type #animatebox .address-info a:visited {
+  color: #333;
+}
+#pay-type #animatebox .address-info .icon {
+  width: 10%;
+  height: 100%;
+  display: block;
+  line-height: 72px;
+  float: right;
+  text-align: right;
+}
+#pay-type #animatebox .address-info .icon i {
+  text-align: right;
+  color: #999;
+}
