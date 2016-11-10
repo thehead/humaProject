@@ -2,19 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c8bda6ad-9602-499d-bd52-ffd0535c1244" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/personalCenter.css" afterPath="$PROJECT_DIR$/css/personalCenter.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/personalCenter.css.map" afterPath="$PROJECT_DIR$/css/personalCenter.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/personalCenter.scss" afterPath="$PROJECT_DIR$/css/personalCenter.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/newAdress.html" afterPath="$PROJECT_DIR$/newAdress.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/personalCenter.html" afterPath="$PROJECT_DIR$/personalCenter.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/personalFile.html" afterPath="$PROJECT_DIR$/personalFile.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phone.html" afterPath="$PROJECT_DIR$/phone.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/recive.html" afterPath="$PROJECT_DIR$/recive.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/renew.html" afterPath="$PROJECT_DIR$/renew.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vip.html" afterPath="$PROJECT_DIR$/vip.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/viped.html" afterPath="$PROJECT_DIR$/viped.html" />
     </list>
     <ignored path="huma.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -51,7 +39,7 @@
             <entry file="file://$PROJECT_DIR$/newAdress.html">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="434">
-                  <caret line="67" column="10" selection-start-line="67" selection-start-column="10" selection-end-line="67" selection-end-column="10" />
+                  <caret line="68" column="10" selection-start-line="68" selection-start-column="10" selection-end-line="68" selection-end-column="10" />
                   <folding>
                     <element signature="n#style#0;n#form#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                     <element signature="n#style#0;n#span#0;n#span#0;n#div#0;n#li#2;n#ul#0;n#form#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -159,8 +147,8 @@
           <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/js/index.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="250">
-                  <caret line="178" column="26" selection-start-line="178" selection-start-column="21" selection-end-line="178" selection-end-column="26" />
+                <state relative-caret-position="25">
+                  <caret line="163" column="13" selection-start-line="163" selection-start-column="13" selection-end-line="163" selection-end-column="13" />
                   <folding>
                     <marker date="1478704191000" expanded="true" signature="13253:13337" ph="..." />
                     <marker date="1478704191000" expanded="true" signature="13361:13448" ph="..." />
@@ -404,12 +392,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1478065966604</updated>
-      <workItem from="1478740628899" duration="12848000" />
+      <workItem from="1478740628899" duration="13598000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12848000" />
+    <option name="totallyTimeSpent" value="13598000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -422,7 +410,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-20" y="23" width="1469" height="859" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15124309" sideWeight="0.49423632" order="0" side_tool="false" content_ui="tabs" x="538" y="71" width="364" height="715" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.08147175" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -431,7 +419,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32867134" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32523617" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24964234" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32793522" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32793522" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25966448" sideWeight="0.5057637" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -767,7 +755,7 @@
     <entry file="file://$PROJECT_DIR$/newAdress.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="434">
-          <caret line="67" column="10" selection-start-line="67" selection-start-column="10" selection-end-line="67" selection-end-column="10" />
+          <caret line="68" column="10" selection-start-line="68" selection-start-column="10" selection-end-line="68" selection-end-column="10" />
           <folding>
             <element signature="n#style#0;n#form#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#span#0;n#div#0;n#li#2;n#ul#0;n#form#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -815,10 +803,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/vip.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="150" column="13" selection-start-line="150" selection-start-column="13" selection-end-line="150" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/js/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="178" column="26" selection-start-line="178" selection-start-column="21" selection-end-line="178" selection-end-column="26" />
+        <state relative-caret-position="25">
+          <caret line="163" column="13" selection-start-line="163" selection-start-column="13" selection-end-line="163" selection-end-column="13" />
           <folding>
             <marker date="1478704191000" expanded="true" signature="13253:13337" ph="..." />
             <marker date="1478704191000" expanded="true" signature="13361:13448" ph="..." />
@@ -831,14 +827,6 @@
             <marker date="1478704191000" expanded="true" signature="14445:14526" ph="..." />
             <marker date="1478704191000" expanded="true" signature="14571:14653" ph="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vip.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="150" column="13" selection-start-line="150" selection-start-column="13" selection-end-line="150" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
