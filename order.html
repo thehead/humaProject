@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <title>商品分类</title>
+    <title>所有订单</title>
     <link rel="stylesheet" type="text/css" href="css/reset.css"/>
     <link rel="stylesheet" type="text/css" href="css/iconfont/iconfont.css"/>
     <link rel="stylesheet" type="text/css" href="css/swiper-3.3.1.min.css"/>
@@ -19,7 +19,7 @@
 					<img src="images/logo.jpg" alt="" />
 					<div></div>
 					<i class="iconfont icon-fangdajing"></i>
-					<input type="text" placeholder="虎妈二手，专卖你有" name="" id="" value="" />
+					<input type="text" placeholder="请输入商品名称" name="" id="" value="" />
 				</div>
 				<span>
 					搜索
@@ -27,16 +27,19 @@
 			</div>
 			<ul class="option">
 				<li data-name="catinfo" id="catinfo">
-					<span>全部分类</span>
-					<i class="iconfont icon-xiala-copy"></i>
+					<span>全部</span>
 				</li>
 				<li data-name="sortinfo" id="sortinfo">
-					<span>默认排序</span>
-					<i class="iconfont icon-xiala-copy"></i>
+					<span>待支付</span>
 				</li>
 				<li data-name="newoldinfo" id="newoldinfo">
-					<i class="iconfont icon-shaixuan"></i>
-					<span>筛选</span>
+					<span>待发货</span>
+				</li>
+				<li data-name="newoldinfo" id="newoldinfo">
+					<span>已发货</span>
+				</li>
+				<li data-name="newoldinfo" id="newoldinfo">
+					<span>已完成</span>
 				</li>
 			</ul>
 			<div class="panelbox">
@@ -165,7 +168,7 @@
 				</a>
 			</li>
 			<li>
-				<a href="personalCenter.html">
+				<a href="usercenter.html">
 				<i class="iconfont icon-wode"></i>
 				<span>我的</span>
 				</a>
