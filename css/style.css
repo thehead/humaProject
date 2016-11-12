@@ -209,12 +209,37 @@ section #new .swiper-container-new .swiper-wrapper .swiper-slide span.oldprice {
 section .listTop {
   width: 100%;
   height: 40px;
-  background: #FFF url(../imgages/img2.jpg) no-repeat center;
   background-size: cover;
   color: #ff5f00;
   position: relative;
   clear: both;
   border-top: 1px solid #ececec;
+}
+section .listTop.wanju .lTname,
+section .listTop.nvzhuang .lTname,
+section .listTop.muying .lTname,
+section .listTop.huiben .lTname,
+section .listTop.wanju .more,
+section .listTop.nvzhuang .more,
+section .listTop.muying .more,
+section .listTop.huiben .more {
+  text-indent: -99999px;
+}
+section .listTop.wanju {
+  background: #FFF url(../images/wanju.jpg) no-repeat center;
+  background-size: 100% 100%;
+}
+section .listTop.nvzhuang {
+  background: #FFF url(../images/nvzhuang.jpg) no-repeat center;
+  background-size: 100% 100%;
+}
+section .listTop.muying {
+  background: #FFF url(../images/muying.jpg) no-repeat center;
+  background-size: 100% 100%;
+}
+section .listTop.huiben {
+  background: #FFF url(../images/huiben.jpg) no-repeat center;
+  background-size: 100% 100%;
 }
 section .listTop .lTname {
   position: absolute;
@@ -223,6 +248,7 @@ section .listTop .lTname {
   display: block;
 }
 section .listTop .more {
+  display: block;
   position: absolute;
   right: 5%;
   bottom: 10%;
@@ -245,15 +271,22 @@ section .list li {
   float: left;
   border: 1px solid #ececec;
 }
+section .list li a {
+  display: inline-block;
+}
+section .list li a.desc {
+  margin-top: 0px;
+  border: none;
+}
 section .list li img {
   width: 100%;
   height: 190px;
 }
-section .list li div {
+section .list li .desc {
   width: 93%;
   margin: 0 3%;
 }
-section .list li div .listName {
+section .list li .desc .listName {
   display: block;
   width: 100%;
   overflow: hidden;
@@ -263,10 +296,10 @@ section .list li div .listName {
   color: #333333;
   line-height: 20px;
 }
-section .list li div .listNewPrice {
+section .list li .desc .listNewPrice {
   color: #ff5f00;
 }
-section .list li div .listOldPrice {
+section .list li .desc .listOldPrice {
   font-size: 0.7rem;
   color: #ccc;
   float: right;
@@ -1536,6 +1569,201 @@ footer ul .active {
   font-size: 1.2em;
   padding: 20px 5px;
   color: #999;
+  text-align: center;
+}
+.account-total {
+  overflow: hidden;
+  border-bottom: 1px solid #ece8e2;
+  padding: 4% 2%;
+}
+.account-total .balancebox {
+  width: 35%;
+  float: left;
+  text-align: center;
+  border-right: 1px solid #ece8e2;
+  line-height: 30px;
+}
+.account-total .balancebox span {
+  display: block;
+  font-size: 1.3em;
+  color: #333;
+}
+.account-total .balancebox i {
+  font-size: 1.3em;
+  color: #ff5f00;
+}
+.account-total .amountbox {
+  width: 60%;
+  float: right;
+}
+.account-total .amountbox span {
+  display: block;
+  width: 100%;
+  text-align: center;
+  line-height: 30px;
+}
+.account-total .amountbox span.tit {
+  font-size: 1.3em;
+  color: #333;
+}
+.account-total .amountbox span i {
+  color: #999;
+  font-size: 1.2em;
+}
+.account-total .amountbox span i.left {
+  float: left;
+}
+.account-total .amountbox span i.right {
+  float: right;
+}
+.account-total .depositbox {
+  padding-left: 5%;
+}
+.account-total .depositbox .money {
+  font-size: 1.3em;
+  line-height: 30px;
+}
+.account-total .depositbox .money i {
+  color: #ff5f00;
+}
+.account-total .depositbox .descbox {
+  font-size: 1.2em;
+  color: #999;
+  line-height: 30px;
+}
+.billbox {
+  margin-top: 15px;
+  padding: 0px 0px 0px 5%;
+  border-bottom: 1px solid #ece8e2;
+}
+.billbox.no-margin {
+  margin-top: 0px;
+}
+.billbox p {
+  border-bottom: 1px solid #ece8e2;
+  overflow: hidden;
+}
+.billbox p .left {
+  float: left;
+  width: 50%;
+}
+.billbox p .left i {
+  display: inline-block;
+}
+.billbox p .left i.txt {
+  line-height: 45px;
+  font-size: 1.3em;
+  text-indent: 2.8em;
+}
+.billbox p .left i.back-color {
+  font-size: 3em;
+  position: absolute;
+  color: #fab639;
+  margin-top: -5px;
+}
+.billbox p .right {
+  float: right;
+  width: 50%;
+  text-align: right;
+  line-height: 45px;
+  font-size: 1.2em;
+}
+.billbox p .right a {
+  color: #999;
+  margin-right: 5px;
+}
+.billbox .bill-list {
+  border-bottom: 1px solid #ece8e2;
+  display: table;
+  width: 100%;
+}
+.billbox .bill-list:last-child {
+  border-bottom: none;
+}
+.billbox .bill-list span {
+  display: table-cell;
+  vertical-align: middle;
+  padding: 5px 0px;
+}
+.billbox .bill-list span.tit {
+  width: 42%;
+  font-size: 1.2em;
+  color: #333;
+}
+.billbox .bill-list span.charges {
+  width: 23%;
+  font-size: 1.1em;
+  text-align: center;
+}
+.billbox .bill-list span.add {
+  color: #ff5f00;
+}
+.billbox .bill-list span.time {
+  width: 30%;
+  font-size: 1.1em;
+  color: #999;
+  text-align: center;
+}
+.withdraw-deposit {
+  border-bottom: 1px solid #ece8e2;
+  margin-top: 15px;
+  padding-left: 5%;
+  overflow: hidden;
+}
+.withdraw-deposit .left {
+  float: left;
+  width: 50%;
+  line-height: 45px;
+}
+.withdraw-deposit .left span {
+  background: #fab639;
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  border-radius: 5px;
+  position: absolute;
+  margin-top: 6px;
+}
+.withdraw-deposit .left span i.iconbox {
+  font-size: 1.8em;
+  color: #FFF;
+  top: -4px;
+  position: relative;
+}
+.withdraw-deposit .left i.txt {
+  display: inline-block;
+  text-indent: 2.8em;
+  font-size: 1.3em;
+  color: #333;
+}
+.withdraw-deposit .right {
+  line-height: 45px;
+  text-align: right;
+}
+.withdraw-deposit .right i {
+  margin-right: 10px;
+  color: #999;
+}
+.withdraw-deposit.deposit-input input {
+  padding: 15px 0px;
+  border: none;
+  font-size: 1.2em;
+  width: 100%;
+}
+.submitbox {
+  position: fixed;
+  background: #ff5f00;
+  bottom: 0px;
+  width: 100%;
+}
+.submitbox .submit {
+  display: inline-block;
+  bottom: 0px;
+  width: 100%;
+  line-height: 45px;
+  font-size: 1.3em;
+  color: #FFF;
   text-align: center;
 }
 .loadding-box {

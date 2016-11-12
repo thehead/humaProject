@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>账户</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="css/iconfont/iconfont.css"/>
+    <link rel="stylesheet" type="text/css" href="css/swiper-3.3.1.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+</head>
+<body>
+<header></header>
+<section>
+    <!--账单列表-->
+    <div class="billbox background-write no-margin">
+        <p>
+            <span class="left">
+                <i class="iconfont icon-xiaozhangben back-color" ></i>
+                <i class="txt">账单</i>
+            </span>
+        </p>
+        <div class="bill-list">
+            <span class="tit">购买:小乌富兰克...</span>
+            <span class="charges subtract">-¥300.00</span>
+            <span class="time">2016-09-27<br/> 16:00 </span>
+        </div>
+        <div class="bill-list">
+            <span class="tit">购买:小乌富兰克...</span>
+            <span class="charges add">+¥300.00</span>
+            <span class="time">2016-09-27 <br/>16:00 </span>
+        </div>
+        <div class="bill-list">
+            <span class="tit">购买:小乌富兰克...</span>
+            <span class="charges subtract">-¥300.00</span>
+            <span class="time">2016-09-27 <br/>16:00 </span>
+        </div>
+        <div class="bill-list">
+            <span class="tit">购买:小乌富兰克...</span>
+            <span class="charges add">+¥300.00</span>
+            <span class="time">2016-09-27<br/> 16:00 </span>
+        </div>
+        <div class="bill-list">
+            <span class="tit">购买:小乌富兰克...</span>
+            <span class="charges subtract">-¥300.00</span>
+            <span class="time">2016-09-27<br/> 16:00 </span>
+        </div>
+        <div class="bill-list">
+            <span class="tit">购买:小乌富兰克...</span>
+            <span class="charges add">+¥300.00</span>
+            <span class="time">2016-09-27 <br/>16:00 </span>
+        </div>
+        <div class="bill-list">
+            <span class="tit">购买:小乌富兰克...</span>
+            <span class="charges subtract">-¥300.00</span>
+            <span class="time">2016-09-27 <br/>16:00 </span>
+        </div>
+        <div class="bill-list">
+            <span class="tit">购买:小乌富兰克...</span>
+            <span class="charges add">+¥300.00</span>
+            <span class="time">2016-09-27<br/> 16:00 </span>
+        </div>
+        <div class="bill-list">
+            <span class="tit">购买:小乌富兰克...</span>
+            <span class="charges subtract">-¥300.00</span>
+            <span class="time">2016-09-27<br/> 16:00 </span>
+        </div>
+        <div class="bill-list">
+            <span class="tit">购买:小乌富兰克...</span>
+            <span class="charges add">+¥300.00</span>
+            <span class="time">2016-09-27 <br/>16:00 </span>
+        </div>
+        <div class="bill-list">
+            <span class="tit">购买:小乌富兰克...</span>
+            <span class="charges subtract">-¥300.00</span>
+            <span class="time">2016-09-27 <br/>16:00 </span>
+        </div>
+        <div class="bill-list">
+            <span class="tit">购买:小乌富兰克...</span>
+            <span class="charges add">+¥300.00</span>
+            <span class="time">2016-09-27<br/> 16:00 </span>
+        </div>
+    </div>
+    <div class="loadding-box">
+        <img src="./images/loading2.gif" />
+        <span>正在加载中...</span>
+    </div>
+    <!--客服-->
+    <div id="kf">
+        <i class="iconfont icon-kefu"></i>
+    </div>
+</section>
+</body>
+<script src="js/swiper-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/zepto_1.1.3.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    var n = 0;
+    var m = 0;
+    $(window).scroll(function () {
+        var scrollTop = $(this).scrollTop();
+        var scrollHeight = $(document).height();
+        var windowHeight = $(this).height();
+        if (scrollTop + windowHeight == scrollHeight) {
+            $(".loadding-box").addClass("active");
+            if(n<3){
+                setTimeout(function(){
+                    for(var i=0;i<2;i++){
+                        $(".billbox").append(
+                                '<div class="bill-list">'+
+                                '<span class="tit">购买:小乌富兰克...</span>'+
+                                '<span class="charges add">+¥300.00</span>'+
+                                '<span class="time">2016-09-27<br/> 16:00 </span>'+
+                                '</div>'
+                        );
+                        m++;
+                    }
+                    n++
+                },400);
+            }else{
+                $(".loadding-box").html('没有更多了!');
+            }
+        }
+    });
+</script>
+</html>
