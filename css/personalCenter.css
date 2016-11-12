@@ -26,11 +26,11 @@ a:hover {
 a:focus {
   -moz-outline-style: none; }
 
-.pcUnderline {
+.pcUnderline, .pcUnderlineNormal {
   position: relative;
   color: #333; }
 
-.pcUnderline:after {
+.pcUnderline:after, .pcUnderlineNormal:after {
   content: '';
   position: absolute;
   right: -0.1rem;
@@ -38,6 +38,13 @@ a:focus {
   width: 3.65rem;
   height: 1px;
   background: #ddd9d3; }
+
+.pcUnderlineNormal {
+  padding-bottom: .1rem; }
+
+.pcUnderlineNormal:after {
+  width: 3.75rem;
+  left: -.1rem; }
 
 .pcHeader {
   background: #fff;
@@ -105,7 +112,7 @@ a:focus {
   font-size: .2rem;
   color: #a5a5a5; }
 
-.pcOrder, .pcService, .pcFooter {
+.pcOrder, .ccCash, .pcService, .pcFooter {
   width: 100%;
   box-sizing: border-box;
   font-size: .15rem;
@@ -122,10 +129,10 @@ a:focus {
 .pcAllOrders .top .iconLeft {
   top: .1rem; }
 
-.pcOrder ul, .pcOrder li {
+.pcOrder ul, .pcOrder li, .ccCash ul, .ccCash li {
   width: 100%; }
 
-.pcOrder .pcOrderS {
+.pcOrder .pcOrderS, .ccCash .pcOrderS {
   width: .3rem;
   font-size: .2rem;
   height: .3rem;
@@ -332,7 +339,6 @@ a:focus {
   color: #ffc529; }
 
 .reciveFooter {
-  padding: .1rem;
   width: 100%;
   position: fixed;
   box-sizing: border-box;
@@ -625,5 +631,254 @@ a:focus {
 #pay-type #animatebox .address-info .icon i {
   text-align: right;
   color: #999; }
+
+.pcQuestions {
+  border-bottom: 1px solid #ECECEC; }
+  .pcQuestions ul {
+    background: #fff;
+    padding: 0 .1rem .1rem .1rem;
+    font-size: .14rem; }
+    .pcQuestions ul .FAQ div:nth-child(1) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center; }
+      .pcQuestions ul .FAQ div:nth-child(1) h2 {
+        padding-top: .1rem;
+        font-weight: 400;
+        font-size: .18rem;
+        color: #333; }
+      .pcQuestions ul .FAQ div:nth-child(1) i {
+        font-size: .2rem; }
+    .pcQuestions ul .FAQ p:nth-child(2) {
+      color: #999;
+      background: #fffbf4;
+      margin-top: .1rem;
+      padding: .1rem;
+      border: 1px solid #ececec;
+      border-radius: .1rem; }
+    .pcQuestions ul .FAQ p:nth-child(3) {
+      margin-top: .1rem; }
+
+.pcHuM div:nth-child(1) {
+  box-sizing: border-box;
+  width: 100%;
+  padding: .1rem; }
+  .pcHuM div:nth-child(1) img {
+    width: 100%; }
+.pcHuM .swiper-container {
+  background: #fff;
+  height: 5.2rem;
+  border-bottom: 1px solid #ECECEC;
+  border-right: 1px solid #ECECEC;
+  margin: -.7rem .35rem 0 .35rem; }
+  .pcHuM .swiper-container p {
+    text-indent: 1em;
+    margin: 0 .3rem 0 .2rem;
+    color: #5f5f5f;
+    font-size: .175rem; }
+  .pcHuM .swiper-container .swiper-pagination-bullet-active {
+    background: #ff5f00;
+    margin: 0 3px; }
+
+.pcMyCollection {
+  color: #5a5a5a; }
+  .pcMyCollection form {
+    margin-top: .6rem; }
+  .pcMyCollection .head {
+    position: fixed;
+    width: 3.55rem;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    background: #fff;
+    padding: .1rem;
+    border-bottom: 1px solid #ECECEC;
+    display: flex;
+    justify-content: space-between;
+    font-size: .16rem; }
+    .pcMyCollection .head i {
+      font-size: .2rem; }
+    .pcMyCollection .head div:nth-child(1) i {
+      width: .3rem;
+      height: .3rem;
+      display: inline-block;
+      text-align: center;
+      line-height: .3rem;
+      border-radius: .1rem;
+      color: #fff; }
+    .pcMyCollection .head div:nth-child(1) i.icon-fill85 {
+      background: #fab639; }
+    .pcMyCollection .head div:nth-child(1) i.icon-checkbox1 {
+      color: #5a5a5a; }
+    .pcMyCollection .head div:nth-child(2) {
+      line-height: .3rem; }
+  .pcMyCollection .content {
+    font-size: .15rem;
+    background: #fff;
+    color: #333;
+    margin-top: .1rem;
+    padding: .1rem;
+    border-bottom: 1px solid #ECECEC; }
+    .pcMyCollection .content div:nth-child(1) {
+      padding-bottom: .1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center; }
+      .pcMyCollection .content div:nth-child(1) .collectTime {
+        color: #5a5a5a; }
+    .pcMyCollection .content .contentList {
+      display: flex;
+      align-items: center;
+      padding-top: .1rem;
+      justify-content: space-between; }
+      .pcMyCollection .content .contentList .collectCheckbox {
+        visibility: hidden;
+        padding-right: .1rem; }
+        .pcMyCollection .content .contentList .collectCheckbox i {
+          font-size: .2rem; }
+      .pcMyCollection .content .contentList .collectCheckbox.active {
+        color: #fab639; }
+      .pcMyCollection .content .contentList .collectImg {
+        width: .8rem;
+        height: .85rem;
+        overflow: hidden; }
+        .pcMyCollection .content .contentList .collectImg img {
+          width: 100%; }
+      .pcMyCollection .content .contentList .collectDescribe {
+        width: 2.57rem;
+        padding-left: .1rem; }
+        .pcMyCollection .content .contentList .collectDescribe p:nth-child(1) {
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          font-size: .19rem;
+          margin-bottom: .16rem; }
+        .pcMyCollection .content .contentList .collectDescribe .dress {
+          display: flex;
+          justify-content: space-between;
+          align-items: center; }
+          .pcMyCollection .content .contentList .collectDescribe .dress .Pcicon {
+            color: #cb39f5; }
+          .pcMyCollection .content .contentList .collectDescribe .dress i {
+            font-size: .18rem; }
+          .pcMyCollection .content .contentList .collectDescribe .dress .redWord {
+            font-size: .18rem;
+            color: #ff5f00; }
+            .pcMyCollection .content .contentList .collectDescribe .dress .redWord span {
+              font-size: .14rem; }
+          .pcMyCollection .content .contentList .collectDescribe .dress .grayWord {
+            display: inline-block;
+            position: relative;
+            color: #999; }
+          .pcMyCollection .content .contentList .collectDescribe .dress .grayWord:after {
+            content: '';
+            position: absolute;
+            top: .12rem;
+            right: -.05rem;
+            background: #999;
+            width: .35rem;
+            height: .015rem; }
+  .pcMyCollection .collectStatus {
+    visibility: hidden; }
+  .pcMyCollection .content.retire, .pcMyCollection .collectStatus {
+    color: #999; }
+  .pcMyCollection .content.retire .collectStatus {
+    visibility: visible; }
+  .pcMyCollection .loadding-box {
+    margin-bottom: 1em;
+    margin-top: 0.5em;
+    width: 100%;
+    text-align: center;
+    font-size: 1.2em;
+    color: #999;
+    display: none; }
+  .pcMyCollection .loadding-box img {
+    width: 2em;
+    height: auto;
+    margin: 0 auto;
+    display: block; }
+  .pcMyCollection .loadding-box.active {
+    display: block; }
+  .pcMyCollection #pcCollectingFooter {
+    display: none; }
+  .pcMyCollection .icon-checkbox {
+    color: #fab639 !important; }
+  .pcMyCollection .icon-checkbox1 {
+    color: #5a5a5a; }
+
+.accGray {
+  color: #999999; }
+
+.accOrange {
+  color: #ff5f00; }
+
+.pcAccFund {
+  width: 100%;
+  color: #333333;
+  font-size: 0.15rem; }
+  .pcAccFund .accFundTop {
+    width: 100%;
+    height: 0.9rem;
+    text-align: center;
+    background: #fff;
+    position: relative;
+    border-bottom: 1px solid #ececec;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    .pcAccFund .accFundTop .accRemain {
+      width: 20%;
+      height: 0.5rem;
+      padding: 0 0.1rem;
+      border-right: 1px solid #cccccc; }
+    .pcAccFund .accFundTop .accCredit {
+      width: 80%;
+      height: 0.5rem;
+      padding: 0 0.1rem; }
+      .pcAccFund .accFundTop .accCredit .accCreditTit {
+        padding: .1rem 0; }
+      .pcAccFund .accFundTop .accCredit div {
+        display: flex;
+        justify-content: space-around; }
+        .pcAccFund .accFundTop .accCredit div span {
+          font-size: 0.13rem; }
+  .pcAccFund .accFundMid, .pcAccFund .ccCash {
+    margin-top: .1rem;
+    background: #fff;
+    border-bottom: 1px solid #ececec; }
+    .pcAccFund .accFundMid dl, .pcAccFund .ccCash dl {
+      width: 100%;
+      padding: 0 .1rem; }
+    .pcAccFund .accFundMid dd, .pcAccFund .ccCash dd {
+      height: 0.525rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center; }
+    .pcAccFund .accFundMid .accBill, .pcAccFund .ccCash .accBill {
+      width: 100%;
+      height: 0.4rem;
+      display: flex;
+      justify-content: space-between; }
+      .pcAccFund .accFundMid .accBill div, .pcAccFund .ccCash .accBill div {
+        display: flex;
+        justify-content: space-around;
+        align-items: center; }
+  .pcAccFund .accBuyTime {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+  .pcAccFund .accBuyTime {
+    color: #999; }
+  .pcAccFund .accBuyWord {
+    overflow: hidden;
+    width: 100%;
+    text-overflow: ellipsis;
+    white-space: nowrap; }
+  .pcAccFund .accBuy div:nth-child(1), .pcAccFund .accPhone div:nth-child(1), .pcAccFund .accSell div:nth-child(1) {
+    width: 1.5rem; }
+  .pcAccFund .accBuy div:nth-child(2), .pcAccFund .accPhone div:nth-child(2), .pcAccFund .accSell div:nth-child(2) {
+    width: 1rem;
+    text-align: center; }
 
 /*# sourceMappingURL=personalCenter.css.map */

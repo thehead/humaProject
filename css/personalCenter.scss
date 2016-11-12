@@ -1,3 +1,5 @@
+$orange:#ff5f00;
+$gray:#999999;
 html {
   width: 100%;
   height: 100%;
@@ -27,11 +29,11 @@ a:hover {
 a:focus {
   -moz-outline-style: none;
 }
-.pcUnderline{
+.pcUnderline,.pcUnderlineNormal{
   position: relative;
   color: #333;
 }
-.pcUnderline:after{
+.pcUnderline:after,.pcUnderlineNormal:after {
   content: '';
   position: absolute;
   right: -0.1rem;
@@ -39,6 +41,13 @@ a:focus {
   width: 3.65rem;
   height: 1px;
   background: #ddd9d3;
+}
+.pcUnderlineNormal{
+  padding-bottom: .1rem;
+}
+.pcUnderlineNormal:after{
+  width: 3.75rem;
+  left: -.1rem;
 }
 .pcHeader {
   background: #fff;
@@ -110,7 +119,7 @@ a:focus {
   color: #a5a5a5;
 }
 
-.pcOrder, .pcService, .pcFooter {
+.pcOrder,.ccCash, .pcService, .pcFooter {
   width: 100%;
   box-sizing: border-box;
   font-size: .15rem;
@@ -129,10 +138,10 @@ a:focus {
   top: .1rem;
 }
 
-.pcOrder ul, .pcOrder li {
+.pcOrder ul, .pcOrder li,.ccCash ul,.ccCash li {
   width: 100%;
 }
-.pcOrder .pcOrderS {
+.pcOrder .pcOrderS,.ccCash .pcOrderS {
   width: .3rem;
   font-size: .2rem;
   height: .3rem;
@@ -374,7 +383,6 @@ a:focus {
 }
 
 .reciveFooter{
-  padding: .1rem;
   width: 100%;
   position: fixed;
   box-sizing: border-box;
@@ -734,4 +742,343 @@ a:focus {
 #pay-type #animatebox .address-info .icon i {
   text-align: right;
   color: #999;
+}
+//pcQuestions
+.pcQuestions{
+  border-bottom: 1px solid #ECECEC;
+  ul{
+    background: #fff;
+    padding: 0 .1rem .1rem .1rem;
+    font-size: .14rem;
+
+    .FAQ{
+      div:nth-child(1){
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        h2{
+          padding-top: .1rem;
+          font-weight: 400;
+          font-size: .18rem;
+          color: #333;
+        }
+        i{
+          font-size: .2rem;
+        }
+      }
+      p:nth-child(2){
+        color: #999;
+        background: #fffbf4;
+        margin-top: .1rem;
+        padding: .1rem;
+        border: 1px solid #ececec;
+        border-radius: .1rem;
+      }
+      p:nth-child(3){
+        margin-top: .1rem;
+      }
+    }
+  }
+}
+//pcQuestions
+
+//aboutHuM
+.pcHuM{
+  div:nth-child(1){
+    box-sizing: border-box;
+    width: 100%;
+    padding: .1rem;
+    img{
+      width: 100%;
+    }
+  }
+ .swiper-container{
+   background: #fff;
+   height: 5.2rem;
+   border-bottom: 1px solid #ECECEC;
+   border-right: 1px solid #ECECEC;
+   margin: -.7rem .35rem 0 .35rem;
+   p{
+     text-indent:1em;
+     margin: 0 .3rem 0 .2rem;
+     color: #5f5f5f;
+     font-size: .175rem;
+   }
+   .swiper-pagination-bullet-active{
+      background: #ff5f00;
+      margin: 0 3px;
+   }
+ }
+}
+//aboutHuM
+
+//pcMySales
+.pcMyCollection{
+  color: #5a5a5a;
+  form{
+    margin-top: .6rem;
+  }
+  .head{
+    position: fixed;
+    width: 3.55rem;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    background: #fff;
+    padding: .1rem;
+    border-bottom: 1px solid #ECECEC;
+    display: flex;
+    justify-content: space-between;
+    font-size: .16rem;
+    i{
+      font-size: .2rem;
+    }
+    div:nth-child(1){
+      i{
+        width: .3rem;
+        height: .3rem;
+        display: inline-block;
+        text-align: center;
+        line-height: .3rem;
+        border-radius: .1rem;
+        color: #fff;
+      }
+      i.icon-fill85{
+        background: #fab639;
+      }
+      i.icon-checkbox1{
+        color: #5a5a5a;
+      }
+    }
+
+    div:nth-child(2){
+      line-height: .3rem;
+    }
+  }
+  .content{
+    font-size: .15rem;
+    background: #fff;
+    color: #333;
+    margin-top: .1rem;
+    padding: .1rem;
+    border-bottom: 1px solid #ECECEC;
+    div:nth-child(1){
+      padding-bottom: .1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .collectTime{
+        color: #5a5a5a;
+      }
+    }
+    .contentList{
+      display: flex;
+      align-items: center;
+      padding-top: .1rem;
+      justify-content: space-between;
+      .collectCheckbox{
+        visibility: hidden;
+        padding-right: .1rem;
+        i{
+          font-size: .2rem;
+        }
+      }
+      .collectCheckbox.active{
+        color: #fab639;
+      }
+      .collectImg{
+        width: .8rem;
+        height: .85rem;
+        overflow: hidden;
+        img{
+          width: 100%;
+        }
+      }
+      .collectDescribe{
+        width: 2.57rem;
+        padding-left: .1rem;
+        p:nth-child(1){
+          overflow: hidden;
+          text-overflow:ellipsis;
+          white-space: nowrap;
+          font-size: .19rem;
+          margin-bottom: .16rem;
+        }
+        .dress{
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          .Pcicon{
+            color: #cb39f5;
+          }
+          i{
+            font-size: .18rem;
+          }
+          .redWord{
+            font-size: .18rem;
+            color: #ff5f00;
+            span{
+              font-size: .14rem;
+            }
+          }
+          .grayWord{
+            display: inline-block;
+            position: relative;
+            color: #999;
+          }
+          .grayWord:after{
+            content: '';
+            position: absolute;
+            top: .12rem;
+            right: -.05rem;
+            background: #999;
+            width: .35rem;
+            height: .015rem;
+          }
+        }
+      }
+    }
+  }
+  .collectStatus{
+    visibility: hidden;
+  }
+  .content.retire,.collectStatus{
+    color: #999;
+  }
+  .content.retire .collectStatus{
+    visibility: visible;
+  }
+  .loadding-box {
+    margin-bottom: 1em;
+    margin-top: 0.5em;
+    width: 100%;
+    text-align: center;
+    font-size: 1.2em;
+    color: #999;
+    display: none;
+  }
+  .loadding-box img {
+    width: 2em;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+  }
+  .loadding-box.active {
+    display: block;
+  }
+  #pcCollectingFooter{
+    display: none;
+  }
+  .icon-checkbox{
+    color: #fab639!important;
+  }
+  .icon-checkbox1{
+    color: #5a5a5a;
+  }
+}
+//pcMySales
+
+
+//accountFund
+.accGray{
+  color:$gray
+}
+.accOrange{
+  color:$orange;
+}
+.pcAccFund{
+  width:100%;
+  color:#333333;
+  font-size: 0.15rem;
+
+  //accFundTop
+  .accFundTop{
+    width:100%;
+    height:0.9rem;
+    text-align: center;
+    background:#fff;
+    position:relative;
+    border-bottom: 1px solid #ececec;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    .accRemain{
+      width:20%;
+      height:0.5rem;
+      padding:0 0.1rem;
+      border-right:1px solid #cccccc;
+    }
+    .accCredit{
+      width:80%;
+      height:0.5rem;
+      padding:0 0.1rem;
+      .accCreditTit{
+        padding:.1rem 0;
+      }
+      div{
+        display: flex;
+        justify-content: space-around;
+        span{
+          font-size: 0.13rem;
+        }
+      }
+    }
+  }
+
+  //accFundMid
+  .accFundMid,.ccCash{
+    margin-top: .1rem;
+    background:#fff;
+    border-bottom: 1px solid #ececec;
+    dl{
+      width:100%;
+      padding:0 .1rem;
+    }
+    dd{
+      height:0.525rem;
+      //border-bottom:1px solid #ccc;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+    .accBill{
+      width:100%;
+      height:0.4rem;
+      display:flex;
+      justify-content: space-between;
+      //border-bottom:1px solid #ccc;
+      div{
+        display: flex;
+        justify-content: space-around;
+        align-items:center;
+      }
+    }
+  }
+  .accBuyTime{
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items:center;
+  }
+  .accBuyTime{
+    color: #999;
+  }
+  .accBuyWord{
+    overflow: hidden;
+    width: 100%;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+  }
+  .accBuy,.accPhone,.accSell{
+    div:nth-child(1){
+      width: 1.5rem;
+    }
+    div:nth-child(2){
+      width: 1rem;
+      text-align: center;
+    }
+  }
+  .ccCash{
+
+  }
 }

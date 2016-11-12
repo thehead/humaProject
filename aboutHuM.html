@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/iconfont/iconfont.css"/>
+    <link rel="stylesheet" type="text/css" href="css/swiper-3.3.1.min.css"/>
+    <link rel="stylesheet" href="css/personalCenter.css">
+    <script>
+        (function () {
+            var vw=document.documentElement.clientWidth,
+                    html=document.querySelector('html');
+            var font=html.style.fontSize=(vw/375>2?'200px':(vw/375*100+'px'));
+            console.log(font);
+        })()
+    </script>
+</head>
+<body>
+    <section class="pcHuM">
+        <div>
+            <img src="images/aboutHuM.jpg" alt="关于虎妈">
+        </div>
+        <div class="swiper-container" >
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <p>《虎妈猫爸》热播，儿童教育成为热门话题，教育路上父母受反哺，“孩子是成人最好的老师”，虎妈赵薇为了爱女茜茜上最好的第一小学，掷600多万买了一个60平学区房，看看最开始的破旧不堪的二手小两房怎么改造，变温馨的。</p>
+                </div>
+                <div class="swiper-slide">
+                    <p>《虎妈猫爸》热播，儿童教育成为热门话题，教育路上父母受反哺，“孩子是成人最好的老师”，虎妈赵薇为了爱女茜茜上最好的第一小学，掷600多万买了一个60平学区房，看看最开始的破旧不堪的二手小两房怎么改造，变温馨的。</p>
+                </div>
+                <div class="swiper-slide">
+                    <p>《虎妈猫爸》热播，儿童教育成为热门话题，教育路上父母受反哺，“孩子是成人最好的老师”，虎妈赵薇为了爱女茜茜上最好的第一小学，掷600多万买了一个60平学区房，看看最开始的破旧不堪的二手小两房怎么改造，变温馨的。</p>
+                </div>
+                <div class="swiper-slide">
+                    <p>《虎妈猫爸》热播，儿童教育成为热门话题，教育路上父母受反哺，“孩子是成人最好的老师”，虎妈赵薇为了爱女茜茜上最好的第一小学，掷600多万买了一个60平学区房，看看最开始的破旧不堪的二手小两房怎么改造，变温馨的。</p>
+                </div>
+            </div>
+            <!-- 如果需要分页器 -->
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+<script src="js/swiper-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/zepto_1.1.3.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    var mySwiper = new Swiper ('.swiper-container', {
+        direction: 'horizontal',
+        loop: true,
+        // 如果需要分页器
+        pagination: '.swiper-pagination'
+    });
+</script>
+</body>
+</html>
