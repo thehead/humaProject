@@ -11,9 +11,9 @@
     <link rel="stylesheet" href="css/personalCenter.css">
     <script>
         (function () {
-            var vw=document.documentElement.clientWidth,
-                    html=document.querySelector('html');
-            var font=html.style.fontSize=(vw/375>2?'200px':(vw/375*100+'px'));
+            var vw = document.documentElement.clientWidth,
+                    html = document.querySelector('html');
+            var font = html.style.fontSize = (vw / 375 > 2 ? '200px' : (vw / 375 * 100 + 'px'));
             console.log(font);
         })()
     </script>
@@ -41,16 +41,38 @@
                 </div>
                 <div class="newAdress pcUnderline">
                 <span>
-                    -省份-
-                    <i class="iconfont icon-unfold"></i>
+                    <!-- -省份- -->
+                    <!--<i class="iconfont icon-unfold"></i>-->
+                    <select>
+                        <option value="">—省份—</option>
+                        <option selected value="">北京市</option>
+                        <option value="">北京市</option>
+                        <option value="">北京市</option>
+                        <option value="">北京市</option>
+                        <option value="">北京市</option>
+                        <option value="">北京市</option>
+                    </select>
                 </span>
                     <span>
-                    -市/区-
-                    <i class="iconfont icon-unfold"></i>
+                     <!-- -市/区- -->
+                    <!--<i class="iconfont icon-unfold"></i>-->
+                        <select>
+                        <option value="" >—市／区—</option>
+                        <option selected value="">北京市</option>
+                    </select>
                 </span>
                     <span>
-                    -县/区-
-                    <i class="iconfont icon-unfold"></i>
+                    <!-- -县/区- -->
+                    <!--<i class="iconfont icon-unfold"></i>-->
+                        <select>
+                        <option value="">—县／区—</option>
+                        <option selected value="">海淀区</option>
+                        <option value="">海淀区</option>
+                        <option value="">海淀区</option>
+                        <option value="">海淀区</option>
+                        <option value="">海淀区</option>
+                        <option value="">海淀区</option>
+                    </select>
                 </span>
                 </div>
                 <div class="pcAdressSlect">
@@ -68,9 +90,11 @@
     </form>
 </section>
 <footer class="reciveFooter">
-    <span>
-        保存
-    </span>
+    <a href="personalFile.html">
+         <span>
+            保存
+        </span>
+    </a>
 </footer>
 <script src="js/zepto_1.1.3.js" type="text/javascript" charset="utf-8"></script>
 <script src="js/personalCenter.js" type="text/javascript" charset="utf-8"></script>

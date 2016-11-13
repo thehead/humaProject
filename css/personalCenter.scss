@@ -128,7 +128,29 @@ a:focus {
   display: -ms-flexbox;
   display: flex;
 }
-
+#animatebox{
+  padding: .2rem 0;
+  border-radius: .1rem;
+  text-align: center;
+  div{
+    label{
+      width: 45%;
+      display: inline-block;
+      text-align: center;
+    }
+    #sexConfirmBtn{
+      display: inline-block;
+      margin-top: .1rem;
+      padding: .05rem .15rem;
+      background: #ff5f00;
+      color: #fff;
+      border-radius: .1rem;
+    }
+    #sexConfirmBtn:focus{
+      outline: none;
+    }
+  }
+}
 .pcAllOrders {
   border-bottom: 1px solid #ede9e3;
   margin-bottom: .12rem;
@@ -141,7 +163,7 @@ a:focus {
 .pcOrder ul, .pcOrder li,.ccCash ul,.ccCash li {
   width: 100%;
 }
-.pcOrder .pcOrderS,.ccCash .pcOrderS {
+.pcOrder .pcOrderS, .pcOrderS {
   width: .3rem;
   font-size: .2rem;
   height: .3rem;
@@ -445,6 +467,7 @@ a:focus {
       &:after{
         content: '';
         position: absolute;
+        top: 0;
         right: 0;
         height: 100%;
         width: 1px;
@@ -976,109 +999,270 @@ a:focus {
     color: #5a5a5a;
   }
 }
+
 //pcMySales
-
-
-//accountFund
-.accGray{
-  color:$gray
-}
-.accOrange{
-  color:$orange;
-}
-.pcAccFund{
-  width:100%;
-  color:#333333;
-  font-size: 0.15rem;
-
-  //accFundTop
-  .accFundTop{
-    width:100%;
-    height:0.9rem;
-    text-align: center;
-    background:#fff;
-    position:relative;
-    border-bottom: 1px solid #ececec;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    .accRemain{
-      width:20%;
-      height:0.5rem;
-      padding:0 0.1rem;
-      border-right:1px solid #cccccc;
-    }
-    .accCredit{
-      width:80%;
-      height:0.5rem;
-      padding:0 0.1rem;
-      .accCreditTit{
-        padding:.1rem 0;
-      }
-      div{
-        display: flex;
-        justify-content: space-around;
-        span{
-          font-size: 0.13rem;
+.pcMySales{
+  color: #333;
+  .header{
+    background: #fffbf4;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+  }
+  .container{
+    margin-top: 2.04rem;
+  }
+  .head{
+    background: #fff;
+    .under{
+      border-bottom: 1px solid #ececec;
+      .salesIcon{
+        i{
+          width: .3rem;
+          font-size: .2rem;
+          height: .3rem;
+          margin: .1rem;
+          text-align: center;
+          color: #fff;
+          border-radius: .1rem;
+          display: inline-block;
+          background: #fab639;
         }
       }
     }
   }
-
-  //accFundMid
-  .accFundMid,.ccCash{
-    margin-top: .1rem;
-    background:#fff;
+  .saleStatus{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     border-bottom: 1px solid #ececec;
-    dl{
-      width:100%;
-      padding:0 .1rem;
+    padding: .1rem;
+    box-sizing: border-box;
+    div{
+      text-align: center;
+      width: 33%;
+      font-size: .155rem;
+      p:nth-child(2){
+        font-size: .19rem;
+        color: #ff5f00;
+      }
+      p:nth-child(3){
+        color: #999;
+        font-size: .13rem;
+      }
     }
-    dd{
-      height:0.525rem;
-      //border-bottom:1px solid #ccc;
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
+    div:nth-child(1),div:nth-child(3){
+      p:nth-child(3){
+        visibility: hidden;
+      }
     }
-    .accBill{
-      width:100%;
-      height:0.4rem;
-      display:flex;
+    div:nth-child(2){
+      width: 34%;
+      border-left: 2px solid #ececec;
+      border-right: 2px solid #ececec;
+    }
+  }
+  .collectStatus{
+    color: #ff5f00;
+  }
+  .collectStatus.cancle{
+    color: #5a5a5a;
+  }
+  .sellect{
+    margin-top: .1rem;
+    padding: .1rem 0;
+    border-bottom: 1px solid #ececec;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .myChange{
+      width: 25%;
+      text-align: center;
+    }
+    .myChange.active{
+      color: #ff5f00;
+    }
+  }
+  .myList{
+    border-bottom: 1px solid #ececec;
+    background: #fff;
+    padding: 0 .1rem;
+    margin-bottom: .1rem;
+    .pcUnderlineNormal{
+      padding: .1rem 0;
+      display: flex;
       justify-content: space-between;
-      //border-bottom:1px solid #ccc;
-      div{
-        display: flex;
-        justify-content: space-around;
-        align-items:center;
+      align-items: center;
+      color: #333;
+    }
+    .contentList{
+      display: flex;
+      align-items: center;
+      padding: .1rem 0;
+      justify-content: space-between;
+      .collectImg{
+        width: .8rem;
+        height: .85rem;
+        padding: 0 .2rem 0 .1rem;
+        overflow: hidden;
+          img{
+            width: 100%;
+        }
+      }
+      .collectDescribe{
+        width: 2.6rem;
+        p:nth-child(1){
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          font-size: .187rem;
+          margin-bottom: .16rem;
+          color: #5a5a5a;
+        }
+        div:nth-child(2){
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+      }
+      .Pcicon{
+        color: #cb39f5;
+      }
+      .redWord{
+        color: #ff5f00;
       }
     }
   }
-  .accBuyTime{
-    display:flex;
-    flex-direction:column;
-    justify-content: center;
-    align-items:center;
-  }
-  .accBuyTime{
-    color: #999;
-  }
-  .accBuyWord{
+  .confirmBox{
+    position: relative;
     overflow: hidden;
+    span{
+      margin: .1rem 0;
+      float: right;
+      display: inline-block;
+      padding: .05rem;
+      border: 1px solid #999;
+      border-radius: .05rem;
+    }
+  }
+  .loadding-box {
+    margin-bottom: 1em;
+    margin-top: 0.5em;
     width: 100%;
-    text-overflow:ellipsis;
-    white-space: nowrap;
+    text-align: center;
+    font-size: 1.2em;
+    color: #999;
+    display: none;
   }
-  .accBuy,.accPhone,.accSell{
-    div:nth-child(1){
-      width: 1.5rem;
-    }
-    div:nth-child(2){
-      width: 1rem;
-      text-align: center;
-    }
+  .loadding-box img {
+    width: 2em;
+    height: auto;
+    margin: 0 auto;
+    display: block;
   }
-  .ccCash{
-
+  .loadding-box.active {
+    display: block;
   }
 }
+
+//pcMySales
+//sellDetails
+.sellDetails{
+  section:nth-child(1){
+    font-size: .16rem;
+  }
+  .head,.content,.describe,.infomation{
+    background: #fff;
+    margin-bottom: .1rem;
+    border-bottom: 1px solid #ececec;
+    font-size: .145rem;
+  }
+  .content div span:nth-child(1),.describe div span:nth-child(1){
+    font-size: .15rem;
+  }
+  .content,.describe{
+    padding: 0 .1rem;
+  }
+  .head,.content div,.describe div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .1rem 0;
+  }
+  .head{
+    padding: .1rem;
+  }
+  .saleAlready{
+    color: #ff5f00;
+    font-size: .16rem;
+  }
+  .infomation{
+    padding: 0 .1rem;
+    p{
+      padding: .1rem 0;
+    }
+    p:nth-child(1){
+      font-size: .16rem;
+    }
+  }
+  .activeWord{
+    color: #ff5f00;
+  }
+  .confirmWord{
+    color: #999;
+  }
+  .confirmP{
+    input{
+      text-align: right;
+      width: .45rem;
+    }
+  }
+  .VipServe{
+    padding: .15rem;
+    p{
+      font-size: .155rem;
+      line-height: .28rem;
+      color: #999;
+      text-align: center;
+    }
+    span{
+      color: #ff5f00;
+      font-size: .16rem;
+    }
+    .vipWord{
+      font-size: .17rem;
+      line-height: .3rem;
+      color: #333;
+    }
+    a{
+      text-decoration: underline;
+      color: #ff5f00;
+    }
+  }
+  .VipServeNumber{
+    background: #fff;
+    padding: .1rem;
+    padding-bottom: .06rem;
+    text-align: center;
+    color: #999;
+    border-bottom: 1px solid #ececec;
+    i{
+      vertical-align: middle;
+      font-size: .33rem;
+    }
+    span{
+      font-size: .2rem;
+    }
+  }
+  .changeCountHead{
+    display: block;
+  }
+}
+//sellDetails
+
+
+
+
