@@ -133,7 +133,7 @@
 		</div>
 		<div class="right-footer">
 			<a class="add-cart" href="#">加入购物车</a>
-			<a class="now-buy" href="#">立即购买</a>
+			<a class="now-buy-ext" href="#">立即购买</a>
 		</div>
 	</footer>
 	
@@ -170,9 +170,14 @@
 					$(".scroll-msg").html("下拉返回商品基本信息");
 					$(".slide-up img").removeClass("active");
 					$(".slide-up i").addClass("icon-shangla");
-					goTop();
+					if(num==0){
+						goTop();
+						console.log(1)
+					}
+					num++;
 					mum = 0;
 				},1500);
+
 			}else if(scrollTop==0){
 				$(".slide-up img").removeClass("active");
 				$(".slide-up i").addClass("icon-shangla");
@@ -185,6 +190,7 @@
 						$(".shop-content-box").addClass("active");
 						$("#shop-base").removeClass("active");
 						$(".scroll-msg").html("向上滑动加载图文详情");
+						num=0;
 					},1500);
 				}
 				mum++;
