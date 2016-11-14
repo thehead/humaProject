@@ -36,10 +36,16 @@
                         <span>默认地址</span>
                     </div>
                     <div class="slectright">
-                        <i class="iconfont icon-pingjia"></i>
-                        <span class="slectrightWord">编辑</span>
-                        <i class="iconfont icon-shanchu"></i>
-                        <span>删除</span>
+                        <p>
+                            <a href="newAdress.html">
+                                <i class="iconfont icon-pingjia"></i>
+                                <span class="slectrightWord">编辑</span>
+                            </a>
+                        </p>
+                        <p class="deleteAdress">
+                            <i class="iconfont icon-shanchu"></i>
+                            <span>删除</span>
+                        </p>
                     </div>
                 </div>
             </li>
@@ -57,10 +63,16 @@
                         <span>设为默认</span>
                     </div>
                     <div class="slectright">
-                        <i class="iconfont icon-pingjia"></i>
-                        <span class="slectrightWord">编辑</span>
-                        <i class="iconfont icon-shanchu"></i>
-                        <span>删除</span>
+                        <a href="newAdress.html">
+                            <p>
+                                <i class="iconfont icon-pingjia"></i>
+                                <span class="slectrightWord">编辑</span>
+                            </p>
+                        </a>
+                       <p class="deleteAdress">
+                           <i class="iconfont icon-shanchu"></i>
+                           <span>删除</span>
+                       </p>
                     </div>
                 </div>
             </li>
@@ -77,6 +89,12 @@
 <script src="js/zepto_1.1.3.js" type="text/javascript" charset="utf-8"></script>
 <script src="js/personalCenter.js" type="text/javascript" charset="utf-8"></script>
 <script>
+    $(function () {
+        var $deleteAdress=$('.deleteAdress');
+        $deleteAdress.on('touchstart',function () {
+            $(this).parents('.address').remove()
+        })
+    })
 </script>
 </body>
 </html>

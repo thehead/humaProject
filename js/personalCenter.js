@@ -49,7 +49,7 @@
     $pcCollectEdit.on('touchstart', function () {
             //我的收藏状态
             if ($('#pcCollectionSellect').children('i').hasClass('icon-fill85')) {
-                $(this).children('.iconfont').removeClass().addClass('iconfont icon-huiyuan');
+                $(this).children('.iconfont').removeClass().addClass('iconfont icon-quxiao');
                 $(this).children('span').html('取消编辑');
                 $('#pcCollectionSellect').children('span').html('全选');
                 $('#pcCollectingFooter').show();
@@ -61,7 +61,7 @@
             }
             //取消编辑状态
             else {
-                $(this).children('.iconfont').removeClass('icon-huiyuan').addClass('icon-pingjia');
+                $(this).children('.iconfont').removeClass('icon-quxiao').addClass('icon-pingjia');
                 $(this).children('span').html('编辑');
                 $('#pcCollectionSellect').children('span').html('我的收藏');
                 $('#pcCollectionSellect').children('i').removeClass().addClass('iconfont icon-fill85');
@@ -139,3 +139,31 @@ $('.myChange').on('touchstart',function () {
         })
     }
 });
+
+
+// 手机号码检验
+$('#submit').on('click',function () {
+   var phone=$('#myPhone').val();
+    if (phone===''){
+        layer.msg("手机号不能为空!");
+        return false
+    }else {
+        location.href='newAdress.html';
+    }
+});
+
+
+/**
+ *模拟layer模态框
+ */
+var layer = new Object();
+layer.msg = function(e){
+    //alert(e);
+    var str = '<div id="layerbox" style="position: absolute;width:100%;height:100%;top:0px;display: table;text-align: center;">'+
+        '<p style="padding:10px 20px;font-size:1.3em;color:#333;display: table-cell;vertical-align: middle"><span style="display: inline-block;padding:10px 20px;border-radius:5px;background: rgba(0,0,0,0.3);color:#FFF;">'+e+'</span></p></div>';
+    $("body").append(str);
+    setInterval(function(){
+        $("#layerbox").remove();
+    },3000)
+
+};

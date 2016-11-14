@@ -309,14 +309,44 @@ a:focus {
   display: block;
 }
 .pcFooter ul .icon-add {
-  padding: .15rem .175rem;
+  padding: .15rem .168rem;
   border: 1px solid #86858e;
   border-radius: 50%;
   background-color: #eee;
   position: relative;
   bottom: .15rem;
 }
-
+.pcOrder{
+  .huM{
+    margin-bottom: .9rem!important;
+  }
+}
+.personalCenter{
+  #footer{
+    li{
+      font-size: .13rem;
+      i{
+        font-size: .255rem;
+      }
+    }
+  }
+}
+//kefu
+.personalKefu{
+  #kf{
+    position: fixed;
+    right: 3%;
+    bottom: 15%;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    text-align: center;
+    line-height: 40px;
+  }
+}
+//kefu
 //personalFile
 .pcPortraitWord{
   text-decoration: underline;
@@ -328,7 +358,7 @@ a:focus {
     font-size: .2rem;
     color: #86858e;
     top: -.14rem;
-    left: -.2rem;
+    left: -.7rem;
   }
 }
 //personalFile
@@ -337,7 +367,7 @@ a:focus {
 .pcRecive{
   .address{
     background: #fff;
-    padding: .1rem;
+    padding: 0 .1rem;
     box-sizing: border-box;
     margin-bottom: .1rem;
     border-bottom: 1px solid #ECECEC;
@@ -352,14 +382,14 @@ a:focus {
     }
     .slectright{
       box-sizing: border-box;
-      padding-left: .6rem;
+      padding-left: .5rem;
     }
     .slectrightWord{
       margin-right: .1rem;
     }
     .pcAdressSlect{
       display: block;
-      padding-top: .1rem;
+      padding: .1rem 0;
       overflow: hidden;
       div:nth-child(1),div:nth-child(2){
         width: 50%;
@@ -377,6 +407,8 @@ a:focus {
   .describe{
     font-size: .18rem;
     margin: .1rem 0;
+    margin-top: 0;
+    padding-top: .1rem;
     display: flex;
     color: #4e4e4e;
     span:nth-child(1),span:nth-child(2){
@@ -429,14 +461,19 @@ a:focus {
   input:focus{
     outline: none;
   }
+  .describe{
+    padding-top: 0;
+  }
   .describe:nth-child(1){
-    padding-bottom: .1rem;
+    padding: .1rem 0;
   }
   .setDefault{
     padding-top: .1rem;
    padding-left: .1rem;
-    .icon-checkbox1{
-      font-size: .13rem;
+    i{
+      font-size: .19rem;
+      position: relative;
+      top: .01rem;
     }
   }
   .newAdress{
@@ -444,10 +481,20 @@ a:focus {
     padding-bottom: .1rem;
     display: flex;
     justify-content: center;
+    //选择框
+    select{
+      border: none;
+      background: transparent;
+      text-align: center;
+    }
+    select:focus{
+      outline: none;
+    }
+
 
     span:nth-child(1),span:nth-child(2),span:nth-child(3){
       width: 33%;
-      padding-left: .2rem;
+      padding-left: .4rem;
       text-align: center;
       .iconfont{
         padding: 0 .1rem;
@@ -483,13 +530,16 @@ a:focus {
   input:focus{
     outline: none;
   }
+  .phoneDescribe{
+    margin: 0;
+    padding: 0 0 .1rem 0;
+  }
   i{
     font-size: .25rem;
     padding-right: .1rem;
   }
   .address{
     padding: 0 .1rem;
-    padding-top: .1rem;
   }
   .describe{
     margin-top: 0;

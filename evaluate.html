@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>商品分类</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="css/iconfont/iconfont.css"/>
+    <link rel="stylesheet" type="text/css" href="css/swiper-3.3.1.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+	<style>
+		.pingjia i{
+			font-size: 1.8rem;
+			padding: .7rem;
+			color: #999;
+		}
+	</style>
+</head>
+<body>
+	<header></header>
+	<section>
+		<!--订单列表-->
+		<div class="order-list evaluate">
+			<div class="orderbox background-write" style="margin-top:0px;">
+				<div class="boxtop">
+					<span class="isbuy">商品一</span>
+					<span class="date">2016-11-07 10:00</span>
+				</div>
+				<div class="boxcont">
+					<div class="thumbbox">
+						<img src="./images/img1.jpg" alt="" />
+					</div>
+					<div class="info">
+						<p class="shopname">这是虎妈二手商城的商品...</p>
+						<p class="shopcat">
+							<span class="catname">
+								<i class="iconfont icon-lianyiqun"></i>
+								女装
+							</span>
+							<span class="price">¥38.02</span>
+						</p>
+					</div>
+				</div>
+				<div class="pingjia">
+					<p class="act">
+						<i data-item="0" class="iconfont icon-pingjiabox"></i>
+						<i data-item="1" class="iconfont icon-pingjiabox"></i>
+						<i data-item="2" class="iconfont icon-pingjiabox"></i>
+						<i data-item="3" class="iconfont icon-pingjiabox"></i>
+						<i data-item="4" class="iconfont icon-pingjiabox"></i>
+					</p>
+				</div>
+			</div>
+			<div class="orderbox background-write">
+				<div class="boxtop">
+					<span class="isbuy">商品一</span>
+					<span class="date">2016-11-07 10:00</span>
+				</div>
+				<div class="boxcont">
+					<div class="thumbbox">
+						<img src="./images/img1.jpg" alt="" />
+					</div>
+					<div class="info">
+						<p class="shopname">这是虎妈二手商城的商品...</p>
+						<p class="shopcat">
+							<span class="catname">
+								<i class="iconfont icon-lianyiqun"></i>
+								女装
+							</span>
+							<span class="price">¥38.02</span>
+						</p>
+					</div>
+				</div>
+				<div class="pingjia">
+					<p class="act">
+						<i data-item="0" class="iconfont icon-pingjiabox"></i>
+						<i data-item="1" class="iconfont icon-pingjiabox"></i>
+						<i data-item="2" class="iconfont icon-pingjiabox"></i>
+						<i data-item="3" class="iconfont icon-pingjiabox"></i>
+						<i data-item="4" class="iconfont icon-pingjiabox"></i>
+					</p>
+				</div>
+			</div>
+			<div class="orderbox background-write">
+				<div class="boxtop">
+					<span class="isbuy">商品一</span>
+					<span class="date">2016-11-07 10:00</span>
+				</div>
+				<div class="boxcont">
+					<div class="thumbbox">
+						<img src="./images/img1.jpg" alt="" />
+					</div>
+					<div class="info">
+						<p class="shopname">这是虎妈二手商城的商品...</p>
+						<p class="shopcat">
+							<span class="catname">
+								<i class="iconfont icon-lianyiqun"></i>
+								女装
+							</span>
+							<span class="price">¥38.02</span>
+						</p>
+					</div>
+				</div>
+				<div class="pingjia">
+					<p class="act">
+						<i data-item="0" class="iconfont icon-pingjiabox"></i>
+						<i data-item="1" class="iconfont icon-pingjiabox"></i>
+						<i data-item="2" class="iconfont icon-pingjiabox"></i>
+						<i data-item="3" class="iconfont icon-pingjiabox"></i>
+						<i data-item="4" class="iconfont icon-pingjiabox"></i>
+					</p>
+				</div>
+			</div>
+
+
+		</div>
+		<div class="cancel-order">
+			<span class="now-pay">提交评价</span>
+		</div>
+		<!--客服-->
+		<div id="kf">
+			<i class="iconfont icon-kefu"></i>
+		</div>
+	</section>
+
+	
+	
+</body>
+
+	<script src="js/swiper-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/zepto_1.1.3.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+ 	<script>
+		$(function(){
+			var n = 5;
+			$(".pingjia").find("i").on("click",function(){
+				$(this).siblings().removeClass("active");
+				var _item = $(this).data("item");
+				for(var m=0;m<=_item;m++){
+					$(this).parent().children("i").eq(m).addClass("active");
+				}
+			});
+		});
+	</script>
+</html>
