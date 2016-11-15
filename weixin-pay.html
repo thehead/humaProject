@@ -13,35 +13,45 @@
 	<meta name="format-detection" content="telephone=no,email=no"><!--忽略页面的数字为电话，忽略email识别-->
 	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
-	<title>微信支付</title>
+	<title>支付成功</title>
     <link rel="stylesheet" type="text/css" href="css/reset.css"/>
     <link rel="stylesheet" type="text/css" href="css/iconfont/iconfont.css"/>
     <link rel="stylesheet" type="text/css" href="css/swiper-3.3.1.min.css"/>
     <link rel="stylesheet" type="text/css" href="css/animate.min.css"/>
     <link rel="stylesheet" type="text/css" href="css/style.css"/>
+	<style>
+		body{
+			background: #fffbf4;
+		}
+	</style>
 </head>
 <body>
 	<section class="msgbox">
-		<div class="msginfo">
-			<div class="pay-resault">
+		<div class="msginfo msginfoAdjust">
+			<div class="pay-resault pay-resault-adjust">
 				<i class="iconfont icon-weibiaoti2"></i>
 				<span class="success">支付成功</span>
-				<p class="order-info">
-					<span>订单编号:201608091120</span>
-					<span>实付金额:¥56.00元</span>
-					<span>支付方式:微信支付</span>
+				<p class="order-info order-infoAdjust">
+					<span class="order-message">
+						<span>订单编号:201608091120</span>
+						<span>实付金额:¥56.00元</span>
+						<span>支付方式:微信支付</span>
+					</span>
 				</p>
 			</div>
 		</div>
-		<div class="msgaction">
+		<div class="msgaction msgactionAdjust">
 			<a class="border-right" href="order.html">
-				<i class="iconfont icon-order"></i>
+				<i class="iconfont icon-order iconfont-adjust"></i>
 				<span>查看订单</span>
 			</a>
 			<a href="index.html">
 				<i class="iconfont icon-icon01"></i>
 				<span>逛逛首页</span>
 			</a>
+		</div>
+		<div id="kf">
+			<i class="iconfont icon-kefu"></i>
 		</div>
 	</section>
 </body>

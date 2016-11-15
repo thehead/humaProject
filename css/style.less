@@ -890,6 +890,9 @@ footer{
             width: 96%;
             margin:2% auto;
             overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
 
             .checkbox{
                 width:10%;
@@ -936,7 +939,6 @@ footer{
                     }
                 }
             }
-
         }
     }
 }
@@ -1061,6 +1063,9 @@ footer{
         width: 96%;
         margin:2% auto;
         overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
         .thumbbox{
             width:20%;
             float: left;
@@ -1175,6 +1180,17 @@ footer{
     }
     border-bottom:1px solid #ece8e2;
 }
+.myaccout{
+    input,p{
+        width: 52%;
+        box-sizing: border-box;
+    }
+    p{
+        width: 45%;
+        text-align: center;
+    }
+}
+
 .credit{
     margin-top:10px;
     text-align: center;
@@ -1351,6 +1367,20 @@ footer{
                 span{
                     display: block;
                 }
+                .order-message{
+                    margin-left: 30%;
+                    margin-top: 5%;
+                    width: 50%;
+                    text-align: left;
+                }
+            }
+        }
+        .pay-resault-adjust{
+            display: block;
+            padding-top: 20%;
+            .success{
+                color: @font-color-two;
+                font-size: 22px;
             }
         }
     }
@@ -1379,6 +1409,9 @@ footer{
                     color:@font-color-two;
                     border-left:1px solid #ece8e2;
                 }
+                &.iconfont-adjust{
+                    color: #fab639;
+                }
             }
             span{
                 font-size:1.2em;
@@ -1387,6 +1420,9 @@ footer{
         }
     }
 }
+.msgactionAdjust{
+    position: relative!important;
+ }
 
 //支付时选择快递
 #expressbox{
@@ -1645,8 +1681,16 @@ footer{
             .addcolor{
                 color:@font-color-two;
             }
+            .pay-resault-adjust{
+                padding-bottom: 0;
+            }
         }
     }
+    .msginfoAdjust{
+        height: auto;
+        position: relative;
+        margin-bottom: 10px;
+     }
     .act-msg{
         line-height:60px;
         font-size:1.2em;
@@ -1930,6 +1974,7 @@ footer{
             .thumbbox{
                 width:15%;
                 float: left;
+
                 img{
                     max-width:100%;
                 }
@@ -2078,6 +2123,10 @@ footer{
             }
         }
     }
+}
+.order-infoAdjust{
+    border-bottom: 0;
+    padding-bottom: 30px;
 }
 .order-address{
     margin-top:15px;

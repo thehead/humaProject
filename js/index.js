@@ -125,7 +125,7 @@ $(".select-all-box").on("click",function(){
         $(this).children("i").removeClass("icon-checkbox1");
         $(".all-check").attr("checked","checked");
     }
-})
+});
 
 $(".listbox").on("click",".checkbox",function(){
     var is_checked = $(this).children("input").is(':checked');
@@ -156,9 +156,11 @@ $(".del").on("click",function(){
         if($(this).is(':checked')){
             var del_id = $(this).data("name");
             $("#box"+del_id).remove();
+            // $(".total-num").html(getTotalNum(totalNum));
+            // $(".total-price").html(getTotalPrice(totalPrice));
         }
     });
-})
+});
 
 //选择收货地址
 $(function(){

@@ -846,6 +846,9 @@ footer ul .active {
   width: 96%;
   margin: 2% auto;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 .listbox .boxinfo .boxcont .checkbox {
   width: 10%;
@@ -1001,6 +1004,9 @@ footer ul .active {
   width: 96%;
   margin: 2% auto;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 .buy-shop-list .boxcont .thumbbox {
   width: 20%;
@@ -1101,6 +1107,15 @@ footer ul .active {
   color: #999;
   display: block;
   width: 100%;
+}
+.myaccout input,
+.myaccout p {
+  width: 52%;
+  box-sizing: border-box;
+}
+.myaccout p {
+  width: 45%;
+  text-align: center;
 }
 .credit {
   margin-top: 10px;
@@ -1272,6 +1287,20 @@ footer ul .active {
 .msgbox .msginfo .pay-resault .order-info span {
   display: block;
 }
+.msgbox .msginfo .pay-resault .order-info .order-message {
+  margin-left: 30%;
+  margin-top: 5%;
+  width: 50%;
+  text-align: left;
+}
+.msgbox .msginfo .pay-resault-adjust {
+  display: block;
+  padding-top: 20%;
+}
+.msgbox .msginfo .pay-resault-adjust .success {
+  color: #ff5f00;
+  font-size: 22px;
+}
 .msgbox .msgaction {
   position: fixed;
   width: 100%;
@@ -1304,8 +1333,14 @@ footer ul .active {
   color: #ff5f00;
   border-left: 1px solid #ece8e2;
 }
+.msgbox .msgaction a i.iconfont-adjust {
+  color: #fab639;
+}
 .msgbox .msgaction a span {
   font-size: 1.2em;
+}
+.msgactionAdjust {
+  position: relative!important;
 }
 #expressbox {
   position: fixed;
@@ -1567,6 +1602,14 @@ footer ul .active {
 }
 .msgbox .msginfo .pay-resault .addcolor {
   color: #ff5f00;
+}
+.msgbox .msginfo .pay-resault .pay-resault-adjust {
+  padding-bottom: 0;
+}
+.msgbox .msginfoAdjust {
+  height: auto;
+  position: relative;
+  margin-bottom: 10px;
 }
 .msgbox .act-msg {
   line-height: 60px;
@@ -1972,6 +2015,10 @@ footer ul .active {
 }
 .order-info .topinfo .post-info .icon i {
   text-align: right;
+}
+.order-infoAdjust {
+  border-bottom: 0;
+  padding-bottom: 30px;
 }
 .order-address {
   margin-top: 15px;
