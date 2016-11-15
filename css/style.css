@@ -227,19 +227,19 @@ section .listTop.huiben .more {
 }
 section .listTop.wanju {
   background: #FFF url(../images/wanju.jpg) no-repeat center;
-  background-size: 100% 100%;
+  background-size: cover;
 }
 section .listTop.nvzhuang {
   background: #FFF url(../images/nvzhuang.jpg) no-repeat center;
-  background-size: 100% 100%;
+  background-size: cover;
 }
 section .listTop.muying {
   background: #FFF url(../images/muying.jpg) no-repeat center;
-  background-size: 100% 100%;
+  background-size: cover;
 }
 section .listTop.huiben {
   background: #FFF url(../images/huiben.jpg) no-repeat center;
-  background-size: 100% 100%;
+  background-size: cover;
 }
 section .listTop .lTname {
   position: absolute;
@@ -329,7 +329,7 @@ section #kong {
 footer {
   position: fixed;
   bottom: 0;
-  z-index: 100px;
+  z-index: 100;
   width: 100%;
   height: 54px;
   background-color: #fff;

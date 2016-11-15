@@ -68,10 +68,12 @@
 		</div>
 		<!--最新寄售-->		
 		<div id="new">
-			<div class="nl">
-				<span class="nl1"><img src="./images/tzc_new.png"/></span>
-				<span class="nl2">最新寄售</span>
-			</div>	
+			<a href="shopinfo.html">
+				<div class="nl">
+					<span class="nl1"><img src="./images/tzc_new.png"/></span>
+					<span class="nl2">最新寄售</span>
+				</div>
+			</a>
 			<div class="swiper-container-new">
 				<div class="swiper-wrapper">
 					<div class="swiper-slide">
@@ -380,7 +382,7 @@
 		</div>
 		<!--kong-->
 		<div id="kong">
-			
+
 		</div>
 	</section>
 	<footer id="footer">
@@ -427,6 +429,8 @@
 			direction: 'horizontal',
 			loop: true,
 			autoplay:1000,
+			//用户点击后还可以轮播
+			autoplayDisableOnInteraction:false,
 			// 如果需要分页器
 			pagination: '.swiper-pagination',
 		});
