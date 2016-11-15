@@ -75,6 +75,7 @@
 
 
     $('.all').on('touchstart', function () {
+        if($(this).is(".icon-fill85")) return;
         var $icon_checkbox = $('.collectCheckbox i');
         if ($(this).is(".icon-checkbox1")) {
             $(this).removeClass('icon-checkbox1').addClass('icon-checkbox');
