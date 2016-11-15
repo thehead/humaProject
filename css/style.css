@@ -1339,6 +1339,22 @@ footer ul .active {
 .msgbox .msgaction a span {
   font-size: 1.2em;
 }
+.msgbox #kf {
+  position: fixed;
+  right: 3%;
+  bottom: 15%;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  text-align: center;
+  line-height: 40px;
+}
+.msgbox #kf .iconfont {
+  color: #ff5f00;
+  font-size: 30px;
+}
 .msgactionAdjust {
   position: relative!important;
 }
