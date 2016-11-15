@@ -123,17 +123,17 @@
 	<footer id="footer">
 		<div class="left-footer">
 			<a href="#">
-				<i class="iconfont icon-fill85"></i>
+				<i id="collectIcon" class="iconfont icon-fill85"></i>
 				<span>收藏</span>
 			</a>
-			<a href="#">
+			<a href="#" id="cartLayer">
 				<i class="iconfont icon-gouwuche"></i>
 				<span>购物车</span>
 			</a>
 		</div>
 		<div class="right-footer">
-			<a class="add-cart" href="#">加入购物车</a>
-			<a class="now-buy-ext" href="#">立即购买</a>
+			<a class="add-cart" href="cart.html">加入购物车</a>
+			<a class="now-buy-ext" href="buy.html">立即购买</a>
 		</div>
 	</footer>
 	
@@ -144,17 +144,46 @@
 	<script src="js/zepto_1.1.3.js" type="text/javascript" charset="utf-8"></script>
 	<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
  	<script>
+		//收藏点击效果
+		(function () {
+			var $collectIcon=$('#collectIcon');
+			var flag=false;
+			$collectIcon.on('touchstart',function () {
+				if (flag){
+					$(this).removeClass('icon-pingjiabox').addClass('icon-fill85');
+					flag=false;
+				}else {
+					$(this).removeClass('icon-fill85').addClass('icon-pingjiabox');
+					flag=true;
+				}
+			});
+			$collectIcon=null,
+					flag=null;
+		})();
+
+
+		//点击购物车弹出
+			(function () {
+				var $cartLayer=$('#cartLayer');
+				$cartLayer.on('touchstart',function () {
+					layer.msg('成功添加到购物车');
+				})
+			})();
+
+
+//		swiper
 		var mySwiper = new Swiper ('.swiper-container', {
 			direction: 'horizontal',
 			loop: true,
-			autoplay:1000,
+			autoplay:3000,
+			autoplayDisableOnInteraction:false,
 			// 如果需要分页器
 			pagination: '.num-total',
 			paginationType : 'custom',
 			paginationCustomRender: function (swiper, current, total) {
 				return "<div class='circle'>"+current + '/' + total+"</div>";
 			}
-		})
+		});
 		var num = 0;
 		var mum = 0;
 		$(window).scroll(function () {

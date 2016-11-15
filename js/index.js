@@ -269,6 +269,7 @@ $(function(){
             '</div>';
         $("#added-list").append(strHtml);
         layer.msg("添加成功!");
+        $('#added-div').show();
         $("input").val("");
         /*
          var strHtml = "";
@@ -411,7 +412,7 @@ function numSub(num1, num2) {
 var layer = new Object();
 layer.msg = function(e){
     //alert(e);
-    var str = '<div id="layerbox" style="position: absolute;width:100%;height:100%;top:0px;display: table;text-align: center;">'+
+    var str = '<div id="layerbox" style="z-index:10;position: absolute;width:100%;height:100%;top:0px;display: table;text-align: center;">'+
         '<p style="padding:10px 20px;font-size:1.3em;color:#333;display: table-cell;vertical-align: middle"><span style="display: inline-block;padding:10px 20px;border-radius:5px;background: rgba(0,0,0,0.3);color:#FFF;">'+e+'</span></p></div>';
     $("body").append(str);
     setInterval(function(){
