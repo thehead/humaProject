@@ -1,10 +1,10 @@
 
 @font-face {font-family: "iconfont";
-  src: url('iconfont.eot?t=1479013763821'); /* IE9*/
-  src: url('iconfont.eot?t=1479013763821#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('iconfont.woff?t=1479013763821') format('woff'), /* chrome, firefox */
-  url('iconfont.ttf?t=1479013763821') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
-  url('iconfont.svg?t=1479013763821#iconfont') format('svg'); /* iOS 4.1- */
+  src: url('iconfont.eot?t=1479263777057'); /* IE9*/
+  src: url('iconfont.eot?t=1479263777057#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('iconfont.woff?t=1479263777057') format('woff'), /* chrome, firefox */
+  url('iconfont.ttf?t=1479263777057') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('iconfont.svg?t=1479263777057#iconfont') format('svg'); /* iOS 4.1- */
 }
 
 .iconfont {
@@ -28,6 +28,8 @@
 
 .icon-phone:before { content: "\e601"; }
 
+.icon-review:before { content: "\e638"; }
+
 .icon-tuikuan:before { content: "\e6bf"; }
 
 .icon-kefu:before { content: "\e61c"; }
@@ -50,6 +52,8 @@
 
 .icon-checkbox1:before { content: "\e62c"; }
 
+.icon-quxiao:before { content: "\e612"; }
+
 .icon-wode:before { content: "\e64f"; }
 
 .icon-tianjia:before { content: "\e65b"; }
@@ -62,13 +66,13 @@
 
 .icon-weixinzhifu:before { content: "\e683"; }
 
-.icon-changjianwenti01:before { content: "\e639"; }
+.icon-changjianwenti01:before { content: "\e63a"; }
 
 .icon-qianbao:before { content: "\e603"; }
 
 .icon-qingji:before { content: "\e627"; }
 
-.icon-pingjia:before { content: "\e7a3"; }
+.icon-pingjiabox:before { content: "\e7a3"; }
 
 .icon-huigou003:before { content: "\e621"; }
 
@@ -102,7 +106,7 @@
 
 .icon-order1:before { content: "\e60a"; }
 
-.icon-pingjia1:before { content: "\e645"; }
+.icon-pingjia:before { content: "\e645"; }
 
 .icon-background-kefu:before { content: "\e609"; }
 
@@ -117,6 +121,10 @@
 .icon-huiyuan:before { content: "\e60e"; }
 
 .icon-tuihuo:before { content: "\e662"; }
+
+.icon-gender:before { content: "\e6d5"; }
+
+.icon-riqi:before { content: "\e62d"; }
 
 .icon-slice46:before { content: "\e6d0"; }
 

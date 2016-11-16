@@ -122,6 +122,40 @@ a:focus {
   display: -ms-flexbox;
   display: flex; }
 
+.rights {
+  position: relative;
+  width: 100%; }
+
+#brithday {
+  display: inline-block;
+  width: 100%;
+  box-sizing: border-box; }
+
+#brithdayCheck {
+  display: none;
+  position: relative;
+  top: -.1rem;
+  width: 100%;
+  margin-bottom: .1rem;
+  padding: .2rem 0;
+  background: #fff;
+  border-bottom: 1px solid #ececec;
+  text-align: center; }
+  #brithdayCheck span {
+    width: 30%;
+    display: inline-block;
+    text-align: center;
+    box-sizing: border-box; }
+  #brithdayCheck span:nth-child(2) {
+    width: 34%;
+    border-left: 1px solid #979797;
+    border-right: 1px solid #979797; }
+  #brithdayCheck select {
+    text-align: center;
+    padding-left: .2rem; }
+  #brithdayCheck select:focus {
+    outline: none; }
+
 #animatebox {
   padding: .2rem 0;
   border-radius: .1rem;

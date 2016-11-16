@@ -62,14 +62,52 @@
                 </a>
             </li>
             <li class="rights">
-                <a href="">
+                <!--<a href="">-->
                     <i class="iconfont icon-riqi pcOrderS"></i>
-                    <span>出生日期</span>
-                    <div>
-
-                    </div>
+                    <div id="brithday">
+                        <span>
+                            出生日期
+                        </span>
                     <i class="iconfont icon-xiangyoujiantou iconLeft"></i>
-                </a>
+                <!--</a>-->
+                    </div>
+            </li>
+            <li>
+                <div id="brithdayCheck">
+                            <span>
+                                <select>
+                                    <option selected value="">—年—</option>
+                                    <option value="">1990年</option>
+                                    <option value="">1990年</option>
+                                    <option value="">1990年</option>
+                                    <option value="">1990年</option>
+                                    <option value="">1990年</option>
+                                    <option value="">1990年</option>
+                                </select>
+                            </span>
+                    <span>
+                                <select>
+                                    <option selected value="">—月—</option>
+                                    <option value="">12月</option>
+                                    <option value="">12月</option>
+                                    <option value="">12月</option>
+                                    <option value="">12月</option>
+                                    <option value="">12月</option>
+                                    <option value="">12月</option>
+                                </select>
+                            </span>
+                    <span>
+                                <select>
+                                    <option selected value="">—日—</option>
+                                    <option value="">11日</option>
+                                    <option value="">11日</option>
+                                    <option value="">11日</option>
+                                    <option value="">11日</option>
+                                    <option value="">11日</option>
+                                    <option value="">11日</option>
+                                </select>
+                            </span>
+                </div>
             </li>
             <li class="huM">
                 <a href="recive.html">
@@ -171,8 +209,13 @@
     var $iconPingjia=$('#icon-pingjia');
     $iconPingjia.on('touchstart',function () {
         $('#weiNickname').children('input').focus()
-    })
+    });
 
+    //生日
+   var $rights=$('.rights');
+    $rights.on('touchstart',function () {
+        $('#brithdayCheck').show()
+    })
 </script>
 </body>
 </html>
