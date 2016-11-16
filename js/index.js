@@ -29,6 +29,7 @@ $(function(){
         $(this).siblings().removeClass("active");
         $(this).addClass("active");
         $(this).parents().removeClass("active");
+        $('#categoryMask').hide();
 
     });
 

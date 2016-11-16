@@ -275,13 +275,14 @@ a:focus {
   margin-left: -.18rem;
   margin-top: -.03rem;
   background: orangered;
-  width: .2rem;
-  height: .2rem;
-  line-height: .2rem;
+  display: inline-block;
+  box-sizing: border-box;
+  width: .18rem;
+  height: .18rem;
+  line-height: .19rem;
   font-size: .1rem;
   color: #fff;
-  font-size: .1rem;
-  border-radius: 50%!important;
+  border-radius: 2rem;
   vertical-align: middle;
   visibility: hidden;
 }
@@ -923,7 +924,7 @@ a:focus {
   }
  .swiper-container{
    background: #fff;
-   height: 4.7rem;
+   height: 4rem;
    border-bottom: 1px solid #ECECEC;
    border-right: 1px solid #ECECEC;
    margin: -.7rem .35rem 0 .35rem;
