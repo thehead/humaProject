@@ -19,7 +19,7 @@ $(function(){
         }else{
             $("."+boxName+"").removeClass("active");
         }
-
+        $('#categoryMask').show();
     });
     //筛选加载数据
     $(".panelbox div").find("span").on("click",function(){
@@ -31,7 +31,15 @@ $(function(){
         $(this).parents().removeClass("active");
 
     });
-})
+
+    //点击灰色背景隐藏
+    $('#categoryMask').on('click',function () {
+        $('.catinfo').removeClass('active');
+        $('.sortinfo').removeClass('active');
+        $('.newoldinfo').removeClass('active');
+        $(this).hide();
+    })
+});
 //分类页end
 
 //商品详情页开始
@@ -155,12 +163,15 @@ $(".del").on("click",function(){
     $(".listbox").find("input").each(function(){
         if($(this).is(':checked')){
             var del_id = $(this).data("name");
+            var this_price = $(this).parent().children(".price").val();
+            totalPrice = numSub(parseFloat(totalPrice),parseFloat(this_price));
+            totalNum = parseInt(totalNum-1);
+            $(".total-num").html(getTotalNum(totalNum));
+            $(".total-price").html(getTotalPrice(totalPrice));
             $("#box"+del_id).remove();
-            // $(".total-num").html(getTotalNum(totalNum));
-            // $(".total-price").html(getTotalPrice(totalPrice));
         }
     });
-});
+})
 
 //选择收货地址
 $(function(){
