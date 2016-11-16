@@ -1,10 +1,18 @@
 (function () {
     //切换选中状态
     var $selectLeft = $(".slectLeft");
+    var _flag=false;
     $selectLeft.on("touchstart", function () {
         unselect($selectLeft);
-        $(this).children("i").removeClass("icon-checkbox1").addClass("icon-checkbox");
-        $(this).children("span").html("默认地址");
+        if (_flag){
+            $(this).children("i").removeClass("icon-checkbox").addClass("icon-checkbox1");
+            $(this).children("span").html("设为默认地址");
+            _flag=false;
+        }else {
+            $(this).children("i").removeClass("icon-checkbox1").addClass("icon-checkbox");
+            $(this).children("span").html("默认地址");
+            _flag=true;
+        }
     });
 
     function unselect(selectedNodeList) {

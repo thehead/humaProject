@@ -79,11 +79,12 @@ a:focus {
 .pcDescribe div:nth-child(1) {
   margin-left: .1rem; }
 
-.pcDescribe div:nth-child(1) a:nth-child(1) {
-  font-size: .2rem; }
+.pcDescribe .nickname {
+  font-size: 0.2rem !important;
+  color: #999; }
 
-.pcDescribe div:nth-child(1) a:nth-child(2) {
-  font-size: .12rem; }
+.pcDescribe .notVip {
+  color: #999 !important; }
 
 .pcDescribe input {
   width: 1.2rem;
@@ -304,9 +305,9 @@ a:focus {
   margin-bottom: 0.9rem !important; }
 
 .personalCenter #footer li {
-  font-size: .13rem; }
+  font-size: .128rem; }
   .personalCenter #footer li i {
-    font-size: .255rem; }
+    font-size: 25px; }
 
 .personalKefu #kf {
   position: fixed;
@@ -330,6 +331,8 @@ a:focus {
   color: #86858e;
   top: -.14rem;
   left: -.7rem; }
+.pcPersonalFile #weiNickname {
+  font-size: .18rem; }
 
 .pcRecive .address {
   background: #fff;
@@ -414,9 +417,13 @@ a:focus {
   display: flex;
   justify-content: center; }
   .pcNewAdress .newAdress select {
+    width: 100%;
+    margin-left: -.2rem;
     border: none;
-    background: transparent;
-    text-align: center; }
+    background: transparent; }
+  .pcNewAdress .newAdress option {
+    position: relative;
+    margin-left: -.2rem; }
   .pcNewAdress .newAdress select:focus {
     outline: none; }
   .pcNewAdress .newAdress span:nth-child(1), .pcNewAdress .newAdress span:nth-child(2), .pcNewAdress .newAdress span:nth-child(3) {
@@ -443,6 +450,8 @@ a:focus {
       height: 100%;
       width: 1px;
       background: #86858e; }
+.pcNewAdress .describe {
+  font-size: 0.16rem !important; }
 
 .pcPhone input:focus {
   outline: none; }

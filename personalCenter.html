@@ -23,20 +23,20 @@
 <body>
     <!--个人信息-->
     <section class="pcHeader">
-       <ul>
+       <ul onclick="location.href='personalFile.html'">
            <li class="pcPortrait">
                <img src="images/portrait.png" alt="微信头像">
            </li>
            <li class="pcDescribe">
                <div>
-                   <a href="">
-                       <a href="javascript:;">微信昵称</a>
-                       <a href="javascript:;">您并非会员哦</a>
+                   <a href="javascript:;">
+                       <a class="nickname" href="javascript:;">微信昵称</a>
+                       <a class="notVip" href="javascript:;">您并非会员哦</a>
                    </a>
                </div>
            </li>
            <li>
-               <a href="personalFile.html">
+               <a href="vip.html">
                    <div class="pcJoin">
                        <span href="javascript:;">立即加入</span>
                    </div>
@@ -53,9 +53,9 @@
     <!--订单-->
     <section class="pcOrder">
         <ul>
-            <li class="pcAllOrders">
+            <li class="pcAllOrders" onclick="location.href='order.html'">
                 <div class="top" style="width: 100%">
-                    <a href="order.html" style="width: 100%;display: inline-block">
+                    <a href="javascript:;" style="width: 100%;display: inline-block">
                         <i class="iconfont icon-daizhifu pcOrderS"></i>
                         <span>全部订单</span>
                         <i class="iconfont icon-xiangyoujiantou iconLeft"></i>
@@ -64,28 +64,28 @@
                 <div class="bottom">
                     <ul class="pcBottomUl">
                         <li>
-                            <a href="order-no-pay.html">
+                            <a href="javascript:;">
                                 <i class="iconfont icon-daizhifu"></i>
                                 <span>待支付</span>
                                 <span class="pcNumber active">10</span>
                             </a>
                         </li>
                         <li>
-                            <a href="order-no-send.html">
+                            <a href="javascript:;">
                                 <i class="iconfont icon-hongjiuchengicondaifahuo"></i>
                                 <span>待发货</span>
                                 <span class="pcNumber">10</span>
                             </a>
                         </li>
                         <li>
-                            <a href="order-sended.html">
+                            <a href="javascript:;">
                                 <i class="iconfont icon-daishouhuo"></i>
                                 <span>待收货</span>
                                 <span class="pcNumber">10</span>
                             </a>
                         </li>
                         <li>
-                            <a href="order-end.html">
+                            <a href="javascript:;">
                                 <i class="iconfont icon-pingjia"></i>
                                 <span>待评价</span>
                                 <span class="pcNumber">10</span>
@@ -174,11 +174,9 @@
                         <span>购物车</span>
                     </a>
                 </li>
-                <li class="active"
-                    <a href="javascirpt:;">
-                        <i class="iconfont icon-wode"></i>
-                        <span>我的</span>
-                    </a>
+                <li class="active">
+                    <i class="iconfont icon-wode"></i>
+                    <span>我的</span>
                 </li>
             </ul>
         </footer>

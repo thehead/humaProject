@@ -82,11 +82,13 @@ a:focus {
 .pcDescribe div:nth-child(1) {
   margin-left: .1rem;
 }
-.pcDescribe div:nth-child(1) a:nth-child(1) {
-  font-size: .2rem;
+
+.pcDescribe .nickname{
+  font-size: .2rem!important;
+  color: #999;
 }
-.pcDescribe div:nth-child(1) a:nth-child(2) {
-  font-size: .12rem;
+.pcDescribe .notVip{
+  color: #999!important;
 }
 .pcDescribe{
   input{
@@ -324,9 +326,9 @@ a:focus {
 .personalCenter{
   #footer{
     li{
-      font-size: .13rem;
+      font-size: .128rem;
       i{
-        font-size: .255rem;
+        font-size: 25px;
       }
     }
   }
@@ -359,6 +361,9 @@ a:focus {
     color: #86858e;
     top: -.14rem;
     left: -.7rem;
+  }
+  #weiNickname{
+    font-size: .18rem;
   }
 }
 //personalFile
@@ -483,9 +488,14 @@ a:focus {
     justify-content: center;
     //选择框
     select{
+      width: 100%;
+      margin-left: -.2rem;
       border: none;
       background: transparent;
-      text-align: center;
+    }
+    option{
+      position: relative;
+      margin-left: -.2rem;
     }
     select:focus{
       outline: none;
@@ -522,6 +532,10 @@ a:focus {
       }
     }
   }
+  .describe{
+    font-size: .16rem!important;
+  }
+
 }
 //newAdress
 

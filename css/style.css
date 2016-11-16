@@ -346,7 +346,7 @@ footer ul li {
   font-size: 0.8rem;
 }
 footer ul li .iconfont {
-  font-size: 1.6rem;
+  font-size: 25px;
   display: block;
   line-height: 34px;
 }
@@ -1877,7 +1877,9 @@ footer ul .active {
   width: 96%;
   margin: 2% auto;
   overflow: hidden;
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 }
 .order-list .orderbox .boxcont .checkbox {
   width: 10%;
@@ -1900,7 +1902,7 @@ footer ul .active {
   max-width: 100%;
 }
 .order-list .orderbox .boxcont .info {
-  width: 70%;
+  width: 80%;
   float: left;
 }
 .order-list .orderbox .boxcont .info p.shopname {
@@ -2137,7 +2139,7 @@ footer ul .active {
   max-width: 100%;
 }
 .shop-list .boxcont .info {
-  width: 70%;
+  width: 85%;
   float: left;
 }
 .shop-list .boxcont .info p.shopname {
@@ -2161,6 +2163,21 @@ footer ul .active {
 .shop-list .boxcont .info p.shopcat .price {
   float: right;
   color: #ff5f00;
+}
+.shop-list .boxcont .info p.shopcat .priceSale {
+  color: #999;
+  font-size: .8rem;
+  display: inline-block;
+  position: relative;
+}
+.shop-list .boxcont .info p.shopcat .priceSale:after {
+  content: '';
+  height: 2px;
+  width: 5rem;
+  position: absolute;
+  background: #999;
+  top: .9rem;
+  left: .7rem;
 }
 .pay-type {
   overflow: hidden;

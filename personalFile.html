@@ -29,8 +29,8 @@
             <li class="pcDescribe">
                 <form action="">
                     <div>
-                        <a id="weiNickname" href="javascript:;">
-                            <input type="text" placeholder="微信昵称"></a>
+                        <span id="weiNickname" href="javascript:;">
+                            <input type="text" placeholder="微信昵称"></span>
                         <a class="pcPortraitWord" href="javascript:;">
                             <span type="text" disabled id="selectFileBtn"
                                   style=" text-decoration: underline;color: #ff5f00;">选择文件</span>
@@ -54,7 +54,7 @@
                     <i class="iconfont icon-xiangyoujiantou iconLeft"></i>
                 </a>
             </li>
-            <li class="sale" ontouchend="setSex()">
+            <li class="sale" onclick="setSex()">
                 <a href="javascript:void(0)">
                     <i class="iconfont icon-gender pcOrderS"></i>
                     <span>性别</span>
@@ -65,6 +65,9 @@
                 <a href="">
                     <i class="iconfont icon-riqi pcOrderS"></i>
                     <span>出生日期</span>
+                    <div>
+
+                    </div>
                     <i class="iconfont icon-xiangyoujiantou iconLeft"></i>
                 </a>
             </li>
@@ -163,6 +166,12 @@
             console.log($sex.attr("value"));
         }
     }
+
+    //点击按钮聚焦文字
+    var $iconPingjia=$('#icon-pingjia');
+    $iconPingjia.on('touchstart',function () {
+        $('#weiNickname').children('input').focus()
+    })
 
 </script>
 </body>

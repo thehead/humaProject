@@ -350,7 +350,7 @@ footer{
             text-align: center;
             font-size:0.8rem;
             .iconfont{
-                font-size:1.6rem;
+                font-size:25px;
                 display: block;
                 line-height: 34px;  
 
@@ -1974,7 +1974,9 @@ footer{
             width: 96%;
             margin:2% auto;
             overflow: hidden;
-            display: block;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
             .checkbox{
                 width:10%;
                 float: left;
@@ -1997,7 +1999,7 @@ footer{
                 }
             }
             .info{
-                width:70%;
+                width:80%;
                 float: left;
                 p{
                     &.shopname{
@@ -2246,7 +2248,7 @@ footer{
             }
         }
         .info{
-            width:70%;
+            width:85%;
             float: left;
             p{
                 &.shopname{
@@ -2269,6 +2271,21 @@ footer{
                     .price{
                         float: right;
                         color:#ff5f00;
+                    }
+                    .priceSale{
+                        color: #999;
+                        font-size: .8rem;
+                        display: inline-block;
+                        position: relative;
+                        &:after{
+                            content: '';
+                            height: 2px;
+                            width: 5rem;
+                            position: absolute;
+                            background: #999;
+                            top: .9rem;
+                            left: .7rem;
+                        }
                     }
                 }
             }
