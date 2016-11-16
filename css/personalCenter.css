@@ -1008,6 +1008,8 @@ a:focus {
   font-size: .145rem; }
 .sellDetails .content div span:nth-child(1), .sellDetails .describe div span:nth-child(1) {
   font-size: .15rem; }
+.sellDetails .content div span:nth-child(1) {
+  padding-right: .1rem; }
 .sellDetails .content, .sellDetails .describe {
   padding: 0 .1rem; }
 .sellDetails .head, .sellDetails .content div, .sellDetails .describe div {
@@ -1030,9 +1032,11 @@ a:focus {
   color: #ff5f00; }
 .sellDetails .confirmWord {
   color: #999; }
+.sellDetails .confirmP span:first-child {
+  padding-right: 0 !important; }
 .sellDetails .confirmP input {
   text-align: right;
-  width: .45rem; }
+  width: .55rem; }
 .sellDetails .VipServe {
   padding: .15rem; }
   .sellDetails .VipServe p {

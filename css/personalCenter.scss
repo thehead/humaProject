@@ -1247,6 +1247,10 @@ a:focus {
   .content div span:nth-child(1),.describe div span:nth-child(1){
     font-size: .15rem;
   }
+
+  .content div span:nth-child(1){
+    padding-right: .1rem;
+  }
   .content,.describe{
     padding: 0 .1rem;
   }
@@ -1279,9 +1283,12 @@ a:focus {
     color: #999;
   }
   .confirmP{
+    span:first-child{
+      padding-right: 0!important;
+    }
     input{
       text-align: right;
-      width: .45rem;
+      width: .55rem;
     }
   }
   .VipServe{
