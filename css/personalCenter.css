@@ -131,6 +131,10 @@ a:focus {
   width: 100%;
   box-sizing: border-box; }
 
+#brithdayWord {
+  color: #666;
+  padding-left: .05rem; }
+
 #brithdayCheck {
   display: none;
   position: relative;
