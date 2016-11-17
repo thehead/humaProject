@@ -470,6 +470,7 @@ footer{
             border-top:1px solid #eee;
             padding-top:5px;
             display: none;
+            overflow: hidden;
             span{
                 display: block;
                 float: left;
@@ -489,6 +490,36 @@ footer{
             }
             &.active{
                 display: block;
+            }
+            //取消雪顶
+            .newoldinfoConfirm{
+                border: 0;
+                span{
+                    width: 46%;
+                    box-sizing: border-box;
+                    border: none;
+                }
+                span:nth-child(1){
+                    background: #fff;
+                    &.active{
+                        background: #fff;
+                        border:0;
+                        color:#999;
+                    }
+                }
+                span:nth-child(2){
+                    background: #ff5f00;
+                    color: #fff;
+                    &.active{
+                        background: #ff5f00;
+                        border:0;
+                        color:#fff;
+                    }
+                }
+            }
+            .newoldinfoNew{
+                border: 0!important;
+                padding-top: 0;
             }
         }
     }

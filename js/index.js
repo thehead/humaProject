@@ -28,8 +28,21 @@ $(function(){
         $("#"+box+"").children("span").html(selected);
         $(this).siblings().removeClass("active");
         $(this).addClass("active");
-        $(this).parents().removeClass("active");
-        $('#categoryMask').hide();
+        if($(this).parent().is(".newoldinfo")){
+            if($(this).html() == "取消" || $(this).html() == "确定"){
+                $(this).parents().removeClass("active");
+                $('#categoryMask').hide();
+                //点击取消
+                if($(this).html() == "取消"){
+                    $('.newoldinfoNew span').removeClass("active").first().addClass('active');
+                    $('.newoldinfoType span').removeClass("active").first().addClass('active');
+
+                }
+            }
+        } else {
+            $(this).parents().removeClass("active");
+            $('#categoryMask').hide();
+        }
 
     });
 

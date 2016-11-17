@@ -454,6 +454,7 @@ footer ul .active {
   border-top: 1px solid #eee;
   padding-top: 5px;
   display: none;
+  overflow: hidden;
 }
 .screen .panelbox .newoldinfo span {
   display: block;
@@ -474,6 +475,35 @@ footer ul .active {
 }
 .screen .panelbox .newoldinfo.active {
   display: block;
+}
+.screen .panelbox .newoldinfo .newoldinfoConfirm {
+  border: 0;
+}
+.screen .panelbox .newoldinfo .newoldinfoConfirm span {
+  width: 46%;
+  box-sizing: border-box;
+  border: none;
+}
+.screen .panelbox .newoldinfo .newoldinfoConfirm span:nth-child(1) {
+  background: #fff;
+}
+.screen .panelbox .newoldinfo .newoldinfoConfirm span:nth-child(1).active {
+  background: #fff;
+  border: 0;
+  color: #999;
+}
+.screen .panelbox .newoldinfo .newoldinfoConfirm span:nth-child(2) {
+  background: #ff5f00;
+  color: #fff;
+}
+.screen .panelbox .newoldinfo .newoldinfoConfirm span:nth-child(2).active {
+  background: #ff5f00;
+  border: 0;
+  color: #fff;
+}
+.screen .panelbox .newoldinfo .newoldinfoNew {
+  border: 0!important;
+  padding-top: 0;
 }
 .top80 {
   height: 78px;
