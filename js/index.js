@@ -184,6 +184,12 @@ $(function(){
 
         });
     });
+    //点击关闭
+    $(function () {
+        $('#closePay').on('touchstart',function () {
+            $('#pay-type').removeClass("active")
+        });
+    });
     /*
      $("#pay-type").on("click",function(){
      $(this).removeClass("active");
