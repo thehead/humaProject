@@ -186,7 +186,7 @@ $(function(){
     });
     //点击关闭
     $(function () {
-        $('#closePay').on('touchstart',function () {
+        $('#closePay').on('click',function () {
             $('#pay-type').removeClass("active")
         });
     });

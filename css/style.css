@@ -1165,6 +1165,7 @@ footer ul .active {
   width: 94%;
   left: 50%;
   top: 35%;
+  border-radius: 10px;
   margin: 0 auto;
   margin-left: -47%;
 }
@@ -2529,8 +2530,9 @@ footer ul .active {
   position: absolute;
   top: 0;
   right: 0;
-  font-size: .2rem;
+  font-size: 20px;
+  text-align: center;
   color: #999;
-  width: .4rem;
-  height: .4rem;
+  width: 40px;
+  height: 40px;
 }

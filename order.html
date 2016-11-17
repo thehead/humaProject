@@ -181,7 +181,7 @@
 				<div class="boxbottom">
 					<p class="real">实付款: <i>¥38.00</i></p>
 					<p class="act">
-						<a href="">立即支付</a>
+						<a class="now-buy" href="javascript:;">立即支付</a>
 					</p>
 				</div>
 			</div>
@@ -190,6 +190,36 @@
 			<img src="./images/loading2.gif" />
 			<span>正在加载中...</span>
 		</div>
+		<!--选择支付方式-->
+		<div id="pay-type" class="">
+			<div class="fugai"></div>
+			<div id="animatebox" class="">
+				<i id="closePay" class="iconfont icon-iconfonticonfontclose"></i>
+				<h3>支付金额: <i>¥688.00</i></h3>
+				<div class="address-info weixin">
+					<div class="leftbox">
+						<p class="iconbox"><i class="iconfont icon-weixinzhifu"></i></p>
+						<p class="linkman">
+							<span>微信支付</span>
+							<span class="weixin-desc">使用微信支付,安全便捷</span>
+						</p>
+					</div>
+					<p class="icon"><i class="iconfont icon-xiangyoujiantou"></i></p>
+				</div>
+				<h3></h3>
+				<div class="address-info zhifubao">
+					<div class="leftbox">
+						<p class="iconbox"><i class="iconfont icon-zhifubaozhifu"></i></p>
+						<p class="linkman">
+							<span>支付宝支付</span>
+							<span class="weixin-desc">使用微信支付,安全便捷</span>
+						</p>
+					</div>
+					<p class="icon"><i class="iconfont icon-xiangyoujiantou"></i></p>
+				</div>
+			</div>
+		</div>
+		<!--选择支付方式-->
 		<!--客服-->
 		<div id="kf">
 			<i class="iconfont icon-kefu"></i>
@@ -241,7 +271,7 @@
 											'<p class="act">'+
 												'<a href="evaluate.html">评价</a>'+
 												'<a href="counter.html">回购</a>'+
-												'<a class="write" href="">退货</a>'+
+												'<a class="write" href="refund.html">退货</a>'+
 											'</p>'+
 										'</div>'+
 									'</div>'
@@ -270,17 +300,17 @@
 					_url = 'order-no-pay.html';
 				}else if(_status=="order-no-post"){
 					_st = "待发货";
-					_act ='<a class="write" href="">退货</a>';
+					_act ='<a class="write" href="refund.html">退货</a>';
 					_url = 'order-no-send.html';
 				}else if(_status=="order-yes-post"){
 					_st = "已发货";
-					_act = '<a class="write" href="">退货</a>';
+					_act = '<a class="write" href="refund.html">退货</a>';
 					_url = 'order-sended.html';
 				}else if(_status == "order-end"){
 					_st = "已完成";
 					_act = '<a href="evaluate.html">评价</a>'+
 							'<a href="counter.html">回购</a>'+
-							'<a class="write" href="">退货</a>';
+							'<a class="write" href="refund.html">退货</a>';
 					_url = 'order-end.html';
 				}else{
 					location.href="order.html";

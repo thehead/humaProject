@@ -185,7 +185,7 @@ a:focus {
 
 #animatebox {
   padding: .2rem 0;
-  border-radius: .1rem;
+  border-radius: 10px;
   text-align: center; }
   #animatebox div label {
     width: 45%;
@@ -1137,9 +1137,10 @@ a:focus {
   position: absolute;
   top: 0;
   right: 0;
-  font-size: .2rem;
+  font-size: 20px;
   color: #999;
-  width: .4rem;
-  height: .4rem; }
+  width: 40px;
+  height: 40px;
+  text-align: center; }
 
 /*# sourceMappingURL=personalCenter.css.map */
