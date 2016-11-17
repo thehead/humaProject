@@ -364,14 +364,6 @@ $(function(){
 });
 
 
-//购物车点击相应的图片跳转到详情
-$('.info').on('touchstart',function () {
-   location.href='shopInfo.html';
-});
-$('.thumbbox').on('touchstart',function () {
-   location.href='shopInfo.html';
-});
-
 
 /*************
  * author tzchao

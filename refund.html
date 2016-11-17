@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>申请退款</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="css/iconfont/iconfont.css"/>
+    <link rel="stylesheet" type="text/css" href="css/swiper-3.3.1.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+</head>
+<body>
+	<header></header>
+	<section>
+		<div class="refundbox background-write">
+			<div class="titlebox">
+				<div class="leftbox" >
+					<p class="title"><span class="iconbg"><i class="iconfont icon-tuikuan"></i></span><span class="name">申请退款</span></p>
+					<p class="descbox">已收到货,需要退还已收到的货物</p>
+				</div>
+			</div>
+		</div>
+		<div class="cause background-write">
+			<div class="box">
+				<span class="tit">请选择商品退货原因</span>
+			</div>
+			<div class="box sel">
+				<span class="left">质量问题</span>
+				<span class="right">
+					<i class="iconfont icon-checkbox1"></i>
+					<input type="radio" name="type" value="">
+				</span>
+			</div>
+			<div class="box sel active">
+				<span class="left">7天无理由替换</span>
+				<span class="right">
+					<i class="iconfont icon-checkbox"></i>
+					<input type="radio" name="type" value="">
+				</span>
+			</div>
+		</div>
+		<div class="comment background-write">
+			<textarea placeholder="请详细描述您的退货理由"></textarea>
+		</div>
+		<div class="tui-total background-write">
+			<p class="view">退款金额:<span>¥4000.00</span></p>
+			<p class="desc-view">退款金额会返回到您的支付账户中</p>
+		</div>
+
+		<div class="cancel-order">
+			<span class="now-pay">确认退货</span>
+		</div>
+
+		<!--客服-->
+		<div id="kf">
+			<i class="iconfont icon-kefu"></i>
+		</div>
+	</section>
+
+	
+	
+</body>
+	<script src="js/swiper-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/zepto_1.1.3.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+	<script>
+		$(function(){
+			$(".cause").find(".sel").on("click",function(){
+				var is_sel = $(this).children("span").children("input").is(":checked");
+				$(".cause").find(".sel").each(function(){
+					$(this).children("span").children("i").removeClass("icon-checkbox");
+					$(this).children("span").children("i").addClass("icon-checkbox1");
+					$(this).children("span").children("input").removeAttr("checked");
+				})
+				if(!is_sel){
+					$(this).children("span").children("i").removeClass("icon-checkbox1");
+					$(this).children("span").children("i").addClass("icon-checkbox");
+					$(this).children("span").children("input").attr("checked","checked");
+				}
+			});
+			$(".now-pay").on("click",function(){
+				layer.msg("退货申请成功");
+			});
+		});
+	</script>
+</html>

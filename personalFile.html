@@ -221,7 +221,8 @@
     //点击按钮聚焦文字
     var $iconPingjia=$('#icon-pingjia');
     $iconPingjia.on('touchstart',function () {
-        $('#weiNickname').children('input').focus()
+        $('#weiNickname').children('input').focus();
+        return false;
     });
 
     //生日
