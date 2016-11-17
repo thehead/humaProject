@@ -1678,20 +1678,25 @@ footer{
 
 .footer{
     display: table;
-    .add,.submit{
+    .add,.submit,#confirmInfomation{
         display: table-cell;
         vertical-align: middle;
         text-align: center;
         font-size:1.3em;
         color:#FFF;
         width: 50%;
-
     }
     .add{
         background: #fab639;
     }
     .submit{
         background: @font-color-two;
+    }
+    #confirmInfomation{
+        line-height: 55px;
+        display: none;
+        background: @font-color-two;
+        width: 100%;
     }
 }
 

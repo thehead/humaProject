@@ -323,9 +323,25 @@ $(function(){
         $('#agreement').show();
         $('#agreement').removeClass().addClass('fadeInRightBig' + ' animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
             $(this).removeClass();
-
         });
+        var timer=setTimeout(function () {
+            clearTimeout(timer);
+            $('#footer').children('#confirmInfomation').show();
+            $('#footer').children('.add').hide();
+            $('#footer').children('.submit').hide();
+        },1000);
     });
+    //点击 我知道了 取消
+    $('#confirmInfomation').on('click',function () {
+        $('#agreement').addClass('fadeOutRightBig' + ' animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+            $(this).removeClass();
+            $('#agreement').hide();
+        });
+        $('#confirmInfomation').hide();
+        $('#footer').children('.add').show();
+        $('#footer').children('.submit').show();
+    });
+
     $(".back").on("click",function(){
         $('#agreement').removeClass().addClass('fadeOutRightBig' + ' animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
             $(this).removeClass();
@@ -347,6 +363,14 @@ $(function(){
 
 });
 
+
+//购物车点击相应的图片跳转到详情
+$('.info').on('touchstart',function () {
+   location.href='shopInfo.html';
+});
+$('.thumbbox').on('touchstart',function () {
+   location.href='shopInfo.html';
+});
 
 
 /*************

@@ -1605,7 +1605,8 @@ footer ul .active {
   display: table;
 }
 .footer .add,
-.footer .submit {
+.footer .submit,
+.footer #confirmInfomation {
   display: table-cell;
   vertical-align: middle;
   text-align: center;
@@ -1618,6 +1619,12 @@ footer ul .active {
 }
 .footer .submit {
   background: #ff5f00;
+}
+.footer #confirmInfomation {
+  line-height: 55px;
+  display: none;
+  background: #ff5f00;
+  width: 100%;
 }
 .msgbox .address {
   padding: 10px 5px;

@@ -127,7 +127,7 @@
 				<i id="collectIcon" class="iconfont icon-fill85"></i>
 				<span>收藏</span>
 			</a>
-			<a href="#" id="cartLayer">
+			<a href="cart.html" id="cartLayer">
 				<i class="iconfont icon-gouwuche"></i>
 				<span>购物车</span>
 			</a>
@@ -147,14 +147,14 @@
  	<script>
 		//收藏点击效果
 		(function () {
-			var $collectIcon=$('#collectIcon');
+			var $collectIcon=$('#collectIcon').parents('a');
 			var flag=false;
 			$collectIcon.on('touchstart',function () {
 				if (flag){
-					$(this).removeClass('icon-pingjiabox').addClass('icon-fill85');
+					$(this).find('#collectIcon').removeClass('icon-pingjiabox').addClass('icon-fill85');
 					flag=false;
 				}else {
-					$(this).removeClass('icon-fill85').addClass('icon-pingjiabox');
+					$(this).find('#collectIcon').removeClass('icon-fill85').addClass('icon-pingjiabox');
 					flag=true;
 				}
 			});
