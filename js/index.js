@@ -43,6 +43,7 @@ $(function(){
 });
 //分类页end
 
+
 //商品详情页开始
 $(function(){
     var pmWidth = window.innerWidth;

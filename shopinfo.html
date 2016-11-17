@@ -185,16 +185,21 @@
 				return "<div class='circle'>"+current + '/' + total+"</div>";
 			}
 		});
+
 		var num = 0;
 		var mum = 0;
+		var flag=false;
+		var windowHeight = $(window).height();
 		$(window).scroll(function () {
-			var scrollTop = $(this).scrollTop();
 			var scrollHeight = $(document).height();
-			var windowHeight = $(this).height();
-			if(scrollTop + windowHeight == scrollHeight){
+			var scrollTop = $(this).scrollTop();
+			console.log('document:'+scrollHeight,'window:'+windowHeight,'划出的:'+scrollTop);
+//			if(scrollTop + windowHeight >= scrollHeight){
+			if(scrollTop + windowHeight +150>= scrollHeight){
 				$(".slide-up img").addClass("active");
 				$(".slide-up i").removeClass("icon-xiala-copy");
-				setTimeout(function(){
+				var timer=setTimeout(function(){
+					clearTimeout(timer);
 					$(".shop-content-box").removeClass("active");
 					$("#shop-base").addClass("active");
 					$(".scroll-msg").html("下拉返回商品基本信息");
@@ -202,19 +207,21 @@
 					$(".slide-up i").addClass("icon-shangla");
 					if(num==0){
 						goTop();
-						console.log(1)
+						console.log(1);
 					}
 					num++;
 					mum = 0;
 				},1500);
 
-			}else if(scrollTop==0){
+			}else if(scrollTop<=50){
+				console.log(2);
 				$(".slide-up img").removeClass("active");
 				$(".slide-up i").addClass("icon-shangla");
 				if(mum>=1){
 					$(".slide-up img").addClass("active");
 					$(".slide-up i").removeClass("icon-shangla");
-					setTimeout(function(){
+					var timer = setTimeout(function(){
+						clearTimeout(timer);
 						$(".slide-up img").removeClass("active");
 						$(".slide-up i").addClass("icon-xiala-copy");
 						$(".shop-content-box").addClass("active");
