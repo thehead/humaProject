@@ -55,12 +55,28 @@
                     <i class="iconfont icon-xiangyoujiantou iconLeft"></i>
                 </a>
             </li>
-            <li class="sale" onclick="setSex()">
+            <li class="sale">
                 <a href="javascript:void(0)">
                     <i class="iconfont icon-gender pcOrderS"></i>
                     <span>性别</span>
                     <i class="iconfont icon-xiangyoujiantou iconLeft"></i>
                 </a>
+            </li>
+            <li>
+                <div id="sexCheck">
+                    <span class="sexCheckContainer">
+                        <span>
+                            <input type="radio" name="sex" value="男" checked>
+                            <p>男</p>
+                        </span>
+                        <span>
+                            <input type="radio" name="sex" value="女">
+                            <p>女</p>
+                        </span>
+                        <!--< selected value="">—男—</>-->
+                        <!--<option value="">—女—</option>-->
+                    </span>
+                </div>
             </li>
             <li class="rights">
                 <i class="iconfont icon-riqi pcOrderS"></i>
@@ -120,7 +136,7 @@
     <div id="animatebox"
          style=" background: #FFF;position: fixed;z-index: 999;width: 94%;left: 50%;top: 35%;margin: 0 auto;margin-left: -47%;">
         <div style="margin: 0 auto">
-            <label><input name="sex" type="radio" value="nan"/>男 </label>
+            <label><input name="sex" type="radio" value="nan"/>男</label>
             <label><input name="sex" type="radio" value="nv"/>女</label>
             <br/>
             <input type="button" value="确定" id="sexConfirmBtn">
@@ -153,7 +169,7 @@
         $selectFileBtn.on('touchstart', function (e) {
             $input_browseFile.trigger('click');
         });
-        $("#sexConfirmBtn").on('touchstart', confirmSex);
+//        $("#sexConfirmBtn").on('touchstart', confirmSex);
     });
     //过滤图片
     function filter(e) {
@@ -186,32 +202,37 @@
         }
     }
 
-    //显示选择性别
-    function setSex() {
-        $("#mask").css("display", "block");
-    }
-
-    //确定按钮
-    function confirmSex() {
-        var $sex = $('[name="sex"]').filter(":checked");
-        if ($sex.length == 0) {
-            return;
-        } else {
-            $("#mask").css("display", "none");
-            console.log($sex.attr("value"));
-        }
-    }
+//    //显示选择性别
+//    function setSex() {
+//        $("#mask").css("display", "block");
+//    }
+//
+//    //确定按钮
+//    function confirmSex() {
+//        var $sex = $('[name="sex"]').filter(":checked");
+//        if ($sex.length == 0) {
+//            return;
+//        } else {
+//            $("#mask").css("display", "none");
+//            console.log($sex.attr("value"));
+//        }
+//    }
 
     //点击按钮聚焦文字
-    var $iconPingjia=$('#icon-pingjia');
-    $iconPingjia.on('touchstart',function () {
-        $('#weiNickname').children('input').focus()
-    });
+//    var $iconPingjia=$('#icon-pingjia');
+//    $iconPingjia.on('touchstart',function () {
+//        $('#weiNickname').children('input').focus()
+//    });
 
     //生日
    var $rights=$('.rights');
     $rights.on('touchstart',function () {
         $('#brithdayCheck').show()
+    });
+
+    //性别
+    $('.sale').on('touchstart',function () {
+        $('#sexCheck').show();
     })
 </script>
 </body>

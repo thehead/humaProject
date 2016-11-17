@@ -2,30 +2,65 @@
     //切换选中状态
     var $selectLeft = $(".slectLeft");
     var _flag=false;
-    $selectLeft.on("touchstart", function () {
-        unselect($selectLeft);
-        if (_flag){
-            $(this).children("i").removeClass("icon-checkbox").addClass("icon-checkbox1");
-            $(this).children("span").html("设为默认地址");
-            _flag=false;
-        }else {
-            $(this).children("i").removeClass("icon-checkbox1").addClass("icon-checkbox");
-            $(this).children("span").html("默认地址");
-            _flag=true;
-        }
+
+    $selectLeft.on('touchstart',function () {
+       if (_flag){
+          if($(this).children('i').hasClass('icon-checkbox')){
+              $(this).children('i').removeClass('icon-checkbox').addClass('icon-checkbox1');
+              // console.log(1);
+              _flag=false;
+          }else {
+              $.each($selectLeft,function (index,item) {
+                  $(item).children('i').removeClass('icon-checkbox').addClass('icon-checkbox1')
+              });
+              $(this).children('i').removeClass('icon-checkbox1').addClass('icon-checkbox');
+              // console.log(2);
+              _flag=true;
+          }
+       }else {
+           $.each($selectLeft,function (index,item) {
+               $(item).children('i').removeClass('icon-checkbox').addClass('icon-checkbox1')
+           });
+           $(this).children('i').removeClass('icon-checkbox1').addClass('icon-checkbox');
+           _flag=true;
+           // console.log(3)
+       }
     });
 
-    function unselect(selectedNodeList) {
-        $.each(selectedNodeList, function (index, item) {
-            var $item = $(item);
-            var $item_child = $item.children("i");
-
-            if ($item_child.hasClass("icon-checkbox")) {
-                $item_child.removeClass("icon-checkbox").addClass("icon-checkbox1");
-                $item.children("span").html("设为默认");
-            }
-        })
-    }
+    // $selectLeft.on("touchstart", function () {
+    //     unselect($selectLeft);
+    //     $selectLeft.children("span").html("设为默认");
+    //
+    //     if (_flag){
+    //         $(this).children("i").removeClass("icon-checkbox").addClass("icon-checkbox1");
+    //         $(this).children("span").html("默认地址");
+    //         console.log(1);
+    //         _flag=false;
+    //     }else {
+    //        if($(this).children('i').hasClass('icon-checkbox')){
+    //            $(this).children("i").removeClass("icon-checkbox").addClass("icon-checkbox1");
+    //            $(this).children("span").html("设为地址");
+    //            console.log(2);
+    //        }else {
+    //            $(this).children("i").removeClass("icon-checkbox1").addClass("icon-checkbox");
+    //            $(this).children("span").html("默认地址");
+    //            console.log(3);
+    //        }
+    //         _flag=true;
+    //     }
+    // });
+    //
+    // function unselect(selectedNodeList) {
+    //     $.each(selectedNodeList, function (index, item) {
+    //         var $item = $(item);
+    //         var $item_child = $item.children("i");
+    //
+    //         if ($item_child.hasClass("icon-checkbox")) {
+    //             $item_child.removeClass("icon-checkbox").addClass("icon-checkbox1");
+    //             $item.children("span").html("设为默认");
+    //         }
+    //     })
+    // }
 
     var $pcVipList = $('.pcVipList');
     $pcVipList.on('touchstart', function () {
