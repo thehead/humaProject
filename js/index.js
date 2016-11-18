@@ -519,3 +519,8 @@ function confirmAct(){
 //手机正则
 var myreg = /^(((13[0-9]{1})|(15[0-9]{1})|(18[0-9]{1}))+\d{8})$/;
 
+//必需是文字
+function justNumber(e,w) {
+    layer.msg(w);
+    e.focus();
+}
