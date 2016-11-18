@@ -34,8 +34,8 @@
                             <input type="text" placeholder="微信昵称"></span>
                         <a class="pcPortraitWord" href="javascript:;">
                             <span type="text" disabled id="selectFileBtn"
-                                  style=" text-decoration: underline;color: #ff5f00;">选择文件</span>
-                            <input type="file" id="pcPortraitWord" onchange="" style="visibility: hidden" value="选择图片">
+                                  style=" text-decoration: underline;color: #ff5f00;">选择头像图片</span>
+                            <input accept="image/*" type="file" id="pcPortraitWord" onchange="" style="visibility: hidden" value="选择图片">
                         </a>
                     </div>
                 </form>
@@ -166,7 +166,7 @@
         var $selectFileBtn = $('#selectFileBtn');
         var $input_browseFile = $('#pcPortraitWord');
         $input_browseFile.on('change', filter);
-        $selectFileBtn.on('touchstart', function (e) {
+        $selectFileBtn.on('click', function (e) {
             $input_browseFile.trigger('click');
         });
 //        $("#sexConfirmBtn").on('touchstart', confirmSex);
@@ -202,21 +202,21 @@
         }
     }
 
-//    //显示选择性别
-//    function setSex() {
-//        $("#mask").css("display", "block");
-//    }
-//
-//    //确定按钮
-//    function confirmSex() {
-//        var $sex = $('[name="sex"]').filter(":checked");
-//        if ($sex.length == 0) {
-//            return;
-//        } else {
-//            $("#mask").css("display", "none");
-//            console.log($sex.attr("value"));
-//        }
-//    }
+    //显示选择性别
+    function setSex() {
+        $("#mask").css("display", "block");
+    }
+
+    //确定按钮
+    function confirmSex() {
+        var $sex = $('[name="sex"]').filter(":checked");
+        if ($sex.length == 0) {
+            return;
+        } else {
+            $("#mask").css("display", "none");
+            console.log($sex.attr("value"));
+        }
+    }
 
     //点击按钮聚焦文字
     var $iconPingjia=$('#icon-pingjia');

@@ -251,7 +251,8 @@ $(function(){
 
 ///添加商品
 $(function(){
-    $(".add").on("click",function(){
+    //调整为 所有的 而不仅仅是继续添加
+    $(".footer").on("click",function(){
         //获取商品信息
         var shopinfo = $("form").serialize();
         var shopname = $("input[name='shopname']").val();
@@ -259,6 +260,8 @@ $(function(){
         var shopnum = $("input[name='shopnum']").val();
         var oldprice = $("input[name='oldprice']").val();
         var newprice = $("input[name='newprice']").val();
+        var phone=$("input[name='phone']").val();
+
         if(shopname==""){
             layer.msg("商品名称不能为空!");
             $("input[name='shopname']").focus();
@@ -282,10 +285,29 @@ $(function(){
             layer.msg("商品原价不能为空!");
             $("input[name='oldprice']").focus();
             return false;
+        }else if(isNaN(oldprice)){
+            layer.msg("商品原价必须为数字!");
+            $("input[name='oldprice']").focus();
+            return false;
         }
+
         if(newprice == ""){
             layer.msg("期望售价不能为空!");
             $("input[name='newprice']").focus();
+            return false;
+        }else if(isNaN(newprice)){
+            layer.msg("期望售价必须为数字!");
+            $("input[name='newprice']").focus();
+            return false;
+        }
+        if(oldprice<newprice){
+            layer.msg("期望售价不能大与商品原价!");
+            $("input[name='newprice']").focus();
+            return false;
+        }
+        if (!myreg.test(phone)){
+            layer.msg("请输入有效的手机号码!");
+            $("input[name='phone']").focus();
             return false;
         }
 
@@ -376,9 +398,16 @@ $(function(){
             layer.msg("手机号不能为空!");
             //location.href="consign-fail.html";
             return false;
-        }else{
-            location.href="consign-success.html";
+        }else if (!myreg.test(phone)){
+            layer.msg("请输入有效的手机号码!");
+            $("input[name='phone']").focus();
+            return false;
         }
+        if($('.checkbox-click').children('i').hasClass('icon-checkbox1')){
+            layer.msg('请同意《虎妈二手急售服务规则》');
+            return false;
+        }
+        location.href="consign-success.html";
     });
 
 });
@@ -480,9 +509,13 @@ function confirmAct(){
         '<p style="padding:10px 20px;font-size:1.3em;color:#333;display: table-cell;vertical-align: middle">'+
         '<span style="display: inline-block;height:auto;overflow:hidden;width:90%;border-radius:0px;background:#FFF;color:#333;">'+
         '<em style="border-bottom:1px solid #eee;display: inline-block;width:100%;text-align: left;line-height: 35px;text-indent:5px;">操作提示</em>'+
-        '<u class="" style="font-style:normal;text-decoration:none;display: block;line-height:30px;padding:30px 5px;">您确删除此寄售商品吗?</u>'+
+        '<u class="" style="font-style:normal;text-decoration:none;display: block;line-height:30px;padding:30px 5px;">您确认删除此寄售商品吗？</u>'+
         '<i class="queren" style="width: 50%;display: inline-block;background:#fab639;color:#FFF;line-height: 45px;">确认</i>'+
         '<i class="quxiao" style="width: 50%;display: inline-block;background: #ff5f00;color:#FFF;line-height: 45px;">取消</i></span>'+
         '</p></div>';
     $("body").append(str);
 }
+
+//手机正则
+var myreg = /^(((13[0-9]{1})|(15[0-9]{1})|(18[0-9]{1}))+\d{8})$/;
+

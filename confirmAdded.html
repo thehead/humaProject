@@ -22,7 +22,7 @@
     <section class="sellDetails">
         <section class="head">
             <p>
-                客服已通过审核,请根据虎妈建议售价,调整期望转让价(不得高出建议售价20%)如有异议,请练习客服。
+                商品已通过审核,请根据虎妈建议售价,调整期望转让价(不得高出建议售价20%)如有异议,请联系客服。
             </p>
         </section>
         <section class="content">
@@ -37,7 +37,7 @@
                 <span>虎妈建议售价</span>
                 <p>
                     <span class="activeWord">￥</span>
-                    <span class="activeWord">100.00</span>
+                    <span id="recommended" class="activeWord">100.00</span>
                 </p>
             </div>
             <form action="">
@@ -45,7 +45,7 @@
                     <span class="confirmPrice">修改并上架</span>
                     <p class="confirmP">
                         <span class="">￥</span>
-                        <span class=""><input type="number" placeholder="100.00"></span>
+                        <span id="truePrice" class=""><input type="number" placeholder="100.00"></span>
                     </p>
                 </div>
             </form>
@@ -75,4 +75,18 @@
 <script src="js/swiper-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
 <script src="js/zepto_1.1.3.js" type="text/javascript" charset="utf-8"></script>
 <script src="js/personalCenter.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    $(function () {
+        var recommended=parseFloat($('#recommended').html());
+        $('.now-buy').on('touchstart',function () {
+            var truePrice=parseFloat($('#truePrice').children('input').val());
+            console.log(truePrice,recommended);
+            if (truePrice/recommended>1.2){
+                layer.msg('修改并上架处填写的价格不高于建议售价的20%')
+                $('input').focus();
+                return false;
+            }
+        })
+    })
+</script>
 </html>
