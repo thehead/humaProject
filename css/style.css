@@ -1893,7 +1893,8 @@ footer ul .active {
   bottom: 0px;
   width: 100%;
 }
-.submitbox .submit {
+.submitbox .submit,
+.submitbox .submit2 {
   display: inline-block;
   bottom: 0px;
   width: 100%;

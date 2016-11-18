@@ -27,7 +27,7 @@
             <li class="address">
                 <div class="describe pcUnderline">
                     <i class="iconfont icon-phone"></i>
-                    <span><input id="myPhone" type="number" placeholder="188888888888"></span>
+                    <span><input id="myPhone" type="number" placeholder="18888888888"></span>
                 </div>
                 <div class="describe phoneDescribe">
                     <i class="iconfont icon-yanzheng"></i>
@@ -45,5 +45,16 @@
 </footer>
 <script src="js/zepto_1.1.3.js" type="text/javascript" charset="utf-8"></script>
 <script src="js/personalCenter.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/index.js"></script>
+<script>
+    $('#submit').on('touchstart',function () {
+        var myPhone=$('#myPhone').val();
+        if(!myreg.test(myPhone)){
+            layer.msg('请输入有效的手机号码!');
+            $('#myPhone').focus();
+            return false;
+        }
+    });
+</script>
 </body>
 </html>

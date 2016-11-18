@@ -89,7 +89,7 @@
     //我的收藏
     //选择
     var $pcCollectEdit = $('#pcCollectEdit');
-    $pcCollectEdit.on('touchstart', function () {
+    $pcCollectEdit.on('click', function () {
             //我的收藏状态
             if ($('#pcCollectionSellect').children('i').hasClass('icon-fill85')) {
                 $(this).children('.iconfont').removeClass().addClass('iconfont icon-quxiao');
