@@ -195,7 +195,7 @@
 			var scrollTop = $(this).scrollTop();
 			console.log('document:'+scrollHeight,'window:'+windowHeight,'划出的:'+scrollTop);
 //			if(scrollTop + windowHeight >= scrollHeight){
-			if(scrollTop + windowHeight +150>= scrollHeight){
+			if(scrollTop + windowHeight +50>= scrollHeight){
 				$(".slide-up img").addClass("active");
 				$(".slide-up i").removeClass("icon-xiala-copy");
 				var timer=setTimeout(function(){
@@ -212,8 +212,9 @@
 					num++;
 					mum = 0;
 				},1500);
-
-			}else if(scrollTop<=50){
+				scrollTop=60;
+			}
+			if(scrollTop<=0){
 				console.log(2);
 				$(".slide-up img").removeClass("active");
 				$(".slide-up i").addClass("icon-shangla");

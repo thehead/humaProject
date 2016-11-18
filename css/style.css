@@ -486,10 +486,11 @@ footer ul .active {
 }
 .screen .panelbox .newoldinfo .newoldinfoConfirm span:nth-child(1) {
   background: #fff;
+  border: 1px solid #c5c5c5;
 }
 .screen .panelbox .newoldinfo .newoldinfoConfirm span:nth-child(1).active {
   background: #fff;
-  border: 0;
+  border: 1px solid #c5c5c5;
   color: #999;
 }
 .screen .panelbox .newoldinfo .newoldinfoConfirm span:nth-child(2) {
