@@ -630,6 +630,7 @@ footer{
 .left-footer{
     width:35%;
     float: left;
+    position: relative;
     a{
         display: block;
         float: left;
@@ -666,6 +667,23 @@ footer{
         }
         :hover{
             text-decoration: none;
+        }
+    }
+    #cartLayer{
+        position: relative;
+        #cartNum{
+            position: absolute;
+            right: 5px;
+            top: 0;
+            display: block;
+            width: 20px;
+            height: 20px;
+            font-size: 12px;
+            line-height: 20px;
+            background: orangered;
+            color: #fff;
+            border-radius: 10px;
+            text-align: center;
         }
     }
 }
