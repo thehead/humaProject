@@ -477,6 +477,7 @@ footer{
                 width:21%;
                 border:1px dashed #ccc;
                 margin:5px;
+                box-sizing: border-box;
                 text-align: center;
                 border-radius: 3px;
                 padding:10px 0px;
@@ -624,6 +625,21 @@ footer{
         strike{
             color:#999999;
         }
+    }
+}
+
+#largeImg{
+    visibility: hidden;
+    background: #000;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    transition: all .1s ease;
+    #shop-base{
+        margin-top: 30%;
     }
 }
 

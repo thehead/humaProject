@@ -393,6 +393,8 @@ a:focus {
   color: #86858e;
   top: -.14rem;
   left: -.7rem; }
+.pcPersonalFile #pcPortraitWord {
+  width: 1.3rem; }
 .pcPersonalFile #weiNickname {
   font-size: .18rem; }
 

@@ -121,6 +121,29 @@
 			
 		</div>
 	</section>
+	<section id="largeImg">
+		<div id="shop-base">
+			<div class="swiper-container background-write" >
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<img src="images/tzc_shop_thumb.jpg"/>
+					</div>
+					<div class="swiper-slide">
+						<img src="images/tzc_shop_thumb.jpg"/>
+					</div>
+					<div class="swiper-slide">
+						<img src="images/tzc_shop_thumb.jpg"/>
+					</div>
+					<div class="swiper-slide">
+						<img src="images/tzc_shop_thumb.jpg"/>
+					</div>
+				</div>
+				<!-- 数量显示器 -->
+				<!-- 分页器 -->
+				<div class="num-total"></div>
+			</div>
+		</div>
+	</section>
 	<footer id="footer">
 		<div class="left-footer">
 			<a href="#">
@@ -138,10 +161,8 @@
 			<a class="now-buy-ext" href="buy.html">立即购买</a>
 		</div>
 	</footer>
-	
-	
-</body>
 
+</body>
 	<script src="js/swiper-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
 	<script src="js/zepto_1.1.3.js" type="text/javascript" charset="utf-8"></script>
 	<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
@@ -185,6 +206,20 @@
 			paginationCustomRender: function (swiper, current, total) {
 				return "<div class='circle'>"+current + '/' + total+"</div>";
 			}
+		});
+
+		//图片点击放大
+		var $swiperContainer=$('.swiper-container');
+		$swiperContainer.on('click',function () {
+//			var str='<div id="shop-base"><div class="swiper-container background-write" ><div class="swiper-wrapper"><div class="swiper-slide"><img src="images/tzc_shop_thumb.jpg"/></div><div class="swiper-slide"><img src="images/tzc_shop_thumb.jpg"/></div><div class="swiper-slide"><img src="images/tzc_shop_thumb.jpg"/></div><div class="swiper-slide"><img src="images/tzc_shop_thumb.jpg"/></div></div><div class="num-total"></div></div></div>';
+//			$('#largeImg').append(str);
+			$('#largeImg')[0].style.visibility='visible';
+		});
+		//图片再点击取消
+		$('#largeImg').on('click',function () {
+//			var str='<div id="shop-base"><div class="swiper-container background-write" ><div class="swiper-wrapper"><div class="swiper-slide"><img src="images/tzc_shop_thumb.jpg"/></div><div class="swiper-slide"><img src="images/tzc_shop_thumb.jpg"/></div><div class="swiper-slide"><img src="images/tzc_shop_thumb.jpg"/></div><div class="swiper-slide"><img src="images/tzc_shop_thumb.jpg"/></div></div><div class="num-total"></div></div></div>';
+//			$('#largeImg').append(str);
+			$('#largeImg')[0].style.visibility='hidden';
 		});
 
 		var num = 0;
@@ -252,5 +287,6 @@
 			num++;
 		});
 		*/
+
 	</script>
 </html>
