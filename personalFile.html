@@ -186,6 +186,7 @@
                 return item == filetype;
             });
             if (isPic) {
+                minImg(files[i]);
                 addImage(files[i], $pcPortraitImg);   //同时添加到页面
             } else {
                 // 提示文件非图片
@@ -193,7 +194,7 @@
             }
         }
     }
-    //添加图片
+    //添加图片 转base64
     function addImage(file, $imgObj) {
         var reader = new FileReader();
         reader.readAsDataURL(file);

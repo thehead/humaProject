@@ -600,6 +600,10 @@ footer ul .active {
 .shop-base p strike {
   color: #999999;
 }
+#shop-base .swiper-slide {
+  width: 100%;
+  overflow: hidden;
+}
 #largeImg {
   visibility: hidden;
   background: #000;
@@ -609,10 +613,11 @@ footer ul .active {
   left: 0;
   top: 0;
   z-index: 999;
+  justify-content: center;
   transition: all .1s ease;
 }
 #largeImg #shop-base {
-  margin-top: 30%;
+  margin-top: 25%;
 }
 .left-footer {
   width: 35%;

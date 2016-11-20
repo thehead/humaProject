@@ -627,7 +627,12 @@ footer{
         }
     }
 }
-
+#shop-base{
+    .swiper-slide{
+        width: 100%;
+        overflow: hidden;
+    }
+}
 #largeImg{
     visibility: hidden;
     background: #000;
@@ -637,9 +642,10 @@ footer{
     left: 0;
     top: 0;
     z-index: 999;
+    justify-content: center;
     transition: all .1s ease;
     #shop-base{
-        margin-top: 30%;
+        margin-top: 25%;
     }
 }
 
