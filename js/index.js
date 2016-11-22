@@ -264,50 +264,80 @@ $(function(){
 
         if(shopname==""){
             layer.msg("商品名称不能为空!");
-            $("input[name='shopname']").focus();
+            var timer=setTimeout(function () {
+                clearTimeout(timer);
+                $("input[name='shopname']").focus();
+            },1000);
             return false;
         }
         if(shoppinpai==""){
             layer.msg("商品品牌不能为空!");
-            $("input[name='shoppinpai']").focus();
+            var timer=setTimeout(function () {
+                clearTimeout(timer);
+                $("input[name='shoppinpai']").focus();
+            },1000)
             return false;
         }
         if(shopnum==""){
             layer.msg("商品数量不能为空!");
-            $("input[name='shopnum']").focus();
+            var timer=setTimeout(function () {
+                clearTimeout(timer);
+                $("input[name='shopnum']").focus();
+            },1000);
             return false;
         }else if(isNaN(shopnum)){
             layer.msg("商品数量必须为数字!");
-            $("input[name='shopnum']").focus();
+            var timer=setTimeout(function () {
+                clearTimeout(timer);
+                $("input[name='shopnum']").focus();
+            },1000);
             return false;
         }
         if(oldprice == ""){
             layer.msg("商品原价不能为空!");
-            $("input[name='oldprice']").focus();
+            var timer=setTimeout(function () {
+                clearTimeout(timer);
+                $("input[name='oldprice']").focus();
+            },1000);
             return false;
         }else if(isNaN(oldprice)){
             layer.msg("商品原价必须为数字!");
-            $("input[name='oldprice']").focus();
+            var timer=setTimeout(function () {
+                clearTimeout(timer);
+                $("input[name='oldprice']").focus();
+            },1000);
             return false;
         }
 
         if(newprice == ""){
             layer.msg("期望售价不能为空!");
-            $("input[name='newprice']").focus();
+            var timer=setTimeout(function () {
+                clearTimeout(timer);
+                $("input[name='newprice']").focus();
+            },1000);
             return false;
         }else if(isNaN(newprice)){
             layer.msg("期望售价必须为数字!");
-            $("input[name='newprice']").focus();
+            var timer=setTimeout(function () {
+                clearTimeout(timer);
+                $("input[name='newprice']").focus();
+            },1000);
             return false;
         }
         if(oldprice<newprice){
             layer.msg("期望售价不能大与商品原价!");
-            $("input[name='newprice']").focus();
+            var timer=setTimeout(function () {
+                clearTimeout(timer);
+                $("input[name='newprice']").focus();
+            },1000);
             return false;
         }
         if (!myreg.test(phone)){
             layer.msg("请输入有效的手机号码!");
-            $("input[name='phone']").focus();
+            var timer=setTimeout(function () {
+                clearTimeout(timer);
+                $("input[name='phone']").focus();
+            },1000);
             return false;
         }
 
