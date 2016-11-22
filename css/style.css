@@ -1522,6 +1522,8 @@ footer ul .active {
   display: table;
   padding-left: 4%;
   width: 96%;
+  position: relative;
+  overflow: hidden;
 }
 .basebox input,
 .pricebox input,
@@ -1583,6 +1585,7 @@ footer ul .active {
 .phone-check span i.icon-yanzheng {
   display: table-cell;
   vertical-align: middle;
+  box-sizing: border-box;
   font-size: 2em;
 }
 .phone-check input {
@@ -1591,10 +1594,13 @@ footer ul .active {
 }
 .phone-check .check-code {
   width: 60%;
+  box-sizing: border-box;
   border-bottom: none;
 }
 .phone-check a {
-  display: inline-block;
+  display: block;
+  float: right;
+  box-sizing: border-box;
   line-height: 45px;
   width: 30%;
   text-align: center;

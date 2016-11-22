@@ -1601,6 +1601,8 @@ footer{
         display: table;
         padding-left:4%;
         width: 96%;
+        position: relative;
+        overflow: hidden;
     }
 
 
@@ -1659,6 +1661,7 @@ footer{
         i.icon-phone,i.icon-yanzheng{
             display: table-cell;
             vertical-align: middle;
+            box-sizing: border-box;
             font-size:2em;
         }
     }
@@ -1668,10 +1671,14 @@ footer{
     }
     .check-code{
         width:60%;
+        box-sizing: border-box;
         border-bottom:none;
     }
     a{
-        display: inline-block;
+        //display: inline-block;
+        display: block;
+        float: right;
+        box-sizing: border-box;
         line-height:45px;
         width: 30%;
         text-align: center;

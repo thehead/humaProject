@@ -1155,4 +1155,90 @@ a:focus {
   text-decoration: underline;
   text-align: center; }
 
+.htmleaf-container {
+  margin: 0 auto;
+  text-align: center;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  background: #000;
+  display: none;
+  z-index: 9999; }
+
+#clipArea {
+  height: 93%; }
+
+.foot-use {
+  background: #f9f4ed;
+  height: 7%;
+  width: 100%;
+  position: relative; }
+
+.uploader1 {
+  position: absolute;
+  width: 30%;
+  cursor: default;
+  height: 100%;
+  float: left; }
+
+.blue .button {
+  color: #fff;
+  background: #fab639;
+  height: 100%; }
+
+.button {
+  float: left;
+  height: 100%;
+  display: inline-block;
+  outline: 0 none;
+  margin: 0;
+  cursor: pointer;
+  border: 0;
+  width: 100%;
+  font-size: 16px; }
+
+.uploader1 input[type=file] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  cursor: pointer;
+  border: solid 1px #ddd;
+  opacity: 0; }
+
+#file {
+  float: left;
+  height: 100%; }
+
+#clipBtn {
+  float: right;
+  height: 100%;
+  width: 30%;
+  background: #ff5f00;
+  border: 0;
+  outline: none;
+  color: #fff;
+  font-size: 16px;
+  z-index: 999; }
+
+.quxiao {
+  position: absolute;
+  left: 50%;
+  margin-left: -40px;
+  top: 0;
+  height: 100%;
+  width: 80px;
+  color: #5a5a5a;
+  font-size: 16px;
+  background-color: transparent;
+  border-radius: 4px; }
+
+.quxiao:focus {
+  outline: none; }
+
 /*# sourceMappingURL=personalCenter.css.map */

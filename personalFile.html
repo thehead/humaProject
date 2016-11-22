@@ -143,8 +143,26 @@
         </div>
     </div>
 </div>
+<!--头像裁剪-->
+<article class="htmleaf-container">
+    <div id="clipArea" style="user-select: none; overflow: hidden; position: relative;"><div class="photo-clip-view" style="position: absolute; left: 50%; top: 50%; width: 220px; height: 220px; margin-left: -110px; margin-top: -110px;"><div class="photo-clip-moveLayer" style="transform-origin: 0px 0px 0px; transition-timing-function: cubic-bezier(0.1, 0.57, 0.1, 1); transition-duration: 0ms; transform: translate(0px, 0px) scale(1) translateZ(0px); touch-action: none; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><div class="photo-clip-rotateLayer"></div></div></div><div class="photo-clip-mask" style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; pointer-events: none;"><div class="photo-clip-mask-left" style="position: absolute; left: 0px; right: 50%; top: 50%; bottom: 50%; width: auto; height: 220px; margin-right: 110px; margin-top: -110px; margin-bottom: -110px; background-color: rgba(0, 0, 0, 0.498039);"></div><div class="photo-clip-mask-right" style="position: absolute; left: 50%; right: 0px; top: 50%; bottom: 50%; margin-left: 110px; margin-top: -110px; margin-bottom: -110px; background-color: rgba(0, 0, 0, 0.498039);"></div><div class="photo-clip-mask-top" style="position: absolute; left: 0px; right: 0px; top: 0px; bottom: 50%; margin-bottom: 110px; background-color: rgba(0, 0, 0, 0.498039);"></div><div class="photo-clip-mask-bottom" style="position: absolute; left: 0px; right: 0px; top: 50%; bottom: 0px; margin-top: 110px; background-color: rgba(0, 0, 0, 0.498039);"></div><div class="photo-clip-area" style="border: 1px dashed rgb(221, 221, 221); position: absolute; left: 50%; top: 50%; width: 220px; height: 220px; margin-left: -111px; margin-top: -111px;"></div></div></div>
+    <div class="foot-use">
+        <div class="uploader1 blue">
+            <input type="button" name="file" class="button" value="选择图片">
+            <input id="file" type="file" accept="image/*" multiple="">
+        </div>
+        <input type="button" class="quxiao" value="取消">
+        <button id="clipBtn">截取图片</button>
+    </div>
+    <div id="view" style="background-color: rgb(102, 102, 102); background-repeat: no-repeat; background-position: center center; background-size: contain;"></div>
+</article>
 <script src="js/zepto_1.1.3.js" type="text/javascript" charset="utf-8"></script>
 <script src="js/personalCenter.js" type="text/javascript" charset="utf-8"></script>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/iscroll-zoom.js"></script>
+<script src="js/hammer.js"></script>
+<script src="js/jquery.photoClip.js"></script>
 <script>
     //    $(function () {
     //        var $input_browseFile = $("#pcPortraitWord");
@@ -162,45 +180,105 @@
     //        }
     //    }
 
-    $(function () {
-        var $selectFileBtn = $('#selectFileBtn');
-        var $input_browseFile = $('#pcPortraitWord');
-        $input_browseFile.on('change', filter);
-        $selectFileBtn.on('click', function (e) {
-            $input_browseFile.trigger('click');
-        });
-//        $("#sexConfirmBtn").on('touchstart', confirmSex);
+//    $(function () {
+//        var $selectFileBtn = $('#selectFileBtn');
+//        var $input_browseFile = $('#pcPortraitWord');
+//        $input_browseFile.on('change', filter);
+//        $selectFileBtn.on('click', function (e) {
+//            $input_browseFile.trigger('click');
+//        });
+////        $("#sexConfirmBtn").on('touchstart', confirmSex);
+//    });
+//    //过滤图片
+//    function filter(e) {
+//        var $pcPortraitImg = $('#pcPortraitImg');
+//        var files = e.target.files,   // 获取本地文件File对象集合
+//                typelist = ["image/jpeg", "image/png"],  // 合法文件type列表
+//                filetype, // 当前文件的类型
+//                isPic;  // 文件类型是否合法标识
+//        //  针对PC端多选的情况,前提是 input[type=file]元素包含 multiple属性
+//        for (var i = 0, len = files.length; i < len; i++) {
+//            filetype = files[i].type;
+//            //判断filetype是否属于图片
+//            isPic = typelist.some(function (item) {
+//                return item == filetype;
+//            });
+//            if (isPic) {
+//                addImage(files[i], $pcPortraitImg);   //同时添加到页面
+//            } else {
+//                // 提示文件非图片
+//                alert('请选择正确的图片格式');
+//            }
+//        }
+//    }
+//    //添加图片 转base64
+//    function addImage(file, $imgObj) {
+//        var reader = new FileReader();
+//        reader.readAsDataURL(file);
+//        reader.onload = function (e) {
+//            $imgObj.attr("src", reader.result);
+//        }
+//    }
+
+    //点击显示功能列表
+    $('#selectFileBtn').on('touchstart',function () {
+        $('.htmleaf-container').show();
     });
-    //过滤图片
-    function filter(e) {
-        var $pcPortraitImg = $('#pcPortraitImg');
-        var files = e.target.files,   // 获取本地文件File对象集合
-                typelist = ["image/jpeg", "image/png"],  // 合法文件type列表
-                filetype, // 当前文件的类型
-                isPic;  // 文件类型是否合法标识
-        //  针对PC端多选的情况,前提是 input[type=file]元素包含 multiple属性
-        for (var i = 0, len = files.length; i < len; i++) {
-            filetype = files[i].type;
-            //判断filetype是否属于图片
-            isPic = typelist.some(function (item) {
-                return item == filetype;
-            });
-            if (isPic) {
-                addImage(files[i], $pcPortraitImg);   //同时添加到页面
-            } else {
-                // 提示文件非图片
-                alert('请选择正确的图片格式');
+
+    //点击添加图片
+    //插件默认
+    $(function(){
+        var obUrl = '';
+        $("#clipArea").photoClip({
+            width: 220,
+            height: 220,
+            file: "#file",
+            view: "#view",
+            ok: "#clipBtn",
+            loadStart: function() {
+                console.log("照片读取中");
+            },
+            loadComplete: function() {
+                console.log("照片读取完成");
+            },
+            clipFinish: function(dataURL) {
+                console.log(dataURL);
             }
-        }
-    }
-    //添加图片 转base64
-    function addImage(file, $imgObj) {
-        var reader = new FileReader();
-        reader.readAsDataURL(file);
-        reader.onload = function (e) {
-            $imgObj.attr("src", reader.result);
-        }
-    }
+        });
+
+
+        var n = 0;
+
+        //触发点击
+//        $(".logox").on('click',function(){
+//            n = $(this).index();
+//            $(".htmleaf-container").show();
+//        });
+        $("#clipBtn").click(function(){
+            if(imgsource!=''){
+                $('#pcPortraitImg').attr("src", imgsource);
+                $('.htmleaf-container').hide();
+            }
+        });
+
+
+//        $(".boix a i").on('click',function(){
+//            var th = $(this).parent().parent();
+//            th.remove();
+//            /*
+//             th.empty();
+//             th.append('<img src="' + 'images/uploadImg2.png' + '">');
+//             th.parent().addClass('logox');
+//             */
+//        });
+
+        //取消
+        $(".quxiao").click(function(){
+            $(".htmleaf-container").hide();
+        });
+
+    });
+
 
     //显示选择性别
     function setSex() {
