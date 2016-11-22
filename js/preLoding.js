@@ -5,7 +5,7 @@ var _PageHeight = document.documentElement.clientHeight,
 var _LoadingTop = _PageHeight > 61 ? (_PageHeight - 61) / 2 : 0,
     _LoadingLeft = _PageWidth > 215 ? (_PageWidth - 215) / 2 : 0;
 //在页面未加载完毕之前显示的loading Html自定义内容
-var _LoadingHtml = '<div id="loadingDiv" style="position:fixed;left:0;width:100%;height:' + _PageHeight + 'px;top:0;background:#ffffff;z-index:10000;"><div style="position: absolute; cursor1: wait; left:50%;top:50%;margin-top:-200px;margin-left:-150px; width: 300px; height: 400px; line-height: 57px; background: #fff url(images/loading.gif) center center no-repeat; color: #696969;"></div></div>';
+var _LoadingHtml = '<div id="loadingDiv" style="position:fixed;left:0;width:100%;height:' + _PageHeight + 'px;top:0;background:#ffffff;z-index:10000;"><div style="position: absolute; cursor: wait; left:50%;top:50%;margin-top:-200px;margin-left:-150px; width: 300px; height: 400px; line-height: 57px; background: #fff url(images/loadingHuMa.gif) center center no-repeat;background-size: 100px; color: #696969;"></div></div>';
 //呈现loading效果
 document.write(_LoadingHtml);
 

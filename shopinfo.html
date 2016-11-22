@@ -275,7 +275,7 @@
 		//计算shop-base的图片高度
 		var height=$('.swiper-slide')[0].style.height=parseFloat(document.body.clientWidth)*1.067+'px';
 		//计算点击后的图片显示垂直剧中
-		var shopBaseMargin=(parseFloat(window.screen.availHeight)-parseFloat(height))/2;
+		var shopBaseMargin=(parseFloat(window.screen.availHeight)-parseFloat(height))/2-64;
 		$('#largeImg').children('#shop-base').css('marginTop',shopBaseMargin);
 
 		/*
