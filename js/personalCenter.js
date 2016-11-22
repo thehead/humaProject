@@ -138,7 +138,8 @@
     });
 
     //删除选中
-    $('#pcCollectingFooter').on('touchstart', function () {
+    $('#pcCollectingFooter').on('click', function (e) {
+        e.preventDefault();
         var $sellect = $('form .icon-checkbox');
         //全选
         $.each($sellect, function (index, item) {
@@ -146,7 +147,7 @@
             var $parent = item.parentNode.parentNode.parentNode;
             $parent.remove();
         });
-        clearTimeout(timer);
+        // clearTimeout(timer);
         $(".loadding-box").removeClass("active");
     });
 })();

@@ -121,29 +121,29 @@
 			
 		</div>
 	</section>
-	<section id="largeImg">
-		<div id="shop-base">
-			<div class="swiper-container background-write" >
-				<div class="swiper-wrapper">
-					<div class="swiper-slide">
-						<img src="images/tzc_shop_thumb.jpg"/>
-					</div>
-					<div class="swiper-slide">
-						<img src="images/tzc_shop_thumb.jpg"/>
-					</div>
-					<div class="swiper-slide">
-						<img src="images/tzc_shop_thumb.jpg"/>
-					</div>
-					<div class="swiper-slide">
-						<img src="images/tzc_shop_thumb.jpg"/>
-					</div>
-				</div>
-				<!-- 数量显示器 -->
-				<!-- 分页器 -->
-				<div class="num-total"></div>
-			</div>
-		</div>
-	</section>
+	<!--<section id="largeImg">-->
+		<!--<div id="shop-base">-->
+			<!--<div class="swiper-container background-write" >-->
+				<!--<div class="swiper-wrapper">-->
+					<!--<div class="swiper-slide">-->
+						<!--<img src="images/tzc_shop_thumb.jpg"/>-->
+					<!--</div>-->
+					<!--<div class="swiper-slide">-->
+						<!--<img src="images/tzc_shop_thumb.jpg"/>-->
+					<!--</div>-->
+					<!--<div class="swiper-slide">-->
+						<!--<img src="images/tzc_shop_thumb.jpg"/>-->
+					<!--</div>-->
+					<!--<div class="swiper-slide">-->
+						<!--<img src="images/tzc_shop_thumb.jpg"/>-->
+					<!--</div>-->
+				<!--</div>-->
+				<!--&lt;!&ndash; 数量显示器 &ndash;&gt;-->
+				<!--&lt;!&ndash; 分页器 &ndash;&gt;-->
+				<!--<div class="num-total"></div>-->
+			<!--</div>-->
+		<!--</div>-->
+	<!--</section>-->
 	<footer id="footer">
 		<div class="left-footer">
 			<a href="#">
@@ -161,10 +161,16 @@
 			<a class="now-buy-ext" href="buy.html">立即购买</a>
 		</div>
 	</footer>
-
+	<section class="imgzoom_pack">
+		<div class="imgzoom_x">
+			<i class="iconfont icon-iconfonticonfontclose"></i>
+		</div>
+		<div class="imgzoom_img"><img src="" /></div>
+	</section>
 </body>
 	<script src="js/swiper-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
 	<script src="js/zepto_1.1.3.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/scale.js"></script>
 	<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
  	<script>
 		//收藏点击效果
@@ -209,18 +215,18 @@
 		});
 
 		//图片点击放大
-		var $swiperContainer=$('.swiper-container');
-		$swiperContainer.on('click',function () {
-//			var str='<div id="shop-base"><div class="swiper-container background-write" ><div class="swiper-wrapper"><div class="swiper-slide"><img src="images/tzc_shop_thumb.jpg"/></div><div class="swiper-slide"><img src="images/tzc_shop_thumb.jpg"/></div><div class="swiper-slide"><img src="images/tzc_shop_thumb.jpg"/></div><div class="swiper-slide"><img src="images/tzc_shop_thumb.jpg"/></div></div><div class="num-total"></div></div></div>';
-//			$('#largeImg').append(str);
-			$('#largeImg')[0].style.visibility='visible';
-		});
+//		var $swiperContainer=$('.swiper-container');
+//		$swiperContainer.on('click',function () {
+////			var str='<div id="shop-base"><div class="swiper-container background-write" ><div class="swiper-wrapper"><div class="swiper-slide"><img src="images/tzc_shop_thumb.jpg"/></div><div class="swiper-slide"><img src="images/tzc_shop_thumb.jpg"/></div><div class="swiper-slide"><img src="images/tzc_shop_thumb.jpg"/></div><div class="swiper-slide"><img src="images/tzc_shop_thumb.jpg"/></div></div><div class="num-total"></div></div></div>';
+////			$('#largeImg').append(str);
+//			$('#largeImg')[0].style.visibility='visible';
+//		});
 		//图片再点击取消
-		$('#largeImg').on('click',function () {
-//			var str='<div id="shop-base"><div class="swiper-container background-write" ><div class="swiper-wrapper"><div class="swiper-slide"><img src="images/tzc_shop_thumb.jpg"/></div><div class="swiper-slide"><img src="images/tzc_shop_thumb.jpg"/></div><div class="swiper-slide"><img src="images/tzc_shop_thumb.jpg"/></div><div class="swiper-slide"><img src="images/tzc_shop_thumb.jpg"/></div></div><div class="num-total"></div></div></div>';
-//			$('#largeImg').append(str);
-			$('#largeImg')[0].style.visibility='hidden';
-		});
+//		$('#largeImg').on('click',function () {
+////			var str='<div id="shop-base"><div class="swiper-container background-write" ><div class="swiper-wrapper"><div class="swiper-slide"><img src="images/tzc_shop_thumb.jpg"/></div><div class="swiper-slide"><img src="images/tzc_shop_thumb.jpg"/></div><div class="swiper-slide"><img src="images/tzc_shop_thumb.jpg"/></div><div class="swiper-slide"><img src="images/tzc_shop_thumb.jpg"/></div></div><div class="num-total"></div></div></div>';
+////			$('#largeImg').append(str);
+//			$('#largeImg')[0].style.visibility='hidden';
+//		});
 
 		var num = 0;
 		var mum = 0;
@@ -273,10 +279,17 @@
 		});
 
 		//计算shop-base的图片高度
-		var height=$('.swiper-slide')[0].style.height=parseFloat(document.body.clientWidth)*1.067+'px';
-		//计算点击后的图片显示垂直剧中
-		var shopBaseMargin=(parseFloat(window.screen.availHeight)-parseFloat(height))/2-64;
-		$('#largeImg').children('#shop-base').css('marginTop',shopBaseMargin);
+//		var height=$('.swiper-slide')[0].style.height=parseFloat(document.body.clientWidth)*1.067+'px';
+//		//计算点击后的图片显示垂直剧中
+//		var shopBaseMargin=(parseFloat(window.screen.availHeight)-parseFloat(height))/2-64;
+//		$('#largeImg').children('#shop-base').css('marginTop',shopBaseMargin);
+
+		//图片放大
+		document.addEventListener("DOMContentLoaded", function(event){
+			ImagesZoom.init({
+				"elem": ".swiper-container"
+			});
+		}, false);
 
 		/*
 		$(window).scroll(function () {
