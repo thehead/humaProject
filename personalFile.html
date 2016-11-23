@@ -8,7 +8,13 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" type="text/css" href="css/iconfont/iconfont.css"/>
     <link rel="stylesheet" type="text/css" href="css/swiper-3.3.1.min.css"/>
+
+    <link rel="stylesheet" href="css/mobiscroll.core-2.5.2.css">
+    <link rel="stylesheet" href="css/mobiscroll.android-ics-2.5.2.css">
+
     <link rel="stylesheet" href="css/personalCenter.css">
+
+
     <script src="js/preLoding.js"></script>
     <script>
         (function () {
@@ -83,43 +89,49 @@
                 <span id="brithdayWord">
                     出生日期
                 </span>
+                <!--日期-->
+                <div class="demos">
+                    <label for="appDate"></label>
+                    <input type="text" name="appDate" id="appDate" />
+                </div>
                 <i class="iconfont icon-xiangyoujiantou iconLeft"></i>
             </li>
             <li>
                 <div id="brithdayCheck">
-                            <span>
-                                <select>
-                                    <option selected value="">—年—</option>
-                                    <option value="">1990年</option>
-                                    <option value="">1990年</option>
-                                    <option value="">1990年</option>
-                                    <option value="">1990年</option>
-                                    <option value="">1990年</option>
-                                    <option value="">1990年</option>
-                                </select>
-                            </span>
-                    <span>
-                                <select>
-                                    <option selected value="">—月—</option>
-                                    <option value="">12月</option>
-                                    <option value="">12月</option>
-                                    <option value="">12月</option>
-                                    <option value="">12月</option>
-                                    <option value="">12月</option>
-                                    <option value="">12月</option>
-                                </select>
-                            </span>
-                    <span>
-                                <select>
-                                    <option selected value="">—日—</option>
-                                    <option value="">11日</option>
-                                    <option value="">11日</option>
-                                    <option value="">11日</option>
-                                    <option value="">11日</option>
-                                    <option value="">11日</option>
-                                    <option value="">11日</option>
-                                </select>
-                            </span>
+                    <!--日期-->
+                            <!--<span>-->
+                                <!--<select>-->
+                                    <!--<option selected value="">—年—</option>-->
+                                    <!--<option value="">1990年</option>-->
+                                    <!--<option value="">1990年</option>-->
+                                    <!--<option value="">1990年</option>-->
+                                    <!--<option value="">1990年</option>-->
+                                    <!--<option value="">1990年</option>-->
+                                    <!--<option value="">1990年</option>-->
+                                <!--</select>-->
+                            <!--</span>-->
+                    <!--<span>-->
+                                <!--<select>-->
+                                    <!--<option selected value="">—月—</option>-->
+                                    <!--<option value="">12月</option>-->
+                                    <!--<option value="">12月</option>-->
+                                    <!--<option value="">12月</option>-->
+                                    <!--<option value="">12月</option>-->
+                                    <!--<option value="">12月</option>-->
+                                    <!--<option value="">12月</option>-->
+                                <!--</select>-->
+                            <!--</span>-->
+                    <!--<span>-->
+                                <!--<select>-->
+                                    <!--<option selected value="">—日—</option>-->
+                                    <!--<option value="">11日</option>-->
+                                    <!--<option value="">11日</option>-->
+                                    <!--<option value="">11日</option>-->
+                                    <!--<option value="">11日</option>-->
+                                    <!--<option value="">11日</option>-->
+                                    <!--<option value="">11日</option>-->
+                                <!--</select>-->
+                            <!--</span>-->
                 </div>
             </li>
             <li class="huM">
@@ -163,6 +175,13 @@
 <script src="js/iscroll-zoom.js"></script>
 <script src="js/hammer.js"></script>
 <script src="js/jquery.photoClip.js"></script>
+
+<script src="js/mobiscroll.core-2.5.2.js"></script>
+<script src="js/mobiscroll.core-2.5.2-zh.js"></script>
+<script src="js/mobiscroll.datetime-2.5.1.js"></script>
+<script src="js/mobiscroll.datetime-2.5.1-zh.js"></script>
+<script src="js/mobiscroll.android-ics-2.5.2.js"></script>
+
 <script>
     //    $(function () {
     //        var $input_browseFile = $("#pcPortraitWord");
@@ -304,15 +323,36 @@
     });
 
     //生日
-   var $rights=$('.rights');
-    $rights.on('touchstart',function () {
-        $('#brithdayCheck').show()
-    });
+//   var $rights=$('.rights');
+//    $rights.on('touchstart',function () {
+//        $('#brithdayCheck').show()
+//    });
 
     //性别
     $('.sale').on('touchstart',function () {
         $('#sexCheck').show();
     });
+
+
+    //日期插件
+    $(function () {
+        var currYear = (new Date()).getFullYear();
+        var opt = {};
+        opt.date = {preset: 'date'};
+        //opt.datetime = { preset : 'datetime', minDate: new Date(2012,3,10,9,22), maxDate: new Date(2014,7,30,15,44), stepMinute: 5  };
+        opt.datetime = {preset: 'datetime'};
+        opt.time = {preset: 'time'};
+        opt.default = {
+            theme: 'android-ics light', //皮肤样式
+            display: 'modal', //显示方式
+            mode: 'scroller', //日期选择模式
+            lang: 'zh',
+            startYear: currYear - 70, //开始年份
+            endYear: currYear //结束年份
+        };
+
+        $("#appDate").val('').scroller('destroy').scroller($.extend(opt['date'], opt['default']));
+    })
 
 
 

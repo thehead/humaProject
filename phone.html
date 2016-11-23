@@ -47,7 +47,7 @@
 <script src="js/personalCenter.js" type="text/javascript" charset="utf-8"></script>
 <script src="js/index.js"></script>
 <script>
-    $('#submit').on('touchstart',function () {
+    $('#submit').on('click',function () {
         var myPhone=$('#myPhone').val();
         if(!myreg.test(myPhone)){
             layer.msg('请输入有效的手机号码!');
