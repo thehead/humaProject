@@ -192,9 +192,12 @@ $('#submit').on('click',function () {
     if (phone===''){
         layer.msg("手机号不能为空!");
         return false
-    }else {
-        location.href='newAdress.html';
     }
+    // else {
+    //     if(){
+    //         location.href='newAdress.html';
+    //     }
+    // }
 });
 
 
