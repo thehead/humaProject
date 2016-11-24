@@ -80,6 +80,10 @@
 			});
 			$(".now-pay").on("click",function(){
 				layer.msg("退货申请成功");
+				var timer=setTimeout(function () {
+					clearTimeout(timer);
+					location.href='order.html'
+				},1500)
 			});
 		});
 	</script>

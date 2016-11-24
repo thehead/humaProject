@@ -6,7 +6,8 @@
     <title>全部订单</title>
     <link rel="stylesheet" type="text/css" href="css/reset.css"/>
     <link rel="stylesheet" type="text/css" href="css/iconfont/iconfont.css"/>
-    <link rel="stylesheet" type="text/css" href="css/swiper-3.3.1.min.css"/>
+	<link rel="stylesheet" type="text/css" href="css/animate.min.css"/>
+	<link rel="stylesheet" type="text/css" href="css/swiper-3.3.1.min.css"/>
     <link rel="stylesheet" type="text/css" href="css/style.css"/>
 	<script src="js/preLoding.js"></script>
 </head>
@@ -106,33 +107,33 @@
 					</p>
 				</div>
 			</div>
-			<div class="orderbox background-write">
-				<div class="boxtop">
-					<span class="isbuy">已完成</span>
-					<span class="date">2016-11-07 10:00</span>
-				</div>
-				<a class="boxcont" href="order-end.html">
-					<div class="thumbbox">
-						<img src="./images/myCollection.png" alt="" />
-					</div>
-					<div class="info">
-						<p class="shopname">这是虎妈二手商城的商品...</p>
-						<p class="shopcat">
-							<span class="catname">
-								<i class="iconfont icon-lianyiqun"></i>
-								女装
-							</span>
-							<span class="price">¥38.02</span>
-						</p>
-					</div>
-				</a>
-				<div class="boxbottom">
-					<p class="real">实付款: <i>¥38.00</i></p>
-					<p class="act">
-						<a class="write" href="">查看物流</a>
-					</p>
-				</div>
-			</div>
+			<!--<div class="orderbox background-write">-->
+				<!--<div class="boxtop">-->
+					<!--<span class="isbuy">已完成</span>-->
+					<!--<span class="date">2016-11-07 10:00</span>-->
+				<!--</div>-->
+				<!--<a class="boxcont" href="order-end.html">-->
+					<!--<div class="thumbbox">-->
+						<!--<img src="./images/myCollection.png" alt="" />-->
+					<!--</div>-->
+					<!--<div class="info">-->
+						<!--<p class="shopname">这是虎妈二手商城的商品...</p>-->
+						<!--<p class="shopcat">-->
+							<!--<span class="catname">-->
+								<!--<i class="iconfont icon-lianyiqun"></i>-->
+								<!--女装-->
+							<!--</span>-->
+							<!--<span class="price">¥38.02</span>-->
+						<!--</p>-->
+					<!--</div>-->
+				<!--</a>-->
+				<!--<div class="boxbottom">-->
+					<!--<p class="real">实付款: <i>¥38.00</i></p>-->
+					<!--<p class="act">-->
+						<!--<a class="write" href="">查看物流</a>-->
+					<!--</p>-->
+				<!--</div>-->
+			<!--</div>-->
 			<div class="orderbox background-write">
 				<div class="boxtop">
 					<span class="isbuy">已完成</span>
@@ -181,7 +182,7 @@
 				<div class="boxbottom">
 					<p class="real">实付款: <i>¥38.00</i></p>
 					<p class="act">
-						<a class="now-buy" href="javascript:;">立即支付</a>
+						<a class="now-buy" href="javascipt:;">立即支付</a>
 					</p>
 				</div>
 			</div>
@@ -226,8 +227,8 @@
 		</div>
 	</section>
 
-	
-	
+
+
 </body>
 
 	<script src="js/swiper-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
@@ -296,15 +297,17 @@
 				$(this).addClass("active");
 				if(_status=="order-no-payment"){
 					_st = "待支付";
-					_act = '<a href="">立即支付</a>';
+					_act = '<a class="now-buy" onclick="payAnimate()" href="javascript:;">立即支付</a>';
 					_url = 'order-no-pay.html';
 				}else if(_status=="order-no-post"){
 					_st = "待发货";
-					_act ='<a class="write" href="refund.html">退货</a>';
+					_act ='<a class="write" href="javascript:;">查看物流</a>';
+//					_act ='';
 					_url = 'order-no-send.html';
 				}else if(_status=="order-yes-post"){
 					_st = "已发货";
-					_act = '<a class="write" href="refund.html">退货</a>';
+					_act = '<a class="write" href="javascript:;">查看物流</a>';
+//					_act = '';
 					_url = 'order-sended.html';
 				}else if(_status == "order-end"){
 					_st = "已完成";
@@ -350,5 +353,14 @@
 				},400);
 			});
 		});
+
+		function payAnimate() {
+			$('#pay-type').addClass("active");
+			var x = "fadeInDownBig";
+			$('#animatebox').removeClass().addClass(x + ' animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+				$(this).removeClass();
+
+			});
+		}
 	</script>
 </html>

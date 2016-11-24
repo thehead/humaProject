@@ -151,13 +151,13 @@
 				<span>收藏</span>
 			</a>
 			<a href="cart.html" id="cartLayer">
-				<span id="cartNum">1</span>
+				<span id="cartNum" style="display: none">1</span>
 				<i class="iconfont icon-gouwuche"></i>
 				<span>购物车</span>
 			</a>
 		</div>
 		<div class="right-footer">
-			<a class="add-cart" href="cart.html">加入购物车</a>
+			<a class="add-cart" href="javascript:;">加入购物车</a>
 			<a class="now-buy-ext" href="buy.html">立即购买</a>
 		</div>
 	</footer>
@@ -193,8 +193,9 @@
 
 		//点击购物车弹出
 			(function () {
-				var $cartLayer=$('#cartLayer');
-				$cartLayer.on('touchstart',function () {
+				var $addCart=$('.add-cart');
+				$addCart.on('touchstart',function () {
+					$('#cartNum').show();
 					layer.msg('成功添加到购物车');
 				})
 			})();

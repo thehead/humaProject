@@ -186,7 +186,7 @@ $(".del").on("click",function(){
             $("#box"+del_id).remove();
         }
     });
-})
+});
 
 //选择收货地址
 $(function(){
@@ -344,7 +344,7 @@ $(function(){
         //这里写异步提交
         //$.ajax();
 
-        var shopNum = 0;
+        var shopNum = 1;
         $("#added-list").children(".shop-box").each(function(){
             shopNum++;
         });
