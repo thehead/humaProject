@@ -252,7 +252,7 @@ $(function(){
 ///添加商品
 $(function(){
     //调整为 所有的 而不仅仅是继续添加
-    $(".footer").on("click",function(){
+    $(".add").on("click",function(){
         //获取商品信息
         var shopinfo = $("form").serialize();
         var shopname = $("input[name='shopname']").val();
@@ -356,6 +356,14 @@ $(function(){
         $("#added-list").append(strHtml);
         layer.msg("添加成功!");
         $('#added-div').show();
+
+        //添加商品后手机验证隐藏
+        $('.securityCode').hide();
+
+        var phoneNum=$('input[name="phone"]').val();
+        //添加商品后手机号保存
+        $('input[name="phone"]').attr('placeholder',phoneNum);
+
         $("input").val("");
         /*
          var strHtml = "";
@@ -391,6 +399,7 @@ $(function(){
             $(this).children("input").attr("checked","checked");
         }
     });
+    //虎妈二手弹窗按钮
     $(".agreement").on("click",function(){
         $('#agreement').show();
         $('#agreement').removeClass().addClass('fadeInRightBig' + ' animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
@@ -422,17 +431,95 @@ $(function(){
         //
     });
 
+    //点击编辑完成
     $(".submit").on("click",function(){
-        var phone = $("input[name='phone']").val();
-        if(phone==""){
-            layer.msg("手机号不能为空!");
-            //location.href="consign-fail.html";
-            return false;
-        }else if (!myreg.test(phone)){
-            layer.msg("请输入有效的手机号码!");
-            $("input[name='phone']").focus();
+        var shopinfo = $("form").serialize();
+        var shopname = $("input[name='shopname']").val();
+        var shoppinpai = $("input[name='shoppinpai']").val();
+        var shopnum = $("input[name='shopnum']").val();
+        var oldprice = $("input[name='oldprice']").val();
+        var newprice = $("input[name='newprice']").val();
+        var phone=$("input[name='phone']").val();
+
+        if(shopname==""){
+            layer.msg("商品名称不能为空!");
+            var timer=setTimeout(function () {
+                clearTimeout(timer);
+                $("input[name='shopname']").focus();
+            },1000);
             return false;
         }
+        if(shoppinpai==""){
+            layer.msg("商品品牌不能为空!");
+            var timer=setTimeout(function () {
+                clearTimeout(timer);
+                $("input[name='shoppinpai']").focus();
+            },1000)
+            return false;
+        }
+        if(shopnum==""){
+            layer.msg("商品数量不能为空!");
+            var timer=setTimeout(function () {
+                clearTimeout(timer);
+                $("input[name='shopnum']").focus();
+            },1000);
+            return false;
+        }else if(isNaN(shopnum)){
+            layer.msg("商品数量必须为数字!");
+            var timer=setTimeout(function () {
+                clearTimeout(timer);
+                $("input[name='shopnum']").focus();
+            },1000);
+            return false;
+        }
+        if(oldprice == ""){
+            layer.msg("商品原价不能为空!");
+            var timer=setTimeout(function () {
+                clearTimeout(timer);
+                $("input[name='oldprice']").focus();
+            },1000);
+            return false;
+        }else if(isNaN(oldprice)){
+            layer.msg("商品原价必须为数字!");
+            var timer=setTimeout(function () {
+                clearTimeout(timer);
+                $("input[name='oldprice']").focus();
+            },1000);
+            return false;
+        }
+
+        if(newprice == ""){
+            layer.msg("期望售价不能为空!");
+            var timer=setTimeout(function () {
+                clearTimeout(timer);
+                $("input[name='newprice']").focus();
+            },1000);
+            return false;
+        }else if(isNaN(newprice)){
+            layer.msg("期望售价必须为数字!");
+            var timer=setTimeout(function () {
+                clearTimeout(timer);
+                $("input[name='newprice']").focus();
+            },1000);
+            return false;
+        }
+        if(oldprice<newprice){
+            layer.msg("期望售价不能大与商品原价!");
+            var timer=setTimeout(function () {
+                clearTimeout(timer);
+                $("input[name='newprice']").focus();
+            },1000);
+            return false;
+        }
+        if (!myreg.test(phone)){
+            layer.msg("请输入有效的手机号码!");
+            var timer=setTimeout(function () {
+                clearTimeout(timer);
+                $("input[name='phone']").focus();
+            },1000);
+            return false;
+        }
+
         if($('.checkbox-click').children('i').hasClass('icon-checkbox1')){
             layer.msg('请同意《虎妈二手急售服务规则》');
             return false;
@@ -547,9 +634,10 @@ function confirmAct(){
 }
 
 //手机正则
-var myreg = /^(((13[0-9]{1})|(15[0-9]{1})|(18[0-9]{1}))+\d{8})$/;
+// var myreg = /^(((13[0-9]{1})|(15[0-9]{1})|(18[0-9]{1}))+\d{8})$/;
+var myreg = /^1[34578]\d{9}$/;
 
-//必需是文字
+//必需是数字
 function justNumber(e,w) {
     layer.msg(w);
     e.focus();
