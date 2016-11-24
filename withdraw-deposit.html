@@ -39,7 +39,19 @@
 <script>
     $(function () {
         $('.submit2').on('click',function () {
-            layer.msg('提现申请已提交')
+            if($('input').val()==''){
+                layer.msg('请输入提现金额');
+                var timer=setTimeout(function () {
+                    clearTimeout(timer);
+                    $("input").focus();
+                },1000);
+                return false;
+            }
+            layer.msg('提现申请已提交');
+            var timer=setTimeout(function () {
+                clearTimeout(timer);
+                location.href='account.html';
+            },1000)
         })
     })
 </script>

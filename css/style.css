@@ -2651,3 +2651,6 @@ footer ul .active {
   position: absolute;
   top: 50%;
 }
+.box.sel input[type="radio"] {
+  display: none;
+}
