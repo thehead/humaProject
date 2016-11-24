@@ -7,6 +7,7 @@
     <link rel="stylesheet" type="text/css" href="css/reset.css"/>
     <link rel="stylesheet" type="text/css" href="css/iconfont/iconfont.css"/>
     <link rel="stylesheet" type="text/css" href="css/swiper-3.3.1.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/animate.min.css"/>
     <link rel="stylesheet" type="text/css" href="css/style.css"/>
 	<script src="js/preLoding.js"></script>
 </head>
@@ -77,9 +78,38 @@
 		</div>
 
 		<div class="cancel-order">
-			<span class="now-pay">立即支付</span>
+			<span class="now-pay now-buy">立即支付</span>
 		</div>
 
+		<!--弹出层-->
+		<div id="pay-type">
+			<div class="fugai"></div>
+			<div id="animatebox" class="">
+				<i id="closePay" class="iconfont icon-iconfonticonfontclose"></i>
+				<h3>支付金额: <i>¥688.00</i></h3>
+				<div class="address-info weixin">
+					<div class="leftbox">
+						<p class="iconbox"><i class="iconfont icon-weixinzhifu"></i></p>
+						<p class="linkman">
+							<span>微信支付</span>
+							<span class="weixin-desc">使用微信支付,安全便捷</span>
+						</p>
+					</div>
+					<p class="icon"><i class="iconfont icon-xiangyoujiantou"></i></p>
+				</div>
+				<h3></h3>
+				<div class="address-info zhifubao">
+					<div class="leftbox">
+						<p class="iconbox"><i class="iconfont icon-zhifubaozhifu"></i></p>
+						<p class="linkman">
+							<span>支付宝支付</span>
+							<span class="weixin-desc">使用微信支付,安全便捷</span>
+						</p>
+					</div>
+					<p class="icon"><i class="iconfont icon-xiangyoujiantou"></i></p>
+				</div>
+			</div>
+		</div>
 		<!--客服-->
 		<!--<div id="kf">-->
 			<!--<i class="iconfont icon-kefu"></i>-->
