@@ -210,7 +210,7 @@ layer.msg = function(e){
     var str = '<div id="layerbox" style="position: absolute;width:100%;height:100%;top:0px;display: table;text-align: center;">'+
         '<p style="padding:10px 20px;font-size:1.3em;color:#333;display: table-cell;vertical-align: middle"><span style="display: inline-block;padding:10px 20px;border-radius:5px;background: rgba(0,0,0,0.3);color:#FFF;">'+e+'</span></p></div>';
     $("body").append(str);
-    setInterval(function(){
+    setTimeout(function(){
         $("#layerbox").remove();
     },3000)
 

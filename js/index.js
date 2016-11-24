@@ -272,7 +272,7 @@ $(function(){
         }
         if(shoppinpai==""){
             layer.msg("商品品牌不能为空!");
-            var timer=setTimeout(function () {
+            timer=setTimeout(function () {
                 clearTimeout(timer);
                 $("input[name='shoppinpai']").focus();
             },1000)
@@ -280,14 +280,14 @@ $(function(){
         }
         if(shopnum==""){
             layer.msg("商品数量不能为空!");
-            var timer=setTimeout(function () {
+            timer=setTimeout(function () {
                 clearTimeout(timer);
                 $("input[name='shopnum']").focus();
             },1000);
             return false;
         }else if(isNaN(shopnum)){
             layer.msg("商品数量必须为数字!");
-            var timer=setTimeout(function () {
+            timer=setTimeout(function () {
                 clearTimeout(timer);
                 $("input[name='shopnum']").focus();
             },1000);
@@ -295,14 +295,14 @@ $(function(){
         }
         if(oldprice == ""){
             layer.msg("商品原价不能为空!");
-            var timer=setTimeout(function () {
+            timer=setTimeout(function () {
                 clearTimeout(timer);
                 $("input[name='oldprice']").focus();
             },1000);
             return false;
         }else if(isNaN(oldprice)){
             layer.msg("商品原价必须为数字!");
-            var timer=setTimeout(function () {
+            timer=setTimeout(function () {
                 clearTimeout(timer);
                 $("input[name='oldprice']").focus();
             },1000);
@@ -311,14 +311,14 @@ $(function(){
 
         if(newprice == ""){
             layer.msg("期望售价不能为空!");
-            var timer=setTimeout(function () {
+            timer=setTimeout(function () {
                 clearTimeout(timer);
                 $("input[name='newprice']").focus();
             },1000);
             return false;
         }else if(isNaN(newprice)){
             layer.msg("期望售价必须为数字!");
-            var timer=setTimeout(function () {
+            timer=setTimeout(function () {
                 clearTimeout(timer);
                 $("input[name='newprice']").focus();
             },1000);
@@ -326,19 +326,23 @@ $(function(){
         }
         if(oldprice<newprice){
             layer.msg("期望售价不能大与商品原价!");
-            var timer=setTimeout(function () {
+            timer=setTimeout(function () {
                 clearTimeout(timer);
                 $("input[name='newprice']").focus();
             },1000);
             return false;
         }
-        if (!myreg.test(phone)){
-            layer.msg("请输入有效的手机号码!");
-            var timer=setTimeout(function () {
-                clearTimeout(timer);
-                $("input[name='phone']").focus();
-            },1000);
-            return false;
+        //先判断有没有成功添加
+        if($('.phone-check')[0].style.display!='none'){
+            console.log($('.phone-check')[0].display);
+            if (!myreg.test(phone)){
+                layer.msg("请输入有效的手机号码!");
+                timer=setTimeout(function () {
+                    clearTimeout(timer);
+                    $("input[name='phone']").focus();
+                },1000);
+                return false;
+            }
         }
 
         //这里写异步提交
@@ -357,12 +361,15 @@ $(function(){
         layer.msg("添加成功!");
         $('#added-div').show();
 
-        //添加商品后手机验证隐藏
-        $('.securityCode').hide();
+        //添加商品后手机号和手机验证隐藏
+        // $('.securityCode').hide();
+        // $('.telPhoneNum').hide();
+        $('.phone-check').hide();
 
         var phoneNum=$('input[name="phone"]').val();
+
         //添加商品后手机号保存
-        $('input[name="phone"]').attr('placeholder',phoneNum);
+        // $('input[name="phone"]').attr('placeholder',phoneNum);
 
         $("input").val("");
         /*
@@ -441,6 +448,12 @@ $(function(){
         var newprice = $("input[name='newprice']").val();
         var phone=$("input[name='phone']").val();
 
+
+        //再次添加直接跳转
+        if($('#added-list').children('.shop-box').length!=0){
+            location.href='consign-success.html';
+        }
+
         if(shopname==""){
             layer.msg("商品名称不能为空!");
             var timer=setTimeout(function () {
@@ -454,7 +467,7 @@ $(function(){
             var timer=setTimeout(function () {
                 clearTimeout(timer);
                 $("input[name='shoppinpai']").focus();
-            },1000)
+            },1000);
             return false;
         }
         if(shopnum==""){
@@ -611,11 +624,12 @@ layer.msg = function(e){
     var str = '<div id="layerbox" style="z-index:10;position: absolute;width:100%;height:100%;top:0px;display: table;text-align: center;">'+
         '<p style="padding:10px 20px;font-size:1.3em;color:#333;display: table-cell;vertical-align: middle"><span style="display: inline-block;padding:10px 20px;border-radius:5px;background: rgba(0,0,0,0.3);color:#FFF;">'+e+'</span></p></div>';
     $("body").append(str);
-    setInterval(function(){
+    //修改为setTimeout
+    setTimeout(function(){
         $("#layerbox").remove();
     },3000)
 
-}
+};
 
 /*
  *弹出层
