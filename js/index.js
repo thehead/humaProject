@@ -258,8 +258,8 @@ $(function(){
         var shopname = $("input[name='shopname']").val();
         var shoppinpai = $("input[name='shoppinpai']").val();
         var shopnum = $("input[name='shopnum']").val();
-        var oldprice = $("input[name='oldprice']").val();
-        var newprice = $("input[name='newprice']").val();
+        var oldprice = parseFloat($("input[name='oldprice']").val());
+        var newprice = parseFloat($("input[name='newprice']").val());
         var phone=$("input[name='phone']").val();
 
         if(shopname==""){
@@ -325,6 +325,7 @@ $(function(){
             return false;
         }
         if(oldprice<newprice){
+            console.log(oldprice);
             layer.msg("期望售价不能大与商品原价!");
             timer=setTimeout(function () {
                 clearTimeout(timer);
@@ -452,6 +453,7 @@ $(function(){
         //再次添加直接跳转
         if($('#added-list').children('.shop-box').length!=0){
             location.href='consign-success.html';
+            return;
         }
 
         if(shopname==""){
