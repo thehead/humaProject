@@ -353,7 +353,7 @@ $(function(){
         $("#added-list").children(".shop-box").each(function(){
             shopNum++;
         });
-        var strHtml = '<div class="shop-box">'+
+        var strHtml = '<div class="shop-box" style="position: relative">'+
             '<span>商品'+shopNum+':</span>'+
             '<p>'+shopname+'</p>'+
             '<i class="iconfont icon-iconfonticonfontclose close"></i>'+
@@ -452,8 +452,30 @@ $(function(){
 
         //再次添加直接跳转
         if($('#added-list').children('.shop-box').length!=0){
-            location.href='consign-success.html';
-            return;
+            //判断里面是否添加
+            var contentTimers=$('form input');
+            contentTimers=(function () {
+                //去掉下面两个
+                for (var i=0;i<contentTimers.length-2;i++){
+                    // debugger;
+                    if(contentTimers[i].value!=''){
+                        return false;
+                    }
+                    return true;
+                }
+            })();
+
+            //     .each(function (index,item) {
+            //     if ($(item).val()!=''){
+            //         return false;
+            //     }
+            // });
+            // debugger;
+
+            if(contentTimers){
+                location.href='consign-success.html';
+                return;
+            }
         }
 
         if(shopname==""){
@@ -526,8 +548,11 @@ $(function(){
             },1000);
             return false;
         }
-        if (!myreg.test(phone)){
+        //判断手机号 且显示的情况下
+        //判断手机号 且显示的情况下
+        if (!myreg.test(phone) && $('.phone-check')[0].style.display !='none'){
             layer.msg("请输入有效的手机号码!");
+            debugger;
             var timer=setTimeout(function () {
                 clearTimeout(timer);
                 $("input[name='phone']").focus();
