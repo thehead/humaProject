@@ -1253,6 +1253,26 @@ footer{
         }
     }
     border-bottom:1px solid #ece8e2;
+
+    &.myaccout{
+        line-height: 50px;
+        padding-left: 2%;
+        padding-right: 2%;
+        p{
+            border: 0;
+            padding: 0;
+            width: auto;
+            i{
+                color: #ece8e2;
+            }
+            i.active{
+                color: #ff5f00;
+            }
+        }
+        p:nth-of-type(2){
+            padding-left: 1%;
+        }
+    }
 }
 .myaccout{
     input,p{
@@ -1694,6 +1714,9 @@ footer{
 .xieyi-box{
     margin-top:5px;
     margin-bottom: 60px;
+    .notice{
+        color: @font-color-two;
+    }
     p{
         text-align: center;
         font-size:1.2em;

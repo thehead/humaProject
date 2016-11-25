@@ -445,8 +445,8 @@ $(function(){
         var shopname = $("input[name='shopname']").val();
         var shoppinpai = $("input[name='shoppinpai']").val();
         var shopnum = $("input[name='shopnum']").val();
-        var oldprice = $("input[name='oldprice']").val();
-        var newprice = $("input[name='newprice']").val();
+        var oldprice = parseFloat($("input[name='oldprice']").val());
+        var newprice = parseFloat($("input[name='newprice']").val());
         var phone=$("input[name='phone']").val();
 
 

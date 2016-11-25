@@ -1,10 +1,10 @@
 
 @font-face {font-family: "iconfont";
-  src: url('iconfont.eot?t=1479960498825'); /* IE9*/
-  src: url('iconfont.eot?t=1479960498825#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('iconfont.woff?t=1479960498825') format('woff'), /* chrome, firefox */
-  url('iconfont.ttf?t=1479960498825') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
-  url('iconfont.svg?t=1479960498825#iconfont') format('svg'); /* iOS 4.1- */
+  src: url('iconfont.eot?t=1480037672343'); /* IE9*/
+  src: url('iconfont.eot?t=1480037672343#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('iconfont.woff?t=1480037672343') format('woff'), /* chrome, firefox */
+  url('iconfont.ttf?t=1480037672343') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('iconfont.svg?t=1480037672343#iconfont') format('svg'); /* iOS 4.1- */
 }
 
 .iconfont {
@@ -75,6 +75,8 @@
 .icon-pingjiabox:before { content: "\e7a3"; }
 
 .icon-huigou003:before { content: "\e621"; }
+
+.icon-yysj:before { content: "\e613"; }
 
 .icon-weibiaoti2:before { content: "\e606"; }
 

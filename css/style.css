@@ -1179,6 +1179,25 @@ footer ul .active {
   display: block;
   width: 100%;
 }
+.account.myaccout {
+  line-height: 50px;
+  padding-left: 2%;
+  padding-right: 2%;
+}
+.account.myaccout p {
+  border: 0;
+  padding: 0;
+  width: auto;
+}
+.account.myaccout p i {
+  color: #ece8e2;
+}
+.account.myaccout p i.active {
+  color: #ff5f00;
+}
+.account.myaccout p:nth-of-type(2) {
+  padding-left: 1%;
+}
 .myaccout input,
 .myaccout p {
   width: 52%;
@@ -1616,6 +1635,9 @@ footer ul .active {
 .xieyi-box {
   margin-top: 5px;
   margin-bottom: 60px;
+}
+.xieyi-box .notice {
+  color: #ff5f00;
 }
 .xieyi-box p {
   text-align: center;

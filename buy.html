@@ -65,17 +65,17 @@
 				<div class="bbs background-write">
 					<input type="text" name="bbs" value="" placeholder="给我们留言" />
 				</div>
-				<!--<div class="account myaccout background-write">-->
+				<div class="account myaccout background-write">
 					<!--<input id="money" type="tel" name="bbs" value="" placeholder="请输入需要使用的金额" />-->
-					<!--<p>-->
-						<!--<span><i></i>账户余额:¥500.00</span>-->
-					<!--</p>-->
-				<!--</div>-->
-				<div>
-					<i class="iconfont icon-checkbox1"></i>
+					<p>
+						<i class="iconfont icon-yysj"></i>
+					</p>
+					<p>
+						<span>使用可抵扣余额: ¥500.00</span>
+					</p>
 				</div>
 				<div class="credit">
-					<p>余额不足时会扣除信用额度,当前额度<i> ¥37.25</i></p>
+					<p>抵扣金额会消耗账户余额和信用额度</p>
 					<p class="kuaidi"><i class="iconfont icon-tuihuomianyunfei"></i><i class="num">购物免邮递费 <em>0/</em>5次</i></p>
 				</div>
 				<input type="hidden" value="" name="total-price">
@@ -184,6 +184,19 @@
 				justNumber($('#money'),'金额必需为文字');
 				return false;
 			}
+		});
+		//点击切换抵金
+		$(function () {
+			var flag=false;
+			$('.icon-yysj').on('touchend',function () {
+				if (flag){
+					$('.icon-yysj').removeClass('active');
+					flag=false;
+				}else {
+					$('.icon-yysj').addClass('active');
+					flag=true;
+				}
+			})
 		})
 	</script>
 </html>
