@@ -166,12 +166,21 @@ $(".listbox").on("click",".checkbox",function(){
         totalNum = parseInt(totalNum+1);
         totalPrice = numAdd(parseFloat(totalPrice),parseFloat(this_price));
         $(".total-num").html(getTotalNum(totalNum));
-        $(".total-price").html(getTotalPrice(totalPrice));
+        $(".total-price").html(getTotalPrice(totalPrice));var selected = $(".all-check").is(':checked');
         $(this).children("i").addClass("icon-checkbox");
         $(this).children("i").removeClass("icon-checkbox1");
         $(this).children("input").attr("checked","checked");
     }
 
+});
+
+$("#cartNowBuy").on('click',function () {
+    // $(".all-check").prop("checked",false);
+    // location.reload([bForceGet]);
+    layer.msg('购买中...');
+    $('section').remove();
+    location.href = "buy.html";
+    // $("html").hide();
 });
 
 $(".del").on("click",function(){
@@ -580,7 +589,7 @@ function getTotalNum(num){
     return "共计"+num+"件商品";
 }
 function getTotalPrice(price){
-    return "合计:<i>¥"+price+"元</i>"
+    return "合计:<i>¥"+Number(price).toFixed(2)+"元</i>"
 }
 //加法运算
 function numAdd(num1, num2) {

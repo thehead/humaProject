@@ -247,8 +247,10 @@
 			<p><span class="total-price">合计:<i>¥0.00元</i></span></p>
 			<p><span class="total-num">(共计<i>0件商品</i>)</span></p>
 		</div>
-		<div class="now-buy">
-			<a href="buy.html" ><em>立即购买</em></a>
+		<div class="now-buy" id="cartNowBuy">
+			<a href="javascript:;" >
+				<em>立即购买</em>
+			</a>
 		</div>
 	</footer>
 	
@@ -262,9 +264,11 @@
 <script>
 	//购物车点击相应的图片跳转到详情
 	$('.info').on('click',function () {
+		$('section').remove();
 		location.href='shopinfo.html';
 	});
 	$('.thumbbox').on('click',function () {
+		$('section').remove();
 		location.href='shopinfo.html';
 	});
 </script>

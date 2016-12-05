@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport"
+                  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+            <title></title>
+            <link rel="stylesheet" href="css/reset.css">
+            <link rel="stylesheet" type="text/css" href="css/iconfont/iconfont.css"/>
+            <link rel="stylesheet" type="text/css" href="css/swiper-3.3.1.min.css"/>
+
+            <link rel="stylesheet" href="css/mobiscroll.core-2.5.2.css">
+            <link rel="stylesheet" href="css/mobiscroll.android-ics-2.5.2.css">
+
+            <link rel="stylesheet" href="css/personalCenter.css">
+
+
+            <script src="js/preLoding.js"></script>
+            <script>
+                (function () {
+                    var vw = document.documentElement.clientWidth,
+                            html = document.querySelector('html');
+                    var font = html.style.fontSize = (vw / 375 > 2 ? '200px' : (vw / 375 * 100 + 'px'));
+                    console.log(font);
+                })()
+            </script>
+        </head>
+<body>
+<article style="display: block" class="htmleaf-container">
+    <div id="clipArea" style="user-select: none; overflow: hidden; position: relative;"><div class="photo-clip-view" style="position: absolute; left: 50%; top: 50%; width: 220px; height: 220px; margin-left: -110px; margin-top: -110px;"><div class="photo-clip-moveLayer" style="transform-origin: 0px 0px 0px; transition-timing-function: cubic-bezier(0.1, 0.57, 0.1, 1); transition-duration: 0ms; transform: translate(0px, 0px) scale(1) translateZ(0px); touch-action: none; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><div class="photo-clip-rotateLayer"></div></div></div><div class="photo-clip-mask" style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; pointer-events: none;"><div class="photo-clip-mask-left" style="position: absolute; left: 0px; right: 50%; top: 50%; bottom: 50%; width: auto; height: 220px; margin-right: 110px; margin-top: -110px; margin-bottom: -110px; background-color: rgba(0, 0, 0, 0.498039);"></div><div class="photo-clip-mask-right" style="position: absolute; left: 50%; right: 0px; top: 50%; bottom: 50%; margin-left: 110px; margin-top: -110px; margin-bottom: -110px; background-color: rgba(0, 0, 0, 0.498039);"></div><div class="photo-clip-mask-top" style="position: absolute; left: 0px; right: 0px; top: 0px; bottom: 50%; margin-bottom: 110px; background-color: rgba(0, 0, 0, 0.498039);"></div><div class="photo-clip-mask-bottom" style="position: absolute; left: 0px; right: 0px; top: 50%; bottom: 0px; margin-top: 110px; background-color: rgba(0, 0, 0, 0.498039);"></div><div class="photo-clip-area" style="border: 1px dashed rgb(221, 221, 221); position: absolute; left: 50%; top: 50%; width: 220px; height: 220px; margin-left: -111px; margin-top: -111px;"></div></div></div>
+    <div class="foot-use">
+        <div class="uploader1 blue">
+            <input type="button" name="file" class="button" value="选择图片">
+            <input id="file" type="file" accept="image/*" multiple="">
+        </div>
+        <input type="button" class="quxiao" value="取消">
+        <button id="clipBtn">截取图片</button>
+    </div>
+    <div id="view" style="background-color: rgb(102, 102, 102); background-repeat: no-repeat; background-position: center center; background-size: contain;"></div>
+</article>
+<div>
+    <img id="pcPortraitImg" src="" alt="">
+</div>
+<script src="js/zepto_1.1.3.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/personalCenter.js" type="text/javascript" charset="utf-8"></script>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/iscroll-zoom.js"></script>
+<script src="js/hammer.js"></script>
+<script src="js/jquery.photoClip.js"></script>
+
+
+<script>
+
+    //点击显示功能列表
+    $('#selectFileBtn').on('touchstart',function () {
+        $('.htmleaf-container').show();
+    });
+
+    //点击添加图片
+    //插件默认
+    $(function(){
+        var obUrl = '';
+        $("#clipArea").photoClip({
+            width: 220,
+            height: 220,
+            file: "#file",
+            view: "#view",
+            ok: "#clipBtn",
+            loadStart: function() {
+                console.log("照片读取中");
+            },
+            loadComplete: function() {
+                console.log("照片读取完成");
+            },
+            clipFinish: function(dataURL) {
+                console.log(dataURL);
+            }
+        });
+
+
+        var n = 0;
+        $("#clipBtn").click(function(){
+            if(imgsource!=''){
+                $('#pcPortraitImg').attr("src", imgsource);
+                $('.htmleaf-container').hide();
+            }
+        });
+
+
+
+        //取消
+        $(".quxiao").click(function(){
+            $(".htmleaf-container").hide();
+        });
+
+    });
+
+
+
+
+
+</script>
+</body>
+</html></title>
+</head>
+<body>
+
+</body>
+</html>
