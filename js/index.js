@@ -115,7 +115,20 @@ var totalPrice = 0.00;
 $(".select-all-box").on("click",function(){
     var selected = $(".all-check").is(':checked');
     if(selected){
+        $('#cartNowBuy').css('background','#ff5f00');
+        $('#cartNowBuy').removeClass('cannottTap');
+
         $(".listbox").find(".checkbox").each(function(){
+            // //无效
+            // var retired=$(this).parent().prev().children('span.isbuy').html()==='已失效';
+            // //取消无效
+            // if(retired){
+            //     $('#cartNowBuy').css('background','#ff5f00');
+            //     $('#cartNowBuy').removeClass('cannottTap')
+            //
+            // }
+
+
             if($(this).children("input").is(":checked")){
                 var this_price = $(this).children(".price").val();
                 totalNum = parseInt(totalNum-1);
@@ -134,6 +147,15 @@ $(".select-all-box").on("click",function(){
         totalNum = 0;
         totalPrice = 0.00;
         $(".listbox").find(".checkbox").each(function(){
+            //无效
+            var retired=$(this).parent().prev().children('span.isbuy').html()==='已失效';
+            if(retired){
+                $('#cartNowBuy').css('background','#ccc');
+                $('#cartNowBuy').addClass('cannottTap')
+
+            }
+
+
             var this_price = $(this).children(".price").val();
             totalNum = parseInt(totalNum+1);
             totalPrice = numAdd(parseFloat(totalPrice),parseFloat(this_price));
@@ -142,6 +164,7 @@ $(".select-all-box").on("click",function(){
             $(this).children("i").addClass("icon-checkbox");
             $(this).children("i").removeClass("icon-checkbox1");
             $(this).children("input").attr("checked","checked");
+
             //$(this).attr("checked","checked");
         });
         $(this).children("i").addClass("icon-checkbox");
@@ -150,7 +173,12 @@ $(".select-all-box").on("click",function(){
     }
 });
 
+
+//点选一个
 $(".listbox").on("click",".checkbox",function(){
+
+    var retired=$(this).parent().prev().children('span.isbuy').html()==='已失效';
+
     var is_checked = $(this).children("input").is(':checked');
     var this_price = $(this).children(".price").val();
     if(is_checked){
@@ -162,25 +190,70 @@ $(".listbox").on("click",".checkbox",function(){
         $(this).children("i").addClass("icon-checkbox1");
         $(this).children("input").removeAttr("checked");
 
+        //取消无效
+        // if(retired){
+        //     $(".listbox").find(".checkbox").each(function(index,item){
+        //         console.log(item);
+        //         //所有的chekbox
+        //         if ($(item).find('i .icon-checkbox')){
+        //             var a=$(item).parent().prev().children('span.isbuy').html()==='已失效';
+        //             if ($(item).parent().prev().children('span.isbuy').html()==='已失效'){
+        //                 return;
+        //             }
+        //             $('#cartNowBuy').css('background','#ff5f00');
+        //             $('#cartNowBuy').removeClass('cannottTap')
+        //         }
+        //     });
+
+        var $selectedCheckBox = $(".listbox").find(".icon-checkbox");
+        if($selectedCheckBox.length == 0){
+            $('#cartNowBuy').css('background','#ff5f00');
+            $('#cartNowBuy').removeClass('cannottTap');
+        } else {
+            var valiad = false;
+            $.each($selectedCheckBox,function (index,item) {
+                valiad = $(item).parent().parent().prev().children('span.isbuy').html()==='已失效';
+                if(valiad) return false;
+            });
+            if(!valiad){
+                $('#cartNowBuy').css('background','#ff5f00');
+                $('#cartNowBuy').removeClass('cannottTap');
+            }
+        }
+
+
+        // }
+
+
     }else{
-        totalNum = parseInt(totalNum+1);
-        totalPrice = numAdd(parseFloat(totalPrice),parseFloat(this_price));
-        $(".total-num").html(getTotalNum(totalNum));
-        $(".total-price").html(getTotalPrice(totalPrice));var selected = $(".all-check").is(':checked');
-        $(this).children("i").addClass("icon-checkbox");
-        $(this).children("i").removeClass("icon-checkbox1");
-        $(this).children("input").attr("checked","checked");
+        //不是无效
+            totalNum = parseInt(totalNum+1);
+            totalPrice = numAdd(parseFloat(totalPrice),parseFloat(this_price));
+            $(".total-num").html(getTotalNum(totalNum));
+            $(".total-price").html(getTotalPrice(totalPrice));
+            var selected = $(".all-check").is(':checked');
+            $(this).children("i").addClass("icon-checkbox");
+            $(this).children("i").removeClass("icon-checkbox1");
+            $(this).children("input").attr("checked","checked");
+
+        //是无效
+          if(retired){
+              $('#cartNowBuy').css('background','#ccc');
+              $('#cartNowBuy').addClass('cannottTap')
+          }
     }
 
 });
 
 $("#cartNowBuy").on('click',function () {
-    // $(".all-check").prop("checked",false);
-    // location.reload([bForceGet]);
-    layer.msg('购买中...');
-    $('section').remove();
-    location.href = "buy.html";
-    // $("html").hide();
+      // console.log($(this).hasClass('cannottTap'));
+      if(!$(this).hasClass('cannottTap')){
+          layer.msg('购买中...');
+          $('section').remove();
+          // $("input[name='checkbox1']").removeAttr("checked");
+          location.href = "buy.html";
+          // $("html").hide();
+      }
 });
 
 $(".del").on("click",function(){
@@ -193,6 +266,10 @@ $(".del").on("click",function(){
             $(".total-num").html(getTotalNum(totalNum));
             $(".total-price").html(getTotalPrice(totalPrice));
             $("#box"+del_id).remove();
+
+            //取消不能编辑模式
+            $('#cartNowBuy').removeClass('cannottTap');
+            $('#cartNowBuy').css('background','#ff5f00')
         }
     });
 });
